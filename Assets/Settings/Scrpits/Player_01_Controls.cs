@@ -22,7 +22,7 @@ public class Player_01_Controls : MonoBehaviour
 
     }
 
-    public void OnMovment(InputAction.CallbackContext context)
+    public void OnAim(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
     }
