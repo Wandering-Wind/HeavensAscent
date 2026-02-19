@@ -1196,11 +1196,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110e135f2ddf4b041ae255804942d88c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_01_Controls
-  moveSpeed: 5
-  jumpStep: 1
-  rotateSpeed: 180
   Player_01_Soul: {fileID: 5195334398485875902, guid: f3adaa5704da5614fadb3b0f2d20ed5b, type: 3}
-  P1_firePoint: {fileID: 1844046265}
+  P1_firePoint: {fileID: 1844046264}
+  Shoot_power_P_01: 10
 --- !u!114 &1457299728
 MonoBehaviour:
   m_ObjectHideFlags: 0
