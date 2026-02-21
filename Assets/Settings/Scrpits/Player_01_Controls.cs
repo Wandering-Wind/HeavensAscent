@@ -47,7 +47,9 @@ public class Player_01_Controls : MonoBehaviour
     }
     void Shoot()
     {
-        GameObject bulletInstance = Instantiate(Player_01_Soul, P1_firePoint.transform.position, P1_firePoint.transform.rotation);
+        GameObject bulletInstance = Instantiate(Player_01_Soul, P1_firePoint.transform.position, Quaternion.identity);
+        Rigidbody2D rb = bulletInstance.GetComponent<Rigidbody2D>();
+        rb.linearVelocity = lastAimDirection * Shoot_power_P_01;
 
 
     }
