@@ -19,6 +19,7 @@ public class Player_01_Controls : MonoBehaviour
 
     private Vector2 aimInput;
     private Vector2 lastAimDirection = Vector2.right;
+    private GameObject bullet_P_01;
 
     private void Update()
     {
@@ -47,11 +48,12 @@ public class Player_01_Controls : MonoBehaviour
     }
     void Shoot()
     {
-        GameObject bulletInstance = Instantiate(Player_01_Soul, P1_firePoint.transform.position, Quaternion.identity);
-        Rigidbody2D rb = bulletInstance.GetComponent<Rigidbody2D>();
+        if (bullet_P_01 != null){
+            return;
+        }
+         bullet_P_01 = Instantiate(Player_01_Soul, P1_firePoint.transform.position, Quaternion.identity);
+        Rigidbody2D rb = bullet_P_01.GetComponent<Rigidbody2D>();
         rb.linearVelocity = lastAimDirection * Shoot_power_P_01;
-
-
     }
 }
 
