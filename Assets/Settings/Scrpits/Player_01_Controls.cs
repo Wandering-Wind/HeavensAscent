@@ -5,7 +5,7 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class Player_01_Controls : MonoBehaviour
 {
 
-    [Header("Movment")]
+    [Header("Shoot")]
 
     public GameObject Player_01_Soul;
     public GameObject P1_firePoint;
@@ -20,6 +20,7 @@ public class Player_01_Controls : MonoBehaviour
     private Vector2 aimInput;
     private Vector2 lastAimDirection = Vector2.right;
     private GameObject bullet_P_01;
+
 
     private void Update()
     {
@@ -40,13 +41,18 @@ public class Player_01_Controls : MonoBehaviour
     {
         aimInput = context.ReadValue<Vector2>();
     }
+    public void OnTeleport(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        Teleport();
+    }
 
     public void OnShoot(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
         Shoot();
     }
-    void Shoot()
+    public void Shoot()
     {
         if (bullet_P_01 != null){
             return;
@@ -54,6 +60,17 @@ public class Player_01_Controls : MonoBehaviour
          bullet_P_01 = Instantiate(Player_01_Soul, P1_firePoint.transform.position, Quaternion.identity);
         Rigidbody2D rb = bullet_P_01.GetComponent<Rigidbody2D>();
         rb.linearVelocity = lastAimDirection * Shoot_power_P_01;
+
+    }
+    public void Teleport()
+    {
+        print("Asdndfsfljgb");
+        if (bullet_P_01 != null)
+        {
+            transform.position = bullet_P_01.transform.position;
+            Destroy(bullet_P_01);
+            bullet_P_01 = null;
+        }
     }
 }
 
