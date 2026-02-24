@@ -21,6 +21,8 @@ public class Player_01_Controls : MonoBehaviour
     private Vector2 lastAimDirection = Vector2.right;
     private GameObject bullet_P_01;
 
+    public GameObject Player_01;
+
 
     private void Update()
     {
@@ -68,6 +70,8 @@ public class Player_01_Controls : MonoBehaviour
         if (bullet_P_01 != null)
         {
             transform.position = bullet_P_01.transform.position;
+            Rigidbody2D prb = Player_01.GetComponent<Rigidbody2D>();
+            prb.linearVelocity = lastAimDirection * Shoot_power_P_01;
             Destroy(bullet_P_01);
             bullet_P_01 = null;
         }
