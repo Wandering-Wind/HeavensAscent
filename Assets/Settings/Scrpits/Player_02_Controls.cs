@@ -7,9 +7,9 @@ public class Player_02_Controls : MonoBehaviour
 
     [Header("Shoot")]
 
-    public GameObject Player_01_Soul;
-    public GameObject P1_firePoint;
-    [SerializeField] private float Shoot_power_P_01;
+    public GameObject Player_02_Soul;
+    public GameObject P2_firePoint;
+    [SerializeField] private float Shoot_power_P_02;
 
 
     [Header("Aim")]
@@ -19,7 +19,7 @@ public class Player_02_Controls : MonoBehaviour
 
     private Vector2 aimInput;
     private Vector2 lastAimDirection = Vector2.right;
-    private GameObject bullet_P_01;
+    private GameObject bullet_P_02;
 
 
     private void Update()
@@ -54,23 +54,23 @@ public class Player_02_Controls : MonoBehaviour
     }
     public void Shoot()
     {
-        if (bullet_P_01 != null)
+        if (bullet_P_02 != null)
         {
             return;
         }
-        bullet_P_01 = Instantiate(Player_01_Soul, P1_firePoint.transform.position, Quaternion.identity);
-        Rigidbody2D rb = bullet_P_01.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = lastAimDirection * Shoot_power_P_01;
+        bullet_P_02 = Instantiate(Player_02_Soul, P2_firePoint.transform.position, Quaternion.identity);
+        Rigidbody2D rb = bullet_P_02.GetComponent<Rigidbody2D>();
+        rb.linearVelocity = lastAimDirection * Shoot_power_P_02;
 
     }
     public void Teleport()
     {
         print("Asdndfsfljgb");
-        if (bullet_P_01 != null)
+        if (bullet_P_02 != null)
         {
-            transform.position = bullet_P_01.transform.position;
-            Destroy(bullet_P_01);
-            bullet_P_01 = null;
+            transform.position = bullet_P_02.transform.position;
+            Destroy(bullet_P_02);
+            bullet_P_02  = null;
         }
     }
 }
