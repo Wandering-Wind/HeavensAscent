@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.RuleTile.TilingRuleOutput;
@@ -11,6 +12,11 @@ public class Player_02_Controls : MonoBehaviour
     public GameObject P2_firePoint;
     [SerializeField] private float Shoot_power_P_02;
 
+    public float Soul_Life_p2 = 5f;
+    public float Max_SLP2 = 5f;
+
+    private float currentSoulScale;
+    private float originalSoulScale;
 
     [Header("Aim")]
     public GameObject aimArrow;
@@ -23,6 +29,11 @@ public class Player_02_Controls : MonoBehaviour
 
     public GameObject Player_02;
 
+    private void Start()
+    {
+        originalSoulScale = Soul_Life_p2 / Max_SLP2;
+        currentSoulScale = originalSoulScale;
+    }
     private void Update()
     {
         if (aimInput.magnitude > deadzone)
@@ -37,7 +48,12 @@ public class Player_02_Controls : MonoBehaviour
         // Position arrow in front of player
         aimArrow.transform.position = transform.position + (Vector3)(lastAimDirection * arrowDistance);
     }
-
+    IEnumerator Regain()
+    {
+        yield return new WaitForSeconds(5);
+        Soul_Life_p2 = Max_SLP2;
+        currentSoulScale = originalSoulScale;
+    }
     public void OnAim(InputAction.CallbackContext context)
     {
         aimInput = context.ReadValue<Vector2>();
@@ -51,7 +67,15 @@ public class Player_02_Controls : MonoBehaviour
     public void OnShoot(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-        Shoot();
+        if (Soul_Life_p2 > 0)
+        {
+            Shoot();
+            Soul_Life_p2 -= 1;
+        }
+        else if (Soul_Life_p2 <= 0)
+        {
+            StartCoroutine(Regain());
+        }
     }
     public void Shoot()
     {
@@ -62,7 +86,10 @@ public class Player_02_Controls : MonoBehaviour
         bullet_P_02 = Instantiate(Player_02_Soul, P2_firePoint.transform.position, Quaternion.identity);
         Rigidbody2D rb = bullet_P_02.GetComponent<Rigidbody2D>();
         rb.linearVelocity = lastAimDirection * Shoot_power_P_02;
-
+        
+        
+        bullet_P_02.transform.localScale = Vector3.one * currentSoulScale;
+        currentSoulScale = (Soul_Life_p2 / Max_SLP2);
     }
     public void Teleport()
     {
@@ -75,6 +102,11 @@ public class Player_02_Controls : MonoBehaviour
             Destroy(bullet_P_02);
             bullet_P_02  = null;
         }
+    }
+    public void Orb_Absorb()
+    {
+        Soul_Life_p2 = Max_SLP2;
+        currentSoulScale = originalSoulScale;
     }
 }
 

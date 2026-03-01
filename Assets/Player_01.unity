@@ -338,6 +338,8 @@ MonoBehaviour:
   Player_02_Soul: {fileID: 5367916734456019069, guid: 31b5e6c5aa759694d8e54b2c59c647e7, type: 3}
   P2_firePoint: {fileID: 699345897}
   Shoot_power_P_02: 10
+  Soul_Life_p2: 5
+  Max_SLP2: 5
   aimArrow: {fileID: 1232965659}
   arrowDistance: 1
   deadzone: 0.2
@@ -432,6 +434,67 @@ MonoBehaviour:
   m_DefaultActionMap: Player_02
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!1001 &396645886
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 358023746577222263, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
+      propertyPath: m_Name
+      value: Light_Orbs
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496036235126170990, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
+      propertyPath: Pl1
+      value: 
+      objectReference: {fileID: 1457299727}
+    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.95532
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.63581
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
 --- !u!1 &425941503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,6 +1376,9 @@ MonoBehaviour:
   P2_Score: 0
   P1_Text: {fileID: 1295845775}
   P2_Text: {fileID: 1833726785}
+  LightOrb: {fileID: 358023746577222263, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
+  random_Ord_Range: 7
+  Spawn_Time: 2
 --- !u!1 &1232965659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,6 +1974,8 @@ MonoBehaviour:
   Player_01_Soul: {fileID: 5195334398485875902, guid: f3adaa5704da5614fadb3b0f2d20ed5b, type: 3}
   P1_firePoint: {fileID: 1844046264}
   Shoot_power_P_01: 10
+  Soul_Life_p1: 5
+  Max_SLP1: 5
   aimArrow: {fileID: 2053221443}
   arrowDistance: 1
   deadzone: 0.2
@@ -2274,3 +2342,4 @@ SceneRoots:
   - {fileID: 1164912604}
   - {fileID: 1405729286}
   - {fileID: 1251608116}
+  - {fileID: 396645886}

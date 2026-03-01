@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -10,6 +11,15 @@ public class Heavens_Gate : MonoBehaviour
     public TextMeshProUGUI P1_Text;
     public TextMeshProUGUI P2_Text;
 
+    public GameObject LightOrb;
+    public float random_Ord_Range;
+    public float Spawn_Time;
+
+    public void Start()
+    {
+        StartCoroutine(SpawnRoutine());
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player_01_Soul") )
@@ -21,7 +31,26 @@ public class Heavens_Gate : MonoBehaviour
         {
             P2_Score += 1;
             P2_Text.text = P1_Score.ToString();
+        }     
+    }
+    IEnumerator SpawnRoutine()
+    {
+        while (true)
+        {
+            Spawn_Light_orbs();
+            yield return new WaitForSeconds(Spawn_Time);
         }
-        
+    }
+
+    public void Spawn_Light_orbs()
+    {
+        if (LightOrb != null)
+        {
+           // Destroy(LightOrb);
+        }
+        float random_Orbx = Random.Range(0, random_Ord_Range);
+        float random_Orby = Random.Range(0, random_Ord_Range);
+        Vector2 OrbSpawnPos = new Vector2(random_Orbx, random_Orby);
+        Instantiate(LightOrb,OrbSpawnPos , Quaternion.identity);
     }
 }
