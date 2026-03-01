@@ -434,67 +434,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player_02
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!1001 &396645886
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 358023746577222263, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
-      propertyPath: m_Name
-      value: Light_Orbs
-      objectReference: {fileID: 0}
-    - target: {fileID: 2496036235126170990, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
-      propertyPath: Pl1
-      value: 
-      objectReference: {fileID: 1457299727}
-    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.95532
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.63581
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8233510340909104213, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
 --- !u!1 &425941503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,8 +1316,10 @@ MonoBehaviour:
   P1_Text: {fileID: 1295845775}
   P2_Text: {fileID: 1833726785}
   LightOrb: {fileID: 358023746577222263, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
-  random_Ord_Range: 7
-  Spawn_Time: 2
+  random_Ord_Rangex: 8
+  random_Ord_Rangey: 4.5
+  Spawn_Time: 3
+  OrbCount: 5
 --- !u!1 &1232965659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,7 +1914,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player_01_Controls
   Player_01_Soul: {fileID: 5195334398485875902, guid: f3adaa5704da5614fadb3b0f2d20ed5b, type: 3}
   P1_firePoint: {fileID: 1844046264}
+  P1_firePoint_Arrow: {fileID: 2053221443}
   Shoot_power_P_01: 10
+  Min_Charge_power_P_01: 5
+  Max_Charge_power_P_01: 20
+  Charge: 10
   Soul_Life_p1: 5
   Max_SLP1: 5
   aimArrow: {fileID: 2053221443}
@@ -2265,7 +2210,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.01, y: 0.47, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1844046265}
@@ -2320,7 +2265,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 2091707863852291069, guid: 7c254ce966f50d148b3e038a2a09fa15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2342,4 +2287,3 @@ SceneRoots:
   - {fileID: 1164912604}
   - {fileID: 1405729286}
   - {fileID: 1251608116}
-  - {fileID: 396645886}
