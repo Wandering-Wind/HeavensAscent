@@ -12,8 +12,11 @@ public class Heavens_Gate : MonoBehaviour
     public TextMeshProUGUI P2_Text;
 
     public GameObject LightOrb;
-    public float random_Ord_Range;
+    private GameObject currLightOrb;
+    public float random_Ord_Rangex;
+    public float random_Ord_Rangey;
     public float Spawn_Time;
+    public int OrbCount = 5;
 
     public void Start()
     {
@@ -44,13 +47,13 @@ public class Heavens_Gate : MonoBehaviour
 
     public void Spawn_Light_orbs()
     {
-        if (LightOrb != null)
-        {
-           // Destroy(LightOrb);
-        }
-        float random_Orbx = Random.Range(0, random_Ord_Range);
-        float random_Orby = Random.Range(0, random_Ord_Range);
-        Vector2 OrbSpawnPos = new Vector2(random_Orbx, random_Orby);
-        Instantiate(LightOrb,OrbSpawnPos , Quaternion.identity);
+            if (currLightOrb != null)
+            {
+                Destroy(currLightOrb);
+            }
+            float random_Orbx = Random.Range(-random_Ord_Rangex, random_Ord_Rangex);
+            float random_Orby = Random.Range(-random_Ord_Rangey, random_Ord_Rangey);
+            Vector2 OrbSpawnPos = new Vector2(random_Orbx, random_Orby);
+            currLightOrb = Instantiate(LightOrb, OrbSpawnPos, Quaternion.identity);
     }
 }
