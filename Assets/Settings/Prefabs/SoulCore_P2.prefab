@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5581694588819702578}
   - component: {fileID: -907100307479942040}
   m_Layer: 0
-  m_Name: SoulCore
+  m_Name: SoulCore_P2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
