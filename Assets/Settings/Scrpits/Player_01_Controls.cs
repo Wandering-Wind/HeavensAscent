@@ -38,6 +38,9 @@ public class Player_01_Controls : MonoBehaviour
 
     public GameObject Player_01;
 
+    [Header("Slow")]
+    public float slowdownFactor = 0.05f;
+
 
     private void Start()
     {
@@ -60,6 +63,8 @@ public class Player_01_Controls : MonoBehaviour
 
         if (isCharging)
         {
+            Time.timeScale = slowdownFactor;
+            Time.fixedDeltaTime = Time.timeScale * .02f;
             currentCharge += Charge * Time.deltaTime;
             currentCharge = Mathf.Clamp(currentCharge, Min_Charge_power_P_01, Max_Charge_power_P_01);
 
