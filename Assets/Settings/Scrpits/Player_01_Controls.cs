@@ -39,13 +39,17 @@ public class Player_01_Controls : MonoBehaviour
     public GameObject Player_01;
 
     [Header("Slow")]
-    public float slowdownFactor = 0.05f;
-
+    public float slowFactor = 0.05f;
+    private Rigidbody2D rb;
+    private float originalGravity;
 
     private void Start()
     {
-        originalSoulScale = Soul_Life_p1/Max_SLP1;
+        originalSoulScale = Soul_Life_p1 / Max_SLP1;
         currentSoulScale = originalSoulScale;
+        rb = GetComponent<Rigidbody2D>();
+        originalGravity = rb.gravityScale;
+
     }
     private void Update()
     {
@@ -61,10 +65,11 @@ public class Player_01_Controls : MonoBehaviour
         // Position arrow in front of player
         aimArrow.transform.position = transform.position + (Vector3)(lastAimDirection * arrowDistance);
 
+
         if (isCharging)
         {
-            Time.timeScale = slowdownFactor;
-            Time.fixedDeltaTime = Time.timeScale * .02f;
+            rb.linearVelocity *= slowFactor;
+            rb.gravityScale = originalGravity * slowFactor;
             currentCharge += Charge * Time.deltaTime;
             currentCharge = Mathf.Clamp(currentCharge, Min_Charge_power_P_01, Max_Charge_power_P_01);
 
@@ -74,6 +79,7 @@ public class Player_01_Controls : MonoBehaviour
         }
         else
         {
+            rb.gravityScale = originalGravity;
             P1_firePoint_Arrow.transform.localScale = Vector3.one;
         }
     }
@@ -86,12 +92,11 @@ public class Player_01_Controls : MonoBehaviour
     public void OnAim(InputAction.CallbackContext context)
     {
         aimInput = context.ReadValue<Vector2>();
-
     }
     public void OnTeleport(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-            Teleport();
+        Teleport();
     }
 
     public void OnShoot(InputAction.CallbackContext context)
@@ -108,7 +113,6 @@ public class Player_01_Controls : MonoBehaviour
                 StartCoroutine(Regain());
             }
         }
-
         if (context.canceled && isCharging)
         {
             isCharging = false;
@@ -123,14 +127,18 @@ public class Player_01_Controls : MonoBehaviour
     }
     public void Shoot(float SP)
     {
-        if (bullet_P_01 != null){
+        if (bullet_P_01 != null)
+        {
             return;
         }
-
         bullet_P_01 = Instantiate(Player_01_Soul, P1_firePoint.transform.position, Quaternion.identity);
         Rigidbody2D rb = bullet_P_01.GetComponent<Rigidbody2D>();
+        rb.linearVelocity = lastAimDirection * currentCharge;
         ShootDirection = lastAimDirection;
         rb.linearVelocity = ShootDirection * SP;
+
+        SoulScrpit_01 owner1 = bullet_P_01.AddComponent<SoulScrpit_01>();
+        owner1.player1 = this;
 
         bullet_P_01.transform.localScale = Vector3.one * currentSoulScale;
         currentSoulScale = (Soul_Life_p1 / Max_SLP1);
@@ -144,14 +152,15 @@ public class Player_01_Controls : MonoBehaviour
             Rigidbody2D prb = Player_01.GetComponent<Rigidbody2D>();
             prb.linearVelocity = ShootDirection * currentCharge;
             Destroy(bullet_P_01);
-            bullet_P_01 = null;
+            bullet_P_01   = null;
         }
     }
     public void Orb_Absorb()
     {
         Soul_Life_p1 = Max_SLP1;
-        currentSoulScale = originalSoulScale;
+        currentSoulScale = 1f;
     }
 }
+
 
 

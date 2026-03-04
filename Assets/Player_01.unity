@@ -527,7 +527,7 @@ MonoBehaviour:
     m_ActionName: 'Player_02/Teleport[/SwitchProControllerHID/buttonSouth]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Controller
-  m_DefaultActionMap: Player_02
+  m_DefaultActionMap: cc19b404-7d03-4fcf-8450-2111a0c54ba4
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &425941503
@@ -2339,7 +2339,7 @@ MonoBehaviour:
   arrowDistance: 1
   deadzone: 0.2
   Player_01: {fileID: 1457299722}
-  slowdownFactor: 0.05
+  slowFactor: 0.05
 --- !u!114 &1457299728
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,15 +21,16 @@ public class Light_Orbs : MonoBehaviour
             return;
         }
 
-        Soul_Scrpit owner = collision.GetComponent<Soul_Scrpit>();
-        if (owner != null && owner.player2 != null)
+        Soul_Scrpit owner2 = collision.GetComponent<Soul_Scrpit>();
+        if (owner2 != null && owner2.player2 != null)
         {
-            owner.player2.Orb_Absorb();
+            owner2.player2.Orb_Absorb();
             Destroy(gameObject);
         }
-        else if (owner != null && owner.player1 != null)
+        SoulScrpit_01 owner1 = collision.GetComponent<SoulScrpit_01>();
+        if (owner1 != null && owner1.player1 != null)
         {
-            owner.player1.Orb_Absorb();
+            owner1.player1.Orb_Absorb();
             Destroy(gameObject);
         }
     }

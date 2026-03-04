@@ -64,10 +64,12 @@ public class Player_02_Controls : MonoBehaviour
         // Position arrow in front of player
         aimArrow.transform.position = transform.position + (Vector3)(lastAimDirection * arrowDistance);
 
+
         if (isCharging)
         {
             rb.linearVelocity *= slowFactor;
             rb.gravityScale = originalGravity * slowFactor;
+            currentCharge += Charge * Time.deltaTime; 
             currentCharge = Mathf.Clamp(currentCharge, Min_Charge_power_P_02, Max_Charge_power_P_02);
 
             float chargePercent = currentCharge / Max_Charge_power_P_02;
@@ -130,7 +132,9 @@ public class Player_02_Controls : MonoBehaviour
         }
         bullet_P_02 = Instantiate(Player_02_Soul, P2_firePoint.transform.position, Quaternion.identity);
         Rigidbody2D rb = bullet_P_02.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = lastAimDirection * Shoot_power_P_02;
+        rb.linearVelocity = lastAimDirection * currentCharge;
+        ShootDirection = lastAimDirection;
+        rb.linearVelocity = ShootDirection * SP;
 
         Soul_Scrpit owner = bullet_P_02.AddComponent<Soul_Scrpit>();
         owner.player2 = this;
@@ -145,7 +149,7 @@ public class Player_02_Controls : MonoBehaviour
         {
             transform.position = bullet_P_02.transform.position;
             Rigidbody2D prb = Player_02.GetComponent<Rigidbody2D>();
-            prb.linearVelocity = ShootDirection * Shoot_power_P_02;
+            prb.linearVelocity = ShootDirection * currentCharge;
             Destroy(bullet_P_02);
             bullet_P_02  = null;
         }
