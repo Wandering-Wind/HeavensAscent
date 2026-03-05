@@ -7531,7 +7531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1632018978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7548,7 +7548,7 @@ MonoBehaviour:
   P2_Score: 0
   P1_Text: {fileID: 2084913729}
   P2_Text: {fileID: 1141033902}
-  LightOrb: {fileID: 358023746577222263, guid: ac0be9a9f903f1649b301967a06a56b4, type: 3}
+  LightOrb: {fileID: 4245511873358579384, guid: 94abde440dc61104fad5df03201bc806, type: 3}
   random_Ord_Rangex: 8
   random_Ord_Rangey: 4.5
   Spawn_Time: 3
@@ -7607,7 +7607,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632018977}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
