@@ -1551,7 +1551,12 @@ MonoBehaviour:
   random_Ord_Rangex: 8
   random_Ord_Rangey: 4.5
   Spawn_Time: 3
-  OrbCount: 5
+  Platforms:
+  - {fileID: 1168802483030976462, guid: b5ad30a77d9cae741b9e7c8bd1dfd88f, type: 3}
+  - {fileID: 1168802483030976462, guid: b5ad30a77d9cae741b9e7c8bd1dfd88f, type: 3}
+  - {fileID: 1168802483030976462, guid: b5ad30a77d9cae741b9e7c8bd1dfd88f, type: 3}
+  - {fileID: 1168802483030976462, guid: b5ad30a77d9cae741b9e7c8bd1dfd88f, type: 3}
+  - {fileID: 1168802483030976462, guid: b5ad30a77d9cae741b9e7c8bd1dfd88f, type: 3}
 --- !u!1 &1211420417
 GameObject:
   m_ObjectHideFlags: 0

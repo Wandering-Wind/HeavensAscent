@@ -1,4 +1,6 @@
+using NUnit.Framework;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -16,11 +18,14 @@ public class Heavens_Gate : MonoBehaviour
     public float random_Ord_Rangex;
     public float random_Ord_Rangey;
     public float Spawn_Time;
-    public int OrbCount = 5;
+
+    public List<GameObject> Platforms;
+    
 
     public void Start()
     {
         StartCoroutine(SpawnRoutine());
+        Spawn_Platfroms();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -55,5 +60,16 @@ public class Heavens_Gate : MonoBehaviour
             float random_Orby = Random.Range(-random_Ord_Rangey, random_Ord_Rangey);
             Vector2 OrbSpawnPos = new Vector2(random_Orbx, random_Orby);
             currLightOrb = Instantiate(LightOrb, OrbSpawnPos, Quaternion.identity);
+    }
+    public void Spawn_Platfroms()
+    {
+
+        foreach(GameObject Plat in Platforms)
+        {
+            float Plat_Orbx = Random.Range(-random_Ord_Rangex, random_Ord_Rangex);
+            float Plat_Orby = Random.Range(-random_Ord_Rangey, random_Ord_Rangey);
+            Vector2 PlatSpawnPos = new Vector2(Plat_Orbx, Plat_Orby);
+            Instantiate(Plat, PlatSpawnPos, Quaternion.identity);
+        }
     }
 }
