@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue soul
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: d27b6acee0c92824f9556a8347329eb8, type: 3}
+      propertyPath: m_TagString
+      value: Player_02_Soul
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: d27b6acee0c92824f9556a8347329eb8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.43115
@@ -62,6 +66,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: d27b6acee0c92824f9556a8347329eb8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2083782940488975973}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: d27b6acee0c92824f9556a8347329eb8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7140658673744616301}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: d27b6acee0c92824f9556a8347329eb8, type: 3}
 --- !u!1 &2869479970093729897 stripped
 GameObject:
@@ -131,3 +138,16 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.041666657, y: 0.625}
   m_Radius: 0.375
+--- !u!114 &-7140658673744616301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2869479970093729897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a3997803a46b64bb97bb1d4e4a1bf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Soul_Scrpit
+  player2: {fileID: 0}
