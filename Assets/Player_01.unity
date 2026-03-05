@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 331837248}
   m_Layer: 0
   m_Name: P2
-  m_TagString: Untagged
+  m_TagString: P2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -428,13 +428,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player_02_Controls
   Player_02_Soul: {fileID: 5367916734456019069, guid: 31b5e6c5aa759694d8e54b2c59c647e7, type: 3}
   P2_firePoint: {fileID: 699345897}
+  P1_firePoint_Arrow: {fileID: 1232965659}
   Shoot_power_P_02: 10
+  Min_Charge_power_P_02: 5
+  Max_Charge_power_P_02: 20
+  Charge: 10
   Soul_Life_p2: 5
   Max_SLP2: 5
   aimArrow: {fileID: 1232965659}
   arrowDistance: 1
   deadzone: 0.2
   Player_02: {fileID: 331837243}
+  slowFactor: 0.9
 --- !u!114 &331837249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1704,7 +1709,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 2091707863852291069, guid: 7c254ce966f50d148b3e038a2a09fa15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2156,7 +2161,7 @@ GameObject:
   - component: {fileID: 1457299727}
   m_Layer: 0
   m_Name: P1
-  m_TagString: Untagged
+  m_TagString: P1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2334,6 +2339,7 @@ MonoBehaviour:
   arrowDistance: 1
   deadzone: 0.2
   Player_01: {fileID: 1457299722}
+  slowFactor: 0.9
 --- !u!114 &1457299728
 MonoBehaviour:
   m_ObjectHideFlags: 0
