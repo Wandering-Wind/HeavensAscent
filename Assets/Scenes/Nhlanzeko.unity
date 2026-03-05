@@ -1476,7 +1476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110e135f2ddf4b041ae255804942d88c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_01_Controls
-  Player_01_Soul: {fileID: 3208230078731410397, guid: 472bb677a62d43043a4b5ed9bebd86b0, type: 3}
+  Player_01_Soul: {fileID: 5032350863269024265, guid: a61448e5ab99f084bb70af2758ee7ab6, type: 3}
   P1_firePoint: {fileID: 399457247}
   P1_firePoint_Arrow: {fileID: 1619271125}
   Shoot_power_P_01: 10
@@ -1489,6 +1489,7 @@ MonoBehaviour:
   arrowDistance: 1
   deadzone: 0.2
   Player_01: {fileID: 906423705}
+  slowFactor: 0.05
 --- !u!114 &906423707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7303,7 +7304,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 2091707863852291069, guid: 7c254ce966f50d148b3e038a2a09fa15, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7690,7 +7691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: de33ace27d6ab8b42b9d98b5fb5373ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.41
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: de33ace27d6ab8b42b9d98b5fb5373ca, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8002,15 +8003,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92472f960df2a8346ba0b29dda615734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_02_Controls
-  Player_02_Soul: {fileID: 3208230078731410397, guid: 472bb677a62d43043a4b5ed9bebd86b0, type: 3}
+  Player_02_Soul: {fileID: 2869479970093729897, guid: 7e5de2854ccafa84aa8e2d8230259085, type: 3}
   P2_firePoint: {fileID: 29660336}
+  P1_firePoint_Arrow: {fileID: 1577796504}
   Shoot_power_P_02: 10
+  Min_Charge_power_P_02: 5
+  Max_Charge_power_P_02: 20
+  Charge: 10
   Soul_Life_p2: 5
   Max_SLP2: 5
   aimArrow: {fileID: 1577796504}
   arrowDistance: 1
   deadzone: 0.2
   Player_02: {fileID: 1767807943}
+  slowFactor: 0.4
 --- !u!114 &1767807945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8739,7 +8745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1097694950996709307, guid: 3cd787f5d8afb6040954825fffdbbf4a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2172259962883355973, guid: 3cd787f5d8afb6040954825fffdbbf4a, type: 3}
       propertyPath: m_Enabled
@@ -8804,7 +8810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3208230078731410397, guid: 472bb677a62d43043a4b5ed9bebd86b0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8994485045841785575, guid: 472bb677a62d43043a4b5ed9bebd86b0, type: 3}
       propertyPath: m_LocalPosition.x
