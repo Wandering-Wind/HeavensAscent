@@ -13,6 +13,9 @@ public class Heavens_Gate : MonoBehaviour
     public GameObject P1_Start_Pos;
     public GameObject P2_Start_Pos;
 
+    private bool P1_scoring = false;
+    private bool P2_scoring = false;
+
     public float P1_Score;
     public float P2_Score;
 
@@ -41,12 +44,14 @@ public class Heavens_Gate : MonoBehaviour
             P1_Score += 1;
             P1_Text.text = P1_Score.ToString();
             Destroy(collision.gameObject);
+            P1_scoring = true;
         }
         if (collision.CompareTag("Player_02_Soul"))
         {
             P2_Score += 1;
             P2_Text.text = P1_Score.ToString();
             Destroy(collision.gameObject);
+            P2_scoring = true;
         }
         ScoreReset();
     }
@@ -83,8 +88,16 @@ public class Heavens_Gate : MonoBehaviour
     }
     public void ScoreReset()
     {
-        P1.transform.position = P1_Start_Pos.transform.position;
-        P2.transform.position = P2_Start_Pos.transform.position;
+        if (P1_scoring)
+        {
+            P1.transform.position = P1_Start_Pos.transform.position;
+            P1_scoring = false;
+        }
+        else if (P2_scoring)
+        {
+            P2.transform.position = P2_Start_Pos.transform.position;
+            P2_scoring = false;
+        }
         Time.timeScale = 0;
         StartCoroutine(StartAgian(3));
     }
