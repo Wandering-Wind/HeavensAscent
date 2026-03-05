@@ -1543,6 +1543,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af905381d40b9442a88a7578bc064fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Heavens_Gate
+  P1: {fileID: 1457299722}
+  P2: {fileID: 331837243}
+  P1_Start_Pos: {fileID: 1536749242}
+  P2_Start_Pos: {fileID: 1199745268}
   P1_Score: 0
   P2_Score: 0
   P1_Text: {fileID: 1295845775}
@@ -1557,6 +1561,37 @@ MonoBehaviour:
   - {fileID: 1168802483030976462, guid: b5ad30a77d9cae741b9e7c8bd1dfd88f, type: 3}
   - {fileID: 1168802483030976462, guid: b5ad30a77d9cae741b9e7c8bd1dfd88f, type: 3}
   - {fileID: 1168802483030976462, guid: b5ad30a77d9cae741b9e7c8bd1dfd88f, type: 3}
+--- !u!1 &1199745268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1199745269}
+  m_Layer: 0
+  m_Name: P2_Start
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1199745269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199745268}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1211420417
 GameObject:
   m_ObjectHideFlags: 0
@@ -2526,6 +2561,37 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1536749242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1536749243}
+  m_Layer: 0
+  m_Name: P1_Start
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1536749243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536749242}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1607488453
 GameObject:
   m_ObjectHideFlags: 0
@@ -3203,3 +3269,5 @@ SceneRoots:
   - {fileID: 1405729286}
   - {fileID: 1251608116}
   - {fileID: 1969812299}
+  - {fileID: 1536749243}
+  - {fileID: 1199745269}

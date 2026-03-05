@@ -7,6 +7,12 @@ using UnityEngine;
 
 public class Heavens_Gate : MonoBehaviour
 {
+    public GameObject P1;
+    public GameObject P2;
+
+    public GameObject P1_Start_Pos;
+    public GameObject P2_Start_Pos;
+
     public float P1_Score;
     public float P2_Score;
 
@@ -34,12 +40,15 @@ public class Heavens_Gate : MonoBehaviour
         {
             P1_Score += 1;
             P1_Text.text = P1_Score.ToString();
+            Destroy(collision.gameObject);
         }
         if (collision.CompareTag("Player_02_Soul"))
         {
             P2_Score += 1;
             P2_Text.text = P1_Score.ToString();
-        }     
+            Destroy(collision.gameObject);
+        }
+        ScoreReset();
     }
     IEnumerator SpawnRoutine()
     {
@@ -71,5 +80,17 @@ public class Heavens_Gate : MonoBehaviour
             Vector2 PlatSpawnPos = new Vector2(Plat_Orbx, Plat_Orby);
             Instantiate(Plat, PlatSpawnPos, Quaternion.identity);
         }
+    }
+    public void ScoreReset()
+    {
+        P1.transform.position = P1_Start_Pos.transform.position;
+        P2.transform.position = P2_Start_Pos.transform.position;
+        Time.timeScale = 0;
+        StartCoroutine(StartAgian(3));
+    }
+    IEnumerator StartAgian(float delay)
+    {
+        yield return new WaitForSecondsRealtime(delay);
+        Time.timeScale = 1;
     }
 }
