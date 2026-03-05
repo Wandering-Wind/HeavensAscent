@@ -28,13 +28,18 @@ public class Heavens_Gate : MonoBehaviour
     public float random_Ord_Rangey;
     public float Spawn_Time;
 
-    public List<GameObject> Platforms;
-    
+    public GameObject Platform1;
+    public GameObject Platform1Temp;
+    public GameObject Platform2;
+    public GameObject Platform2Temp;
+    public GameObject Platform3;
+    public GameObject Platform3Temp;
+
+
 
     public void Start()
     {
         StartCoroutine(SpawnRoutine());
-        Spawn_Platfroms();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -77,14 +82,32 @@ public class Heavens_Gate : MonoBehaviour
     }
     public void Spawn_Platfroms()
     {
-
-        foreach(GameObject Plat in Platforms)
+        if(Platform1Temp != null)
         {
-            float Plat_Orbx = Random.Range(-random_Ord_Rangex, random_Ord_Rangex);
-            float Plat_Orby = Random.Range(-random_Ord_Rangey, random_Ord_Rangey);
-            Vector2 PlatSpawnPos = new Vector2(Plat_Orbx, Plat_Orby);
-            Instantiate(Plat, PlatSpawnPos, Quaternion.identity);
+            Destroy(Platform1Temp);
         }
+            float Plat_01_Orbx = Random.Range(-random_Ord_Rangex, random_Ord_Rangex);
+            float Plat_01_Orby = Random.Range(-random_Ord_Rangey, random_Ord_Rangey);
+            Vector2 PlatSpawnPos01 = new Vector2(Plat_01_Orbx, Plat_01_Orby);
+            Platform1Temp = Instantiate(Platform1, PlatSpawnPos01, Quaternion.identity);
+
+        if (Platform2Temp != null)
+        {
+            Destroy(Platform2Temp);
+        }
+        float Plat_02_Orbx = Random.Range(-random_Ord_Rangex, random_Ord_Rangex);
+        float Plat_02_Orby = Random.Range(-random_Ord_Rangey, random_Ord_Rangey);
+        Vector2 PlatSpawnPos02 = new Vector2(Plat_02_Orbx, Plat_02_Orby);
+        Platform1Temp = Instantiate(Platform2, PlatSpawnPos02, Quaternion.identity);
+
+        if (Platform3Temp != null)
+        {
+            Destroy(Platform3Temp);
+        }
+        float Plat_Orbx = Random.Range(-random_Ord_Rangex, random_Ord_Rangex);
+        float Plat_Orby = Random.Range(-random_Ord_Rangey, random_Ord_Rangey);
+        Vector2 PlatSpawnPos = new Vector2(Plat_Orbx, Plat_Orby);
+        Platform1Temp = Instantiate(Platform3, PlatSpawnPos, Quaternion.identity);
     }
     public void ScoreReset()
     {
@@ -105,5 +128,6 @@ public class Heavens_Gate : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(delay);
         Time.timeScale = 1;
+        Spawn_Platfroms();
     }
 }
