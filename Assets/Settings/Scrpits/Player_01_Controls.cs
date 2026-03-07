@@ -43,13 +43,16 @@ public class Player_01_Controls : MonoBehaviour
     private Rigidbody2D rb;
     private float originalGravity;
 
+    [Header("Animatiom")]
+    public Animator animator;
+
+
     private void Start()
     {
         originalSoulScale = Soul_Life_p1 / Max_SLP1;
         currentSoulScale = originalSoulScale;
         rb = GetComponent<Rigidbody2D>();
         originalGravity = rb.gravityScale;
-
     }
     private void Update()
     {
@@ -68,6 +71,7 @@ public class Player_01_Controls : MonoBehaviour
 
         if (isCharging)
         {
+
             rb.linearVelocity *= slowFactor;
             rb.gravityScale = originalGravity * slowFactor;
             currentCharge += Charge * Time.deltaTime;
@@ -79,6 +83,7 @@ public class Player_01_Controls : MonoBehaviour
         }
         else
         {
+            //animator.SetInteger("Shoot", 0);
             rb.gravityScale = originalGravity;
             P1_firePoint_Arrow.transform.localScale = Vector3.one;
         }
@@ -107,6 +112,7 @@ public class Player_01_Controls : MonoBehaviour
             {
                 isCharging = true;
                 currentCharge = Min_Charge_power_P_01;
+                animator.SetInteger("Shoot", 1);
             }
             else if (Soul_Life_p1 <= 0)
             {
@@ -116,13 +122,9 @@ public class Player_01_Controls : MonoBehaviour
         if (context.canceled && isCharging)
         {
             isCharging = false;
+            animator.SetInteger("Shoot", 2);
             Shoot(currentCharge);
             Soul_Life_p1 -= 1;
-
-            if (Soul_Life_p1 <= 0)
-            {
-                StartCoroutine(Regain());
-            }
         }
     }
     public void Shoot(float SP)
