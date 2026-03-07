@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 
@@ -26,8 +27,8 @@ public class Heavens_Gate : MonoBehaviour
     private GameObject currLightOrb;
     public float random_Ord_Rangex;
     public float random_Ord_Rangey;
-    public float random_Plat_Rangex;
-    public float random_Plat_Rangey;
+   /* public float random_Plat_Rangex;
+    public float random_Plat_Rangey;*/
     public float Spawn_Time;
 
     public GameObject Platform1;
@@ -36,8 +37,12 @@ public class Heavens_Gate : MonoBehaviour
     private GameObject Platform2Temp;
     public GameObject Platform3;
     private GameObject Platform3Temp;
+    public GameObject Platform4;
+    private GameObject Platform4Temp;
 
 
+    public List<Transform> platformSpawnPoints;
+    public List<Transform> portalMovePoints;
 
 
     public void Start()
@@ -47,20 +52,22 @@ public class Heavens_Gate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player_01_Soul") )
+        if (collision.CompareTag("Player_01_Soul"))
         {
             P1_Score += 1;
             P1_Text.text = P1_Score.ToString();
             Destroy(collision.gameObject);
             P1_scoring = true;
         }
+
         if (collision.CompareTag("Player_02_Soul"))
         {
             P2_Score += 1;
-            P2_Text.text = P1_Score.ToString();
+            P2_Text.text = P2_Score.ToString();
             Destroy(collision.gameObject);
             P2_scoring = true;
         }
+
         ScoreReset();
     }
     IEnumerator SpawnRoutine()
@@ -80,37 +87,34 @@ public class Heavens_Gate : MonoBehaviour
             }
             float random_Orbx = Random.Range(-random_Ord_Rangex, random_Ord_Rangex);
             float random_Orby = Random.Range(-random_Ord_Rangey, random_Ord_Rangey);
-            Vector2 OrbSpawnPos = new Vector2(random_Orbx, random_Orby);
-            currLightOrb = Instantiate(LightOrb, OrbSpawnPos, Quaternion.identity);
+        Vector2 OrbSpawnPos = new Vector2(transform.position.x + random_Orbx, transform.position.y + random_Orby);
+        currLightOrb = Instantiate(LightOrb, OrbSpawnPos, Quaternion.identity);
     }
     public void Spawn_Platfroms()
     {
-        if(Platform1Temp != null)
-        {
-            Destroy(Platform1Temp);
-        }
-            float Plat_01_Orbx = Random.Range(-random_Plat_Rangex, random_Plat_Rangex);
-            float Plat_01_Orby = Random.Range(-random_Plat_Rangey, random_Plat_Rangey);
-            Vector2 PlatSpawnPos01 = new Vector2(Plat_01_Orbx, Plat_01_Orby);
-            Platform1Temp = Instantiate(Platform1, PlatSpawnPos01, Quaternion.identity);
+        if (Platform1Temp != null) Destroy(Platform1Temp);
+        if (Platform2Temp != null) Destroy(Platform2Temp);
+        if (Platform3Temp != null) Destroy(Platform3Temp);
+        if (Platform4Temp != null) Destroy(Platform4Temp);
 
-        if (Platform2Temp != null)
-        {
-            Destroy(Platform2Temp);
-        }
-        float Plat_02_Orbx = Random.Range(-random_Plat_Rangex, random_Plat_Rangex);
-        float Plat_02_Orby = Random.Range(-random_Plat_Rangey, random_Plat_Rangey);
-        Vector2 PlatSpawnPos02 = new Vector2(Plat_02_Orbx, Plat_02_Orby);
-        Platform2Temp = Instantiate(Platform2, PlatSpawnPos02, Quaternion.identity);
+        List<Transform> tempSpawnPoints = new List<Transform>(platformSpawnPoints);
 
-        if (Platform3Temp != null)
-        {
-            Destroy(Platform3Temp);
-        }
-        float Plat_Orbx = Random.Range(-random_Plat_Rangex, random_Plat_Rangex);
-        float Plat_Orby = Random.Range(-random_Plat_Rangey, random_Plat_Rangey);
-        Vector2 PlatSpawnPos = new Vector2(Plat_Orbx, Plat_Orby);
-        Platform3Temp = Instantiate(Platform3, PlatSpawnPos, Quaternion.identity);
+        Transform spawn1 = tempSpawnPoints[Random.Range(0, tempSpawnPoints.Count)];
+        tempSpawnPoints.Remove(spawn1);
+
+        Transform spawn2 = tempSpawnPoints[Random.Range(0, tempSpawnPoints.Count)];
+        tempSpawnPoints.Remove(spawn2);
+
+        Transform spawn3 = tempSpawnPoints[Random.Range(0, tempSpawnPoints.Count)];
+        tempSpawnPoints.Remove(spawn3);
+
+        Transform spawn4 = tempSpawnPoints[Random.Range(0, tempSpawnPoints.Count)];
+
+        Platform1Temp = Instantiate(Platform1, spawn1.position, Quaternion.identity);
+        Platform2Temp = Instantiate(Platform2, spawn2.position, Quaternion.identity);
+        Platform3Temp = Instantiate(Platform3, spawn3.position, Quaternion.identity);
+        Platform4Temp = Instantiate(Platform4, spawn4.position, Quaternion.identity);
+
     }
     public void ScoreReset()
     {
@@ -119,15 +123,17 @@ public class Heavens_Gate : MonoBehaviour
             P1.transform.position = P1_Start_Pos.transform.position;
             P1_scoring = false;
         }
-        else if (P2_scoring)
+
+        if (P2_scoring)
         {
             P2.transform.position = P2_Start_Pos.transform.position;
             P2_scoring = false;
         }
         Spawn_Platfroms();
-        // Time.timeScale = 0;
-        // StartCoroutine(StartAgian(3));
+        StartCoroutine(MovePortal());
     }
+    // Time.timeScale = 0;
+    // StartCoroutine(StartAgian(3));
     /*IEnumerator StartAgian(float delay)
     {
         yield return new WaitForSecondsRealtime(delay);
@@ -135,8 +141,17 @@ public class Heavens_Gate : MonoBehaviour
         Spawn_Platfroms();
     }*/
 
-    public void MovePortal()
+    IEnumerator MovePortal()
     {
+        while (true)
+        {
+            if (portalMovePoints.Count > 0 && gameObject != null)
+            {
+                Transform target = portalMovePoints[Random.Range(0, portalMovePoints.Count)];
+                gameObject.transform.position = target.position;
+            }
 
+            yield return new WaitForSeconds(10f); 
+        }
     }
 }
