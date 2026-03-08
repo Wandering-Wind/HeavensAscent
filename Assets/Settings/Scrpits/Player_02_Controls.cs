@@ -41,6 +41,13 @@ public class Player_02_Controls : MonoBehaviour
     public float slowFactor = 0.4f;
     private Rigidbody2D rb;
     private float originalGravity;
+    [Header("Animatiom")]
+    public Animator animator;
+
+    [Header("Flip")]
+    private bool facingRight;
+    public GameObject flipTarget;
+
 
     private void Start()
     {
@@ -48,7 +55,7 @@ public class Player_02_Controls : MonoBehaviour
         currentSoulScale = originalSoulScale;
         rb = GetComponent<Rigidbody2D>();
         originalGravity = rb.gravityScale;
-
+        facingRight = true;
     }
     private void Update()
     {
@@ -65,11 +72,13 @@ public class Player_02_Controls : MonoBehaviour
         aimArrow.transform.position = transform.position + (Vector3)(lastAimDirection * arrowDistance);
 
 
+
         if (isCharging)
         {
+
             rb.linearVelocity *= slowFactor;
             rb.gravityScale = originalGravity * slowFactor;
-            currentCharge += Charge * Time.deltaTime; 
+            currentCharge += Charge * Time.deltaTime;
             currentCharge = Mathf.Clamp(currentCharge, Min_Charge_power_P_02, Max_Charge_power_P_02);
 
             float chargePercent = currentCharge / Max_Charge_power_P_02;
@@ -78,9 +87,15 @@ public class Player_02_Controls : MonoBehaviour
         }
         else
         {
+            //animator.SetInteger("Shoot", 0);
             rb.gravityScale = originalGravity;
             P1_firePoint_Arrow.transform.localScale = Vector3.one;
         }
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (gameObject.CompareTag("Player_02_Soul") || gameObject.CompareTag("P2"))
+            animator.SetBool("GetHit", true);
     }
     IEnumerator Regain()
     {
@@ -91,6 +106,15 @@ public class Player_02_Controls : MonoBehaviour
     public void OnAim(InputAction.CallbackContext context)
     {
         aimInput = context.ReadValue<Vector2>();
+
+        if (aimInput.x > deadzone && !facingRight)
+        {
+            Flip();
+        }
+        else if (aimInput.x < -deadzone && facingRight)
+        {
+            Flip();
+        }
     }
     public void OnTeleport(InputAction.CallbackContext context)
     {
@@ -106,6 +130,7 @@ public class Player_02_Controls : MonoBehaviour
             {
                 isCharging = true;
                 currentCharge = Min_Charge_power_P_02;
+                animator.SetInteger("Shoot", 1);
             }
             else if (Soul_Life_p2 <= 0)
             {
@@ -115,16 +140,12 @@ public class Player_02_Controls : MonoBehaviour
         if (context.canceled && isCharging)
         {
             isCharging = false;
+            animator.SetInteger("Shoot", 2);
             Shoot(currentCharge);
             Soul_Life_p2 -= 1;
-
-            if (Soul_Life_p2 <= 0)
-            {
-                StartCoroutine(Regain());
-            }
         }
     }
-        public void Shoot(float SP)
+    public void Shoot(float SP)
     {
         if (bullet_P_02 != null)
         {
@@ -151,7 +172,7 @@ public class Player_02_Controls : MonoBehaviour
             Rigidbody2D prb = Player_02.GetComponent<Rigidbody2D>();
             prb.linearVelocity = ShootDirection * currentCharge;
             Destroy(bullet_P_02);
-            bullet_P_02  = null;
+            bullet_P_02 = null;
         }
     }
     public void Orb_Absorb()
@@ -159,6 +180,13 @@ public class Player_02_Controls : MonoBehaviour
         Soul_Life_p2 = Max_SLP2;
         currentSoulScale = 1f;
     }
+
+    public void Flip() //Youtu.be. (2026). Available at: https://youtu.be/Cr-j7EoM8bg?si=IjMERP-pLs5SwuNJ [Accessed 8 Mar. 2026].
+    {
+        Vector3 currentScale = flipTarget.transform.localScale;
+        currentScale.x *= -1;
+        flipTarget.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
+    }
 }
-
-

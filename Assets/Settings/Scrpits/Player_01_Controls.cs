@@ -43,13 +43,21 @@ public class Player_01_Controls : MonoBehaviour
     private Rigidbody2D rb;
     private float originalGravity;
 
+    [Header("Animatiom")]
+    public Animator animator;
+
+    [Header("Flip")]
+    private bool facingRight;
+    public GameObject flipTarget;
+
+
     private void Start()
     {
         originalSoulScale = Soul_Life_p1 / Max_SLP1;
         currentSoulScale = originalSoulScale;
         rb = GetComponent<Rigidbody2D>();
         originalGravity = rb.gravityScale;
-
+        facingRight = true;
     }
     private void Update()
     {
@@ -65,9 +73,11 @@ public class Player_01_Controls : MonoBehaviour
         // Position arrow in front of player
         aimArrow.transform.position = transform.position + (Vector3)(lastAimDirection * arrowDistance);
 
+        
 
         if (isCharging)
         {
+
             rb.linearVelocity *= slowFactor;
             rb.gravityScale = originalGravity * slowFactor;
             currentCharge += Charge * Time.deltaTime;
@@ -79,11 +89,17 @@ public class Player_01_Controls : MonoBehaviour
         }
         else
         {
+            //animator.SetInteger("Shoot", 0);
             rb.gravityScale = originalGravity;
             P1_firePoint_Arrow.transform.localScale = Vector3.one;
         }
     }
-    IEnumerator Regain()
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(gameObject.CompareTag("Player_02_Soul") || gameObject.CompareTag("P2"))
+            animator.SetBool("GetHit", true);
+    }
+IEnumerator Regain()
     {
         yield return new WaitForSeconds(5);
         Soul_Life_p1 = Max_SLP1;
@@ -92,6 +108,15 @@ public class Player_01_Controls : MonoBehaviour
     public void OnAim(InputAction.CallbackContext context)
     {
         aimInput = context.ReadValue<Vector2>();
+
+        if (aimInput.x > deadzone && !facingRight)
+        {
+            Flip();
+        }
+        else if (aimInput.x < -deadzone && facingRight)
+        {
+            Flip();
+        }
     }
     public void OnTeleport(InputAction.CallbackContext context)
     {
@@ -107,6 +132,7 @@ public class Player_01_Controls : MonoBehaviour
             {
                 isCharging = true;
                 currentCharge = Min_Charge_power_P_01;
+                animator.SetInteger("Shoot", 1);
             }
             else if (Soul_Life_p1 <= 0)
             {
@@ -116,13 +142,9 @@ public class Player_01_Controls : MonoBehaviour
         if (context.canceled && isCharging)
         {
             isCharging = false;
+            animator.SetInteger("Shoot", 2);
             Shoot(currentCharge);
             Soul_Life_p1 -= 1;
-
-            if (Soul_Life_p1 <= 0)
-            {
-                StartCoroutine(Regain());
-            }
         }
     }
     public void Shoot(float SP)
@@ -159,6 +181,15 @@ public class Player_01_Controls : MonoBehaviour
     {
         Soul_Life_p1 = Max_SLP1;
         currentSoulScale = 1f;
+    }
+
+    public void Flip() //Youtu.be. (2026). Available at: https://youtu.be/Cr-j7EoM8bg?si=IjMERP-pLs5SwuNJ [Accessed 8 Mar. 2026].
+    {
+        Vector3 currentScale = flipTarget.transform.localScale;
+        currentScale.x *= -1;
+        flipTarget.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 }
 
