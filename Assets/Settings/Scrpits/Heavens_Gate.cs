@@ -25,6 +25,8 @@ public class Heavens_Gate : MonoBehaviour
 
     public GameObject LightOrb;
     private GameObject currLightOrb;
+    private GameObject currLightOrb2;
+    private GameObject currLightOrb3;
     public float random_Ord_Rangex;
     public float random_Ord_Rangey;
    /* public float random_Plat_Rangex;
@@ -58,6 +60,7 @@ public class Heavens_Gate : MonoBehaviour
             P1_Text.text = P1_Score.ToString();
             Destroy(collision.gameObject);
             P1_scoring = true;
+            ScoreReset();
         }
 
         if (collision.CompareTag("Player_02_Soul"))
@@ -66,19 +69,22 @@ public class Heavens_Gate : MonoBehaviour
             P2_Text.text = P2_Score.ToString();
             Destroy(collision.gameObject);
             P2_scoring = true;
+            ScoreReset();
         }
-         ScoreReset();
+
     }
     IEnumerator SpawnRoutine()
     {
         while (true)
         {
-            Spawn_Light_orbs();
+            Spawn_Light_orbs1();
+            Spawn_Light_orbs2();
+            Spawn_Light_orbs3();
             yield return new WaitForSeconds(Spawn_Time);
         }
     }
 
-    public void Spawn_Light_orbs()
+    public void Spawn_Light_orbs1()
     {
             if (currLightOrb != null)
             {
@@ -86,8 +92,30 @@ public class Heavens_Gate : MonoBehaviour
             }
             float random_Orbx = Random.Range(-random_Ord_Rangex, random_Ord_Rangex);
             float random_Orby = Random.Range(-random_Ord_Rangey, random_Ord_Rangey);
+            Vector2 OrbSpawnPos = new Vector2(transform.position.x + random_Orbx, transform.position.y + random_Orby);
+            currLightOrb = Instantiate(LightOrb, OrbSpawnPos, Quaternion.identity);
+    }
+    public void Spawn_Light_orbs2()
+    {
+        if (currLightOrb2 != null)
+        {
+            Destroy(currLightOrb2);
+        }
+        float random_Orbx = Random.Range(-random_Ord_Rangex, random_Ord_Rangex);
+        float random_Orby = Random.Range(-random_Ord_Rangey, random_Ord_Rangey);
         Vector2 OrbSpawnPos = new Vector2(transform.position.x + random_Orbx, transform.position.y + random_Orby);
-        currLightOrb = Instantiate(LightOrb, OrbSpawnPos, Quaternion.identity);
+        currLightOrb2 = Instantiate(LightOrb, OrbSpawnPos, Quaternion.identity);
+    }
+    public void Spawn_Light_orbs3()
+    {
+        if (currLightOrb3 != null)
+        {
+            Destroy(currLightOrb3);
+        }
+        float random_Orbx = Random.Range(-random_Ord_Rangex, random_Ord_Rangex);
+        float random_Orby = Random.Range(-random_Ord_Rangey, random_Ord_Rangey);
+        Vector2 OrbSpawnPos = new Vector2(transform.position.x + random_Orbx, transform.position.y + random_Orby);
+        currLightOrb3 = Instantiate(LightOrb, OrbSpawnPos, Quaternion.identity);
     }
     public void Spawn_Platfroms()
     {

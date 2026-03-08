@@ -2442,7 +2442,7 @@ Transform:
   m_GameObject: {fileID: 906423705}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.98, y: -1.16, z: 0}
+  m_LocalPosition: {x: 0.19, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2938,7 +2938,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8545,9 +8545,9 @@ MonoBehaviour:
   P1_Text: {fileID: 2084913729}
   P2_Text: {fileID: 1141033902}
   LightOrb: {fileID: 4245511873358579384, guid: 94abde440dc61104fad5df03201bc806, type: 3}
-  random_Ord_Rangex: 8
-  random_Ord_Rangey: 4.5
-  Spawn_Time: 3
+  random_Ord_Rangex: 12
+  random_Ord_Rangey: 5.7
+  Spawn_Time: 5
   Platform1: {fileID: 9085756307087719219, guid: b5ad30a77d9cae741b9e7c8bd1dfd88f, type: 3}
   Platform2: {fileID: 1769472006298474172, guid: 4853594eab1a39a4d9b5362c6a478a9b, type: 3}
   Platform3: {fileID: 4566458927162604673, guid: 0e32ddd3beff88541b8a0832e0c70bf5, type: 3}
@@ -9644,7 +9644,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
