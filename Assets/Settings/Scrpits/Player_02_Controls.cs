@@ -92,11 +92,6 @@ public class Player_02_Controls : MonoBehaviour
             P1_firePoint_Arrow.transform.localScale = Vector3.one;
         }
     }
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (gameObject.CompareTag("Player_02_Soul") || gameObject.CompareTag("P2"))
-            animator.SetBool("GetHit", true);
-    }
     IEnumerator Regain()
     {
         yield return new WaitForSeconds(5);
