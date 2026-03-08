@@ -7,6 +7,8 @@ TagManager:
   - End_Point
   - Player_01_Soul
   - Player_02_Soul
+  - P1
+  - P2
   layers:
   - Default
   - TransparentFX
