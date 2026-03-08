@@ -294,6 +294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lightrays_1920x1080
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 67f5042812b400848a940122c95321a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 67f5042812b400848a940122c95321a7, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.248
