@@ -65,7 +65,7 @@ PrefabInstance:
       addedObject: {fileID: 6529606259330257436}
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 9ab07eacd5ab2ea4596cf910a8313543, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4931328325392351462}
+      addedObject: {fileID: 2324272916722096796}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 9ab07eacd5ab2ea4596cf910a8313543, type: 3}
 --- !u!1 &5032350863269024265 stripped
 GameObject:
@@ -99,7 +99,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &4931328325392351462
+--- !u!58 &2324272916722096796
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,5 +133,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.004999999, y: 0.075}
-  m_Radius: 0.045
+  m_Offset: {x: 0.041666657, y: 0.625}
+  m_Radius: 0.375

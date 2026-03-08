@@ -8547,7 +8547,7 @@ MonoBehaviour:
   LightOrb: {fileID: 4245511873358579384, guid: 94abde440dc61104fad5df03201bc806, type: 3}
   random_Ord_Rangex: 12
   random_Ord_Rangey: 5.7
-  Spawn_Time: 5
+  Spawn_Time: 6
   Platform1: {fileID: 9085756307087719219, guid: b5ad30a77d9cae741b9e7c8bd1dfd88f, type: 3}
   Platform2: {fileID: 1769472006298474172, guid: 4853594eab1a39a4d9b5362c6a478a9b, type: 3}
   Platform3: {fileID: 4566458927162604673, guid: 0e32ddd3beff88541b8a0832e0c70bf5, type: 3}
