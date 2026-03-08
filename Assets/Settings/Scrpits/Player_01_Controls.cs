@@ -46,6 +46,10 @@ public class Player_01_Controls : MonoBehaviour
     [Header("Animatiom")]
     public Animator animator;
 
+    [Header("Flip")]
+    private bool facingRight;
+    public GameObject flipTarget;
+
 
     private void Start()
     {
@@ -53,6 +57,7 @@ public class Player_01_Controls : MonoBehaviour
         currentSoulScale = originalSoulScale;
         rb = GetComponent<Rigidbody2D>();
         originalGravity = rb.gravityScale;
+        facingRight = true;
     }
     private void Update()
     {
@@ -68,6 +73,7 @@ public class Player_01_Controls : MonoBehaviour
         // Position arrow in front of player
         aimArrow.transform.position = transform.position + (Vector3)(lastAimDirection * arrowDistance);
 
+        
 
         if (isCharging)
         {
@@ -102,6 +108,15 @@ IEnumerator Regain()
     public void OnAim(InputAction.CallbackContext context)
     {
         aimInput = context.ReadValue<Vector2>();
+
+        if (aimInput.x > deadzone && !facingRight)
+        {
+            Flip();
+        }
+        else if (aimInput.x < -deadzone && facingRight)
+        {
+            Flip();
+        }
     }
     public void OnTeleport(InputAction.CallbackContext context)
     {
@@ -166,6 +181,15 @@ IEnumerator Regain()
     {
         Soul_Life_p1 = Max_SLP1;
         currentSoulScale = 1f;
+    }
+
+    public void Flip() //Youtu.be. (2026). Available at: https://youtu.be/Cr-j7EoM8bg?si=IjMERP-pLs5SwuNJ [Accessed 8 Mar. 2026].
+    {
+        Vector3 currentScale = flipTarget.transform.localScale;
+        currentScale.x *= -1;
+        flipTarget.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
 }
 
