@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 
 public class Heavens_Gate : MonoBehaviour
@@ -46,6 +48,14 @@ public class Heavens_Gate : MonoBehaviour
     public List<Transform> platformSpawnPoints;
     public List<Transform> portalMovePoints;
 
+    public int scoreToWin = 5;
+    public GameObject winPanel_P1;
+    public GameObject winPanel_P2;
+
+    public Animator Anim_P1;
+    public Animator Anim_P2;
+
+    public bool gameEnded;
 
     public void Start()
     {
@@ -54,24 +64,45 @@ public class Heavens_Gate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (gameEnded) return;
+
         if (collision.CompareTag("Player_01_Soul"))
         {
-            P1_Score += 1;
+            P1_Score++;
             P1_Text.text = P1_Score.ToString();
             Destroy(collision.gameObject);
+
+            if (P1_Score >= scoreToWin)
+            {
+                gameEnded = true;
+                winPanel_P1.SetActive(true);
+                Anim_P1.SetTrigger("Win");
+                Anim_P2.SetTrigger("Lose");
+                DisablePlayers();
+
+            }
+
             P1_scoring = true;
             ScoreReset();
         }
-
-        if (collision.CompareTag("Player_02_Soul"))
+        else if (collision.CompareTag("Player_02_Soul"))
         {
-            P2_Score += 1;
+            P2_Score++;
             P2_Text.text = P2_Score.ToString();
             Destroy(collision.gameObject);
+
+            if (P2_Score >= scoreToWin)
+            {
+                gameEnded = true;
+                winPanel_P2.SetActive(true);
+                Anim_P2.SetTrigger("Win");
+                Anim_P1.SetTrigger("Lose");
+                DisablePlayers();
+            }
+
             P2_scoring = true;
             ScoreReset();
         }
-
     }
     IEnumerator SpawnRoutine()
     {
@@ -175,5 +206,13 @@ public class Heavens_Gate : MonoBehaviour
                 Transform target = portalMovePoints[Random.Range(0, portalMovePoints.Count)];
                 gameObject.transform.position = target.position;
             }
+    }
+    void DisablePlayers()
+    {
+        P1.GetComponent<Player_01_Controls>().enabled = false;
+        P2.GetComponent<Player_02_Controls>().enabled = false;
+
+        P1.GetComponent<PlayerInput>().actions.Disable();
+        P2.GetComponent<PlayerInput>().actions.Disable();
     }
 }
