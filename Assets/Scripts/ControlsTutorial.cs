@@ -18,9 +18,10 @@ public class ControlsTutorial : MonoBehaviour
 
     public void OnShoot(InputAction.CallbackContext context)
     {
+        
         if (context.started)
         {
-            ShowText(south_Button, "Hold X/South Button to teleport to your soul");
+            ShowText(east_Button, "Press O to charge and shoot your soul to where you're aiming");
         }
     }
 
@@ -28,7 +29,7 @@ public class ControlsTutorial : MonoBehaviour
     {
         if (context.started)
         {
-            ShowText(east_Button, "Press O to charge and shoot your soul to where you're aiming");
+            ShowText(south_Button, "Hold X/South Button to teleport to your soul");
         }
     }
 
