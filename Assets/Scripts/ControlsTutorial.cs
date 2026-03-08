@@ -23,6 +23,10 @@ public class ControlsTutorial : MonoBehaviour
         {
             ShowText(east_Button, "Hold O to charge and shoot your soul to where you're aiming");
         }
+        else
+        {
+            HideSprites(east_Button);
+        }
     }
 
     public void OnTeleport(InputAction.CallbackContext context)
@@ -30,6 +34,10 @@ public class ControlsTutorial : MonoBehaviour
         if (context.started)
         {
             ShowText(south_Button, "Hold X/South Button to teleport to your soul or into your enemy");
+        }
+        else
+        {
+            HideSprites(south_Button);
         }
     }
 
@@ -41,6 +49,10 @@ public class ControlsTutorial : MonoBehaviour
         {
             ShowText(left_Joystick, "Move the left stick to aim!");
         }
+        else
+        {
+            HideSprites(left_Joystick);
+        }
     }
 
     public void ShowText(GameObject activeButtonSprite, string text)
@@ -48,10 +60,17 @@ public class ControlsTutorial : MonoBehaviour
         activeButtonSprite.SetActive(true);
         textPanel.SetActive(true);
         actionText.text = text;
-        sparkAnim.SetActive(true);
 
+        sparkAnim.SetActive(true);
         sparkAnim.GetComponent<Animator>().Play("Spark");
 
+    }
+
+    public void HideSprites(GameObject activeButtonSprite)
+    {
+        activeButtonSprite.SetActive(false);
+        textPanel.SetActive(false);
+        sparkAnim.SetActive(false); //just to be sure
     }
 }
 
