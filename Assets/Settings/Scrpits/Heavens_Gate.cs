@@ -67,8 +67,7 @@ public class Heavens_Gate : MonoBehaviour
             Destroy(collision.gameObject);
             P2_scoring = true;
         }
-
-        ScoreReset();
+         ScoreReset();
     }
     IEnumerator SpawnRoutine()
     {
@@ -130,7 +129,7 @@ public class Heavens_Gate : MonoBehaviour
             P2_scoring = false;
         }
         Spawn_Platfroms();
-        StartCoroutine(MovePortal());
+        MovePortal();
     }
     // Time.timeScale = 0;
     // StartCoroutine(StartAgian(3));
@@ -141,17 +140,12 @@ public class Heavens_Gate : MonoBehaviour
         Spawn_Platfroms();
     }*/
 
-    IEnumerator MovePortal()
+    public void MovePortal()
     {
-        while (true)
-        {
             if (portalMovePoints.Count > 0 && gameObject != null)
             {
                 Transform target = portalMovePoints[Random.Range(0, portalMovePoints.Count)];
                 gameObject.transform.position = target.position;
             }
-
-            yield return new WaitForSeconds(10f); 
-        }
     }
 }
