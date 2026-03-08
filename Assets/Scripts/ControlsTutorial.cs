@@ -20,7 +20,7 @@ public class ControlsTutorial : MonoBehaviour
     {
         if (context.started)
         {
-            ShowText(south_Button, "Hold X/South Button to charge your soul shot! Or Press O to teleport to your soul");
+            ShowText(south_Button, "Hold X/South Button to teleport to your soul");
         }
     }
 
@@ -28,7 +28,7 @@ public class ControlsTutorial : MonoBehaviour
     {
         if (context.started)
         {
-            ShowText(east_Button, "Press O to charge your soul or shoot your soul to where you're aiming");
+            ShowText(east_Button, "Press O to charge and shoot your soul to where you're aiming");
         }
     }
 
