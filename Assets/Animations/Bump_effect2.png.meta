@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1528f09111387e64cbcd44d1d3672c41
+guid: 6f25252e93d0b94499f0ca7b14ae3b4c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9060204298631621234
-    second: Bump3_0
+      213: 6334269366047079264
+    second: Bump_effect2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bump3_0
+      name: Bump_effect2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 62
+        x: 27
+        y: 27
+        width: 10
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8558938130b34280800000000000000
-      internalID: -9060204298631621234
+      spriteID: 06bffd29d68d7e750800000000000000
+      internalID: 6334269366047079264
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bump3_0: -9060204298631621234
+      Bump_effect2_0: 6334269366047079264
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

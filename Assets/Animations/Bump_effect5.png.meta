@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 78c5b32bfbb34f44eb42971d4aeb949c
+guid: 91705d440271c454dbc4479a09004b27
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7717104905773953075
-    second: Bump7_0
+      213: -5054951299574141330
+    second: Bump_effect5_0
+  - first:
+      213: 7731580482720868014
+    second: Bump_effect5_1
+  - first:
+      213: 8398407326930329858
+    second: Bump_effect5_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bump7_0
+      name: Bump_effect5_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 62
+        x: 20
+        y: 26
+        width: 20
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 330b41b560aa81b60800000000000000
-      internalID: 7717104905773953075
+      spriteID: e6eebf7439439d9b0800000000000000
+      internalID: -5054951299574141330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bump_effect5_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 21
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea6abe04c771c4b60800000000000000
+      internalID: 7731580482720868014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bump_effect5_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 20
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20168b897f22d8470800000000000000
+      internalID: 8398407326930329858
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bump7_0: 7717104905773953075
+      Bump_effect5_0: -5054951299574141330
+      Bump_effect5_1: 7731580482720868014
+      Bump_effect5_2: 8398407326930329858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

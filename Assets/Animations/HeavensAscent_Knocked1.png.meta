@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6a3c7c4633cf61346a13bcad3f4dc4e4
+guid: 076f248aaabe3e9488fbaa3a6d854f68
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3670541249351220829
-    second: Bump4_0
+      213: 5878929440243397637
+    second: HeavensAscent_Knocked1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bump4_0
+      name: HeavensAscent_Knocked1_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 23
-        width: 17
-        height: 16
+        x: 0
+        y: 15
+        width: 16
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a1800b5e2e9f0dc0800000000000000
-      internalID: -3670541249351220829
+      spriteID: 5043b419d27269150800000000000000
+      internalID: 5878929440243397637
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bump4_0: -3670541249351220829
+      HeavensAscent_Knocked1_0: 5878929440243397637
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
