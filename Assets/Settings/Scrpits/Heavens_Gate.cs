@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 
@@ -77,6 +78,7 @@ public class Heavens_Gate : MonoBehaviour
                 winPanel_P1.SetActive(true);
                 Anim_P1.SetTrigger("Win");
                 Anim_P2.SetTrigger("Lose");
+                DisablePlayers();
 
             }
 
@@ -95,6 +97,7 @@ public class Heavens_Gate : MonoBehaviour
                 winPanel_P2.SetActive(true);
                 Anim_P2.SetTrigger("Win");
                 Anim_P1.SetTrigger("Lose");
+                DisablePlayers();
             }
 
             P2_scoring = true;
@@ -203,5 +206,13 @@ public class Heavens_Gate : MonoBehaviour
                 Transform target = portalMovePoints[Random.Range(0, portalMovePoints.Count)];
                 gameObject.transform.position = target.position;
             }
+    }
+    void DisablePlayers()
+    {
+        P1.GetComponent<Player_01_Controls>().enabled = false;
+        P2.GetComponent<Player_02_Controls>().enabled = false;
+
+        P1.GetComponent<PlayerInput>().actions.Disable();
+        P2.GetComponent<PlayerInput>().actions.Disable();
     }
 }
