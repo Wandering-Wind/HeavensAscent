@@ -51,6 +51,8 @@ public class Heavens_Gate : MonoBehaviour
     public int scoreToWin = 5;
     public GameObject winPanel_P1;
     public GameObject winPanel_P2;
+    public GameObject Restart;
+    public GameObject replay;
 
     public Animator Anim_P1;
     public Animator Anim_P2;
@@ -80,6 +82,8 @@ public class Heavens_Gate : MonoBehaviour
                 AM.PlayWinnerAAAH();
                 gameEnded = true;
                 winPanel_P1.SetActive(true);
+                Restart.SetActive(true);
+                replay.SetActive(true);
                 Anim_P1.SetTrigger("Win");
                 Anim_P2.SetTrigger("Lose");
                 DisablePlayers();
@@ -101,6 +105,8 @@ public class Heavens_Gate : MonoBehaviour
                 AM.PlayWinnerAAAH();
                 gameEnded = true;
                 winPanel_P2.SetActive(true);
+                Restart.SetActive(true);
+                replay.SetActive(true);
                 Anim_P2.SetTrigger("Win");
                 Anim_P1.SetTrigger("Lose");
                 DisablePlayers();
