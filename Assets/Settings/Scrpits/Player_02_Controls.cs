@@ -89,7 +89,7 @@ public class Player_02_Controls : MonoBehaviour
         {
             //animator.SetInteger("Shoot", 0);
             rb.gravityScale = originalGravity;
-            P1_firePoint_Arrow.transform.localScale = Vector3.one;
+            P1_firePoint_Arrow.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }
     }
     IEnumerator Regain()
