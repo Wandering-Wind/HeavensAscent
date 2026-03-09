@@ -70,6 +70,12 @@ public class Heavens_Gate : MonoBehaviour
     {
         if (gameEnded) return;
 
+        Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
+
+        // Only allow hits if object is moving downward
+        if (rb != null && rb.linearVelocity.y >= 0)
+            return;
+
         if (collision.CompareTag("Player_01_Soul"))
         {
             AM.PlayScore();
@@ -87,7 +93,6 @@ public class Heavens_Gate : MonoBehaviour
                 Anim_P1.SetTrigger("Win");
                 Anim_P2.SetTrigger("Lose");
                 DisablePlayers();
-
             }
 
             P1_scoring = true;
