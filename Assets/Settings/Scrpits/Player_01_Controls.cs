@@ -84,8 +84,8 @@ public class Player_01_Controls : MonoBehaviour
             currentCharge = Mathf.Clamp(currentCharge, Min_Charge_power_P_01, Max_Charge_power_P_01);
 
             float chargePercent = currentCharge / Max_Charge_power_P_01;
-            float scaleX = Mathf.Lerp(1f, 1.8f, chargePercent);
-            P1_firePoint_Arrow.transform.localScale = new Vector3(scaleX, 1f, 1f);
+            float scaleX = Mathf.Lerp(1.5f, 1.8f, chargePercent);
+            P1_firePoint_Arrow.transform.localScale = new Vector3(scaleX, 1.5f, 1.5f);
         }
         else
         {
