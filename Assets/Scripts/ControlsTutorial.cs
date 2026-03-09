@@ -25,7 +25,8 @@ public class ControlsTutorial : MonoBehaviour
         }
         else
         {
-            HideSprites(east_Button);
+            HideSprites(south_Button);
+            HideSprites(left_Joystick);
         }
     }
 
@@ -34,10 +35,13 @@ public class ControlsTutorial : MonoBehaviour
         if (context.started)
         {
             ShowText(south_Button, "Hold X/South Button to teleport to your soul or into your enemy");
+
         }
         else
         {
-            HideSprites(south_Button);
+            HideSprites(east_Button);
+            HideSprites(left_Joystick);
+            
         }
     }
 
@@ -48,10 +52,13 @@ public class ControlsTutorial : MonoBehaviour
         if(input.magnitude> 0.3f)
         {
             ShowText(left_Joystick, "Move the left stick to aim!");
+ 
         }
         else
         {
-            HideSprites(left_Joystick);
+            HideSprites(east_Button);
+            HideSprites(south_Button);
+            
         }
     }
 
@@ -60,17 +67,18 @@ public class ControlsTutorial : MonoBehaviour
         activeButtonSprite.SetActive(true);
         textPanel.SetActive(true);
         actionText.text = text;
+        
 
         sparkAnim.SetActive(true);
-        sparkAnim.GetComponent<Animator>().Play("Spark");
+       sparkAnim.GetComponent<Animator>().Play("Spark", 0, 0f);
 
     }
 
     public void HideSprites(GameObject activeButtonSprite)
     {
         activeButtonSprite.SetActive(false);
-        textPanel.SetActive(false);
-        sparkAnim.SetActive(false); //just to be sure
+        textPanel.SetActive(true);
+        sparkAnim.SetActive(true); //just to be sure
     }
 }
 
