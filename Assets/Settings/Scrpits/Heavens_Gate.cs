@@ -57,6 +57,8 @@ public class Heavens_Gate : MonoBehaviour
 
     public bool gameEnded;
 
+    public AudioManager AM;
+
     public void Start()
     {
         StartCoroutine(SpawnRoutine());
@@ -68,12 +70,14 @@ public class Heavens_Gate : MonoBehaviour
 
         if (collision.CompareTag("Player_01_Soul"))
         {
+            AM.PlayScore();
             P1_Score++;
             P1_Text.text = P1_Score.ToString();
             Destroy(collision.gameObject);
 
             if (P1_Score >= scoreToWin)
             {
+                AM.PlayWinnerAAAH();
                 gameEnded = true;
                 winPanel_P1.SetActive(true);
                 Anim_P1.SetTrigger("Win");
@@ -87,12 +91,14 @@ public class Heavens_Gate : MonoBehaviour
         }
         else if (collision.CompareTag("Player_02_Soul"))
         {
+            AM.PlayScore();
             P2_Score++;
             P2_Text.text = P2_Score.ToString();
             Destroy(collision.gameObject);
 
             if (P2_Score >= scoreToWin)
             {
+                AM.PlayWinnerAAAH();
                 gameEnded = true;
                 winPanel_P2.SetActive(true);
                 Anim_P2.SetTrigger("Win");

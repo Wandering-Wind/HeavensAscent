@@ -554,6 +554,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonClickAudio
   audioSource: {fileID: 120757586}
   clickSound: {fileID: 8300000, guid: dae9dc39222276c499c8c67d0d1d64f4, type: 3}
+  Score_Sound: {fileID: 0}
+  WinnerAAAH: {fileID: 0}
 --- !u!82 &120757586
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1401,6 +1403,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 389517821}
+  - component: {fileID: 389517822}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -1427,6 +1430,22 @@ Transform:
   - {fileID: 120757584}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &389517822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389517819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17233aa659dce6843b7517e4d8ac42db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  audioSource_Score: {fileID: 890111520}
+  audioSource_Winner: {fileID: 1425989366}
+  Score_Sound: {fileID: 8300000, guid: 5e2a08fc9b8c2ae4eb6241ee92f824b6, type: 3}
+  WinnerAAAH: {fileID: 8300000, guid: fa1e2a4b0cf56e54c97022c70ae5390a, type: 3}
 --- !u!1 &399457247
 GameObject:
   m_ObjectHideFlags: 0
@@ -9919,6 +9938,7 @@ MonoBehaviour:
   Anim_P1: {fileID: 941418375}
   Anim_P2: {fileID: 137666736}
   gameEnded: 0
+  AM: {fileID: 389517822}
 --- !u!61 &1632018979
 BoxCollider2D:
   m_ObjectHideFlags: 0
