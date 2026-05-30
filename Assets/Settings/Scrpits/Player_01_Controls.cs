@@ -50,14 +50,9 @@ public class Player_01_Controls : MonoBehaviour
     public GameObject flipTarget;
 
     [Header("Class")]
-    public PlayerClass selectedClass;
+    public PlayerClassEnum selectedClass;
     public Class_Stats[] availableClasses;
     private Class_Stats currentClass;
-
-    public enum PlayerClass
-    {
-        Devil, Angel
-    }
 
     private void Start()
     {
@@ -202,11 +197,11 @@ IEnumerator Regain()
         facingRight = !facingRight;
     }
 
-    private void LoadClass(PlayerClass playC)
+    private void LoadClass(PlayerClassEnum playC)
     {
         foreach(Class_Stats stats in availableClasses)
         {
-            if(stats.classType1 == playC)
+            if(stats.classType == playC)
             {
                 currentClass = stats;
 

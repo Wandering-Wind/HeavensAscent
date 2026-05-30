@@ -49,17 +49,13 @@ public class Player_02_Controls : MonoBehaviour
     public GameObject flipTarget;
 
     [Header("Class")]
-    public PlayerClass selectedClass;
+    public PlayerClassEnum selectedClass;
     public Class_Stats[] availableClasses;
     private Class_Stats currentClass;
 
-    public enum PlayerClass
-    {
-        Devil, Angel
-    }
     private void Start()
     {
-        //LoadClass(selectedClass);
+        LoadClass(selectedClass);
 
         originalSoulScale = Soul_Life_p2 / Max_SLP2;
         currentSoulScale = originalSoulScale;
@@ -194,11 +190,11 @@ public class Player_02_Controls : MonoBehaviour
 
         facingRight = !facingRight;
     }
-   /* private void LoadClass(PlayerClass playC)
+    private void LoadClass(PlayerClassEnum playC)
     {
         foreach (Class_Stats stats in availableClasses)
         {
-            if (stats.classType2 == playC)
+            if (stats.classType == playC)
             {
                 currentClass = stats;
 
@@ -213,5 +209,5 @@ public class Player_02_Controls : MonoBehaviour
                 break;
             }
         }
-    }*/
+    }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 [System.Serializable]
 public class Class_Stats
 {
-    public Player_01_Controls.PlayerClass classType1;
+    public PlayerClassEnum classType;
 
     [Header("Soul")]
     public float maxSoulLife;
