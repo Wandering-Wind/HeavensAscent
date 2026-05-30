@@ -48,9 +48,19 @@ public class Player_02_Controls : MonoBehaviour
     private bool facingRight;
     public GameObject flipTarget;
 
+    [Header("Class")]
+    public PlayerClass selectedClass;
+    public Class_Stats[] availableClasses;
+    private Class_Stats currentClass;
 
+    public enum PlayerClass
+    {
+        Devil, Angel
+    }
     private void Start()
     {
+        //LoadClass(selectedClass);
+
         originalSoulScale = Soul_Life_p2 / Max_SLP2;
         currentSoulScale = originalSoulScale;
         rb = GetComponent<Rigidbody2D>();
@@ -184,4 +194,24 @@ public class Player_02_Controls : MonoBehaviour
 
         facingRight = !facingRight;
     }
+   /* private void LoadClass(PlayerClass playC)
+    {
+        foreach (Class_Stats stats in availableClasses)
+        {
+            if (stats.classType2 == playC)
+            {
+                currentClass = stats;
+
+                Max_SLP2 = stats.maxSoulLife;
+                Soul_Life_p2 = stats.maxSoulLife;
+
+                Min_Charge_power_P_02 = stats.minChargePower;
+                Max_Charge_power_P_02 = stats.maxChargePower;
+
+                Charge = stats.chargeSpeed;
+
+                break;
+            }
+        }
+    }*/
 }

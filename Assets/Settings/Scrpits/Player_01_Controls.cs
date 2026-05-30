@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Player_01_Controls : MonoBehaviour
 {
@@ -50,9 +49,20 @@ public class Player_01_Controls : MonoBehaviour
     private bool facingRight;
     public GameObject flipTarget;
 
+    [Header("Class")]
+    public PlayerClass selectedClass;
+    public Class_Stats[] availableClasses;
+    private Class_Stats currentClass;
+
+    public enum PlayerClass
+    {
+        Devil, Angel
+    }
 
     private void Start()
     {
+        LoadClass(selectedClass);
+
         originalSoulScale = Soul_Life_p1 / Max_SLP1;
         currentSoulScale = originalSoulScale;
         rb = GetComponent<Rigidbody2D>();
@@ -190,6 +200,27 @@ IEnumerator Regain()
         flipTarget.transform.localScale = currentScale;
 
         facingRight = !facingRight;
+    }
+
+    private void LoadClass(PlayerClass playC)
+    {
+        foreach(Class_Stats stats in availableClasses)
+        {
+            if(stats.classType1 == playC)
+            {
+                currentClass = stats;
+
+                Max_SLP1 = stats.maxSoulLife;
+                Soul_Life_p1 = stats.maxSoulLife;
+
+                Min_Charge_power_P_01 = stats.minChargePower;
+                Max_Charge_power_P_01 = stats.maxChargePower;
+
+                Charge = stats.chargeSpeed;
+
+                break;
+            }
+        }
     }
 }
 

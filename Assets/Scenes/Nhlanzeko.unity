@@ -3128,6 +3128,22 @@ MonoBehaviour:
   slowFactor: 0.9
   animator: {fileID: 941418375}
   flipTarget: {fileID: 941418371}
+  selectedClass: 0
+  availableClasses:
+  - classType1: 1
+    maxSoulLife: 0
+    moveSpeed: 0
+    minChargePower: 0
+    maxChargePower: 0
+    chargeSpeed: 0
+    teleportBoost: 0
+  - classType1: 0
+    maxSoulLife: 0
+    moveSpeed: 0
+    minChargePower: 0
+    maxChargePower: 0
+    chargeSpeed: 0
+    teleportBoost: 0
 --- !u!114 &906423707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10437,7 +10453,7 @@ GameObject:
   - component: {fileID: 1767807947}
   - component: {fileID: 1767807946}
   - component: {fileID: 1767807945}
-  - component: {fileID: 1767807944}
+  - component: {fileID: 1767807950}
   m_Layer: 0
   m_Name: P2
   m_TagString: P2
@@ -10445,34 +10461,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1767807944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767807943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92472f960df2a8346ba0b29dda615734, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Player_02_Controls
-  Player_02_Soul: {fileID: 2869479970093729897, guid: 7e5de2854ccafa84aa8e2d8230259085, type: 3}
-  P2_firePoint: {fileID: 29660336}
-  P1_firePoint_Arrow: {fileID: 1577796504}
-  Shoot_power_P_02: 10
-  Min_Charge_power_P_02: 5
-  Max_Charge_power_P_02: 20
-  Charge: 10
-  Soul_Life_p2: 5
-  Max_SLP2: 5
-  aimArrow: {fileID: 1577796504}
-  arrowDistance: 1
-  deadzone: 0.2
-  Player_02: {fileID: 1767807943}
-  slowFactor: 0.9
-  animator: {fileID: 137666736}
-  flipTarget: {fileID: 137666734}
 --- !u!114 &1767807945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10512,7 +10500,7 @@ MonoBehaviour:
     m_ActionName: 'Player_01/Teleport[/SwitchProControllerHID/buttonSouth]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1767807944}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player_02_Controls, Assembly-CSharp
         m_MethodName: OnAim
         m_Mode: 0
@@ -10528,7 +10516,7 @@ MonoBehaviour:
     m_ActionName: 'Player_02/Aim[/SwitchProControllerHID/leftStick]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1767807944}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player_02_Controls, Assembly-CSharp
         m_MethodName: OnShoot
         m_Mode: 0
@@ -10544,7 +10532,7 @@ MonoBehaviour:
     m_ActionName: 'Player_02/Shoot[/SwitchProControllerHID/buttonEast]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1767807944}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player_02_Controls, Assembly-CSharp
         m_MethodName: OnTeleport
         m_Mode: 0
@@ -10712,6 +10700,50 @@ Transform:
   - {fileID: 137666735}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1767807950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767807943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110e135f2ddf4b041ae255804942d88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player_01_Controls
+  Player_01_Soul: {fileID: 2869479970093729897, guid: 7e5de2854ccafa84aa8e2d8230259085, type: 3}
+  P1_firePoint: {fileID: 29660336}
+  P1_firePoint_Arrow: {fileID: 1577796504}
+  Shoot_power_P_01: 10
+  Min_Charge_power_P_01: 5
+  Max_Charge_power_P_01: 20
+  Charge: 10
+  Soul_Life_p1: 5
+  Max_SLP1: 5
+  aimArrow: {fileID: 1577796504}
+  arrowDistance: 1
+  deadzone: 0.2
+  Player_01: {fileID: 1767807943}
+  slowFactor: 0.05
+  animator: {fileID: 137666736}
+  flipTarget: {fileID: 137666734}
+  selectedClass: 0
+  availableClasses:
+  - classType1: 1
+    maxSoulLife: 0
+    moveSpeed: 0
+    minChargePower: 0
+    maxChargePower: 0
+    chargeSpeed: 0
+    teleportBoost: 0
+  - classType1: 0
+    maxSoulLife: 0
+    moveSpeed: 0
+    minChargePower: 0
+    maxChargePower: 0
+    chargeSpeed: 0
+    teleportBoost: 0
 --- !u!1 &1799286390
 GameObject:
   m_ObjectHideFlags: 0
