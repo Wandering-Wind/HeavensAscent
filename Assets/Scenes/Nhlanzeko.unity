@@ -3131,19 +3131,19 @@ MonoBehaviour:
   selectedClass: 1
   availableClasses:
   - classType: 1
-    maxSoulLife: 0
-    moveSpeed: 0
-    minChargePower: 0
-    maxChargePower: 0
-    chargeSpeed: 0
-    teleportBoost: 0
+    maxSoulLife: 5
+    moveSpeed: 1
+    minChargePower: 5
+    maxChargePower: 20
+    chargeSpeed: 10
+    teleportBoost: 1
   - classType: 0
-    maxSoulLife: 0
-    moveSpeed: 0
-    minChargePower: 0
-    maxChargePower: 0
-    chargeSpeed: 0
-    teleportBoost: 0
+    maxSoulLife: 3
+    moveSpeed: 1
+    minChargePower: 10
+    maxChargePower: 30
+    chargeSpeed: 15
+    teleportBoost: 1
 --- !u!114 &906423707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10492,19 +10492,19 @@ MonoBehaviour:
   selectedClass: 0
   availableClasses:
   - classType: 1
-    maxSoulLife: 0
-    moveSpeed: 0
-    minChargePower: 0
-    maxChargePower: 0
-    chargeSpeed: 0
-    teleportBoost: 0
+    maxSoulLife: 5
+    moveSpeed: 1
+    minChargePower: 5
+    maxChargePower: 20
+    chargeSpeed: 10
+    teleportBoost: 1
   - classType: 0
-    maxSoulLife: 0
-    moveSpeed: 0
-    minChargePower: 0
-    maxChargePower: 0
-    chargeSpeed: 0
-    teleportBoost: 0
+    maxSoulLife: 3
+    moveSpeed: 1
+    minChargePower: 10
+    maxChargePower: 30
+    chargeSpeed: 15
+    teleportBoost: 1
 --- !u!114 &1767807945
 MonoBehaviour:
   m_ObjectHideFlags: 0
