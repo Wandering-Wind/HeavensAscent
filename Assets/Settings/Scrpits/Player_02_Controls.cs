@@ -55,6 +55,7 @@ public class Player_02_Controls : MonoBehaviour
 
     private void Start()
     {
+        selectedClass = SelectManager.Instance.player2Class;
         LoadClass(selectedClass);
 
         originalSoulScale = Soul_Life_p2 / Max_SLP2;

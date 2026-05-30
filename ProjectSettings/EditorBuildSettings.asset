@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Context Scene.unity
     guid: 1d3c3d06494df8741be88e8a504ab4e8
   - enabled: 1
+    path: Assets/Scenes/Character_Select_Screen.unity
+    guid: f75086f3ab0edae49895321e3853ca09
+  - enabled: 1
     path: Assets/Scenes/ControlsScene.unity
     guid: 6ab6dd1efb0a1394d9fcf40a3bd3ee84
   - enabled: 1
