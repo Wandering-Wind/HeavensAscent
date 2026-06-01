@@ -2,7 +2,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class Character_Select : MonoBehaviour
 {
@@ -27,35 +26,7 @@ public class Character_Select : MonoBehaviour
         UpdateUI();
     }
 
-    private void Update()
-    {
-        Gamepad pad = currentPlayer == 1
-            ? Gamepad.all[0]
-            : Gamepad.all[1];
-
-        if (pad == null) return;
-
-        if (Time.time > nextMoveTime)
-        {
-            if (pad.leftStick.x.ReadValue() > 0.5f)
-            {
-                NextClass();
-                nextMoveTime = Time.time + moveCooldown;
-            }
-            else if (pad.leftStick.x.ReadValue() < -0.5f)
-            {
-                PreviousClass();
-                nextMoveTime = Time.time + moveCooldown;
-            }
-        }
-
-        if (pad.buttonSouth.wasPressedThisFrame)
-        {
-            ConfirmSelection();
-        }
-    }
-
-    void NextClass()
+    public void NextClass()
     {
         classIndex++;
 
@@ -65,7 +36,7 @@ public class Character_Select : MonoBehaviour
         UpdateUI();
     }
 
-    void PreviousClass()
+    public void PreviousClass()
     {
         classIndex--;
 
@@ -75,7 +46,7 @@ public class Character_Select : MonoBehaviour
         UpdateUI();
     }
 
-    void ConfirmSelection()
+    public void ConfirmSelection()
     {
         if (currentPlayer == 1)
         {
@@ -96,7 +67,7 @@ public class Character_Select : MonoBehaviour
 
     void UpdateUI()
     {
-        playerText.text = ("Player {currentPlayer} Select Class");
+        playerText.text = $"Player {currentPlayer} Select Class";
         classText.text = classes[classIndex].ToString();
     }
 }
