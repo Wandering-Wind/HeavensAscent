@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Player_01_Controls : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class Player_01_Controls : MonoBehaviour
     private float currentSoulScale;
     private float originalSoulScale;
 
+    public Image soulBarFill;
 
     [Header("Aim")]
     public GameObject aimArrow;
@@ -64,6 +66,8 @@ public class Player_01_Controls : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         originalGravity = rb.gravityScale;
         facingRight = true;
+
+        UpdateSoulBar();
     }
     private void Update()
     {
@@ -110,6 +114,7 @@ IEnumerator Regain()
         yield return new WaitForSeconds(5);
         Soul_Life_p1 = Max_SLP1;
         currentSoulScale = originalSoulScale;
+        UpdateSoulBar();
     }
     public void OnAim(InputAction.CallbackContext context)
     {
@@ -151,6 +156,7 @@ IEnumerator Regain()
             animator.SetInteger("Shoot", 2);
             Shoot(currentCharge);
             Soul_Life_p1 -= 1;
+            UpdateSoulBar();
         }
     }
     public void Shoot(float SP)
@@ -187,6 +193,7 @@ IEnumerator Regain()
     {
         Soul_Life_p1 = Max_SLP1;
         currentSoulScale = 1f;
+        UpdateSoulBar();
     }
 
     public void Flip() //Youtu.be. (2026). Available at: https://youtu.be/Cr-j7EoM8bg?si=IjMERP-pLs5SwuNJ [Accessed 8 Mar. 2026].
@@ -217,6 +224,10 @@ IEnumerator Regain()
                 break;
             }
         }
+    }
+    private void UpdateSoulBar()
+    {
+        soulBarFill.fillAmount = Soul_Life_p1 / Max_SLP1;
     }
 }
 
