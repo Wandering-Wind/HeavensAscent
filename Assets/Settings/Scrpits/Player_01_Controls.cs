@@ -106,7 +106,8 @@ public class Player_01_Controls : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(gameObject.CompareTag("Player_02_Soul") || gameObject.CompareTag("P2"))
+        if (gameObject.CompareTag("Player_02_Soul") || gameObject.CompareTag("P2"))
+            print("Pl2 Hit");
             animator.SetBool("GetHit", true);
     }
 IEnumerator Regain()
