@@ -15,6 +15,7 @@ public class Player_01_Controls : MonoBehaviour
     [SerializeField] private float Min_Charge_power_P_01;
     [SerializeField] private float Max_Charge_power_P_01;
     [SerializeField] private float Charge = 10;
+
     public float currChargep1;
 
     private float currentCharge;
@@ -56,9 +57,14 @@ public class Player_01_Controls : MonoBehaviour
     public PlayerClassEnum selectedClass;
     public Class_Stats[] availableClasses;
     private Class_Stats currentClass;
+    public bool isStunned;
 
     private void Start()
     {
+        if (isStunned)
+        {
+            return;
+        }
         selectedClass = SelectManager.Instance.player1Class;
         LoadClass(selectedClass);
 
@@ -114,13 +120,15 @@ public class Player_01_Controls : MonoBehaviour
               print("Pl2 Hit");
               animator.SetBool("GetHit", true);*/
 
+        if (currentClass.classType == PlayerClassEnum.Devil)
+        {
             Player_02_Controls p2 = collision.gameObject.GetComponent<Player_02_Controls>();
 
             if (p2 != null)
             {
                 if (p2.currChargep2 > 0)
                 {
-                    print("Player 2 hit Player 1");
+                    print("Player 1 hit Player 2");
 
                     p2.currChargep2--;  // steal from Player 1
                     currChargep1++;     // Player 2 gains charge
@@ -129,6 +137,11 @@ public class Player_01_Controls : MonoBehaviour
                 StartCoroutine(StunOther(p2, 2f));
             }
         }
+        else if (currentClass == null || currentClass.classType == PlayerClassEnum.Angel)
+        {
+            return;
+        }
+    }
     IEnumerator StunOther(Player_02_Controls target, float duration)
     {
         target.isStunned = true;

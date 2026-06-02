@@ -46,6 +46,7 @@ public class Player_02_Controls : MonoBehaviour
     public float slowFactor = 0.4f;
     private Rigidbody2D rb;
     private float originalGravity;
+
     [Header("Animatiom")]
     public Animator animator;
 
@@ -77,6 +78,8 @@ public class Player_02_Controls : MonoBehaviour
     }
     private void Update()
     {
+        if (currentClass.isStunned)
+            return;
         if (aimInput.magnitude > deadzone)
         {
             lastAimDirection = aimInput.normalized;
@@ -113,9 +116,39 @@ public class Player_02_Controls : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (gameObject.CompareTag("Player_01_Soul") || gameObject.CompareTag("P1"))
+        /*if (gameObject.CompareTag("Player_01_Soul") || gameObject.CompareTag("P1"))
             print("Pl1 Hit");
-        animator.SetBool("GetHit", true);
+        animator.SetBool("GetHit", true);*/
+        if(currentClass.classType == PlayerClassEnum.Devil)
+        {
+            Player_01_Controls p1 = collision.gameObject.GetComponent<Player_01_Controls>();
+
+            if (p1 != null)
+            {
+                if (p1.currChargep1 > 0)
+                {
+                    print("Player 1 hit Player 2");
+
+                    p1.currChargep1--;  // steal from Player 1
+                    currChargep2++;     // Player 2 gains charge
+                }
+
+                StartCoroutine(StunOther(p1, 2f));
+            }
+        }
+        else if(currentClass ==null || currentClass.classType == PlayerClassEnum.Angel)
+        {
+            return;
+        }
+    }
+
+    IEnumerator StunOther(Player_01_Controls target, float duration)
+    {
+        target.isStunned = true;
+
+        yield return new WaitForSeconds(duration);
+
+        target.isStunned = false;
     }
     IEnumerator Regain()
     {

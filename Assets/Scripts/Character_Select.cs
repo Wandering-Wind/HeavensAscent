@@ -18,9 +18,6 @@ public class Character_Select : MonoBehaviour
     private int classIndex = 0;
     private int currentPlayer = 1;
 
-    private float moveCooldown = 0.25f;
-    private float nextMoveTime;
-
     private void Start()
     {
         UpdateUI();
