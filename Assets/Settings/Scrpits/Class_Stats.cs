@@ -15,6 +15,8 @@ public class Class_Stats
     public float minChargePower;
     public float maxChargePower;
     public float chargeSpeed;
+    public float currCharge;
+    public bool isStunned = false;
 
     [Header("Special")]
     public float teleportBoost;

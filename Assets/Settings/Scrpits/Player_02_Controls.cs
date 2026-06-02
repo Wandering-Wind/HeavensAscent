@@ -17,6 +17,8 @@ public class Player_02_Controls : MonoBehaviour
     [SerializeField] private float Max_Charge_power_P_02;
     [SerializeField] private float Charge = 10f;
 
+    public float currChargep2;
+
     private float currentCharge;
     private bool isCharging = false;
 
@@ -55,9 +57,14 @@ public class Player_02_Controls : MonoBehaviour
     public PlayerClassEnum selectedClass;
     public Class_Stats[] availableClasses;
     private Class_Stats currentClass;
+    public bool isStunned;
 
     private void Start()
     {
+        if(isStunned)
+        {
+            return;
+        }
         selectedClass = SelectManager.Instance.player2Class;
         LoadClass(selectedClass);
 
@@ -219,7 +226,9 @@ public class Player_02_Controls : MonoBehaviour
                 Min_Charge_power_P_02 = stats.minChargePower;
                 Max_Charge_power_P_02 = stats.maxChargePower;
 
+                stats.currCharge = stats.maxChargePower;
                 Charge = stats.chargeSpeed;
+                currChargep2 = stats.currCharge;
 
                 break;
             }

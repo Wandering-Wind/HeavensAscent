@@ -14,7 +14,8 @@ public class Player_01_Controls : MonoBehaviour
     [SerializeField] private float Shoot_power_P_01;
     [SerializeField] private float Min_Charge_power_P_01;
     [SerializeField] private float Max_Charge_power_P_01;
-    [SerializeField] private float Charge = 10f;
+    [SerializeField] private float Charge = 10;
+    public float currChargep1;
 
     private float currentCharge;
     private bool isCharging = false;
@@ -71,6 +72,9 @@ public class Player_01_Controls : MonoBehaviour
     }
     private void Update()
     {
+        if (currentClass.isStunned)
+            return;
+
         if (aimInput.magnitude > deadzone)
         {
             lastAimDirection = aimInput.normalized;
@@ -106,11 +110,34 @@ public class Player_01_Controls : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (gameObject.CompareTag("Player_02_Soul") || gameObject.CompareTag("P2"))
-            print("Pl2 Hit");
-            animator.SetBool("GetHit", true);
+        /*  if (gameObject.CompareTag("Player_02_Soul") || gameObject.CompareTag("P2"))
+              print("Pl2 Hit");
+              animator.SetBool("GetHit", true);*/
+
+            Player_02_Controls p2 = collision.gameObject.GetComponent<Player_02_Controls>();
+
+            if (p2 != null)
+            {
+                if (p2.currChargep2 > 0)
+                {
+                    print("Player 2 hit Player 1");
+
+                    p2.currChargep2--;  // steal from Player 1
+                    currChargep1++;     // Player 2 gains charge
+                }
+
+                StartCoroutine(StunOther(p2, 2f));
+            }
+        }
+    IEnumerator StunOther(Player_02_Controls target, float duration)
+    {
+        target.isStunned = true;
+
+        yield return new WaitForSeconds(duration);
+
+        target.isStunned = false;
     }
-IEnumerator Regain()
+    IEnumerator Regain()
     {
         yield return new WaitForSeconds(5);
         Soul_Life_p1 = Max_SLP1;
@@ -220,8 +247,9 @@ IEnumerator Regain()
                 Min_Charge_power_P_01 = stats.minChargePower;
                 Max_Charge_power_P_01 = stats.maxChargePower;
 
+                stats.currCharge = stats.maxChargePower;
                 Charge = stats.chargeSpeed;
-
+                currChargep1 = stats.currCharge;
                 break;
             }
         }
