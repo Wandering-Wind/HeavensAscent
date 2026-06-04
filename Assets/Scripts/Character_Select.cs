@@ -18,6 +18,8 @@ public class Character_Select : MonoBehaviour
     private int classIndex = 0;
     private int currentPlayer = 1;
 
+    public string[] gameScenes ={"Nhlanzeko","Stage_02","Stage_03"};
+
     private void Start()
     {
         UpdateUI();
@@ -58,7 +60,8 @@ public class Character_Select : MonoBehaviour
         {
             SelectManager.Instance.player2Class = classes[classIndex];
 
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Nhlanzeko");
+            int randomScene = Random.Range(0, gameScenes.Length);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(gameScenes[randomScene]);
         }
     }
 

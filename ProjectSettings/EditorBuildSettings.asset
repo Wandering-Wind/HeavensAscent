@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nhlanzeko.unity
     guid: af55643503cb04a4db71d8fd29baa674
+  - enabled: 1
+    path: Assets/Scenes/Stage_02.unity
+    guid: f3ccd7f4838f34747b62f191b336dae0
+  - enabled: 1
+    path: Assets/Scenes/Stage_03.unity
+    guid: 459387e2c371fe943bf62bfbcb62d097
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
