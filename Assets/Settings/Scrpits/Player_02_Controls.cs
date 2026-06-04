@@ -59,13 +59,11 @@ public class Player_02_Controls : MonoBehaviour
     public Class_Stats[] availableClasses;
     private Class_Stats currentClass;
     public bool isStunned;
+    public float LoseMulti = 1f;
 
     private void Start()
     {
-        if(isStunned)
-        {
-            return;
-        }
+
         selectedClass = SelectManager.Instance.player2Class;
         LoadClass(selectedClass);
 
@@ -78,6 +76,11 @@ public class Player_02_Controls : MonoBehaviour
     }
     private void Update()
     {
+        if (isStunned)
+        {
+            print("Pl2 Stun");
+            return;
+        }
         if (currentClass.isStunned)
             return;
         if (aimInput.magnitude > deadzone)

@@ -78,6 +78,7 @@ public class Heavens_Gate : MonoBehaviour
             AM.PlayScore();
             P1_Score++;
             P1_Text.text = P1_Score.ToString();
+            UpdateLoseBuffs();
             Destroy(collision.gameObject);
 
             if (P1_Score >= scoreToWin)
@@ -100,6 +101,7 @@ public class Heavens_Gate : MonoBehaviour
             AM.PlayScore();
             P2_Score++;
             P2_Text.text = P2_Score.ToString();
+            UpdateLoseBuffs();
             Destroy(collision.gameObject);
 
             if (P2_Score >= scoreToWin)
@@ -228,5 +230,33 @@ public class Heavens_Gate : MonoBehaviour
 
         P1.GetComponent<PlayerInput>().actions.Disable();
         P2.GetComponent<PlayerInput>().actions.Disable();
+    }
+
+    public void UpdateLoseBuffs()
+    {
+        Player_01_Controls p1 = P1.GetComponent<Player_01_Controls>();
+        Player_02_Controls p2 = P2.GetComponent<Player_02_Controls>();
+
+        float diff = Mathf.Abs(P1_Score - P2_Score);
+
+        float baseBuff = 1f + (diff * 0.15f);
+
+        baseBuff = Mathf.Clamp(baseBuff, 1f, 2.5f);
+
+        if (P1_Score < P2_Score)
+        {
+            p1.LoseMulti = baseBuff;
+            p2.LoseMulti = 1f;
+        }
+        else if (P2_Score < P1_Score)
+        {
+            p2.LoseMulti = baseBuff;
+            p1.LoseMulti = 1f;
+        }
+        else
+        {
+            p1.LoseMulti = 1f;
+            p2.LoseMulti = 1f;
+        }
     }
 }

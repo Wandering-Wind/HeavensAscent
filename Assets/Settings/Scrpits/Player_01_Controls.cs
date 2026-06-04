@@ -58,13 +58,12 @@ public class Player_01_Controls : MonoBehaviour
     public Class_Stats[] availableClasses;
     private Class_Stats currentClass;
     public bool isStunned;
+    public float LoseMulti = 1f;
+
 
     private void Start()
     {
-        if (isStunned)
-        {
-            return;
-        }
+
         selectedClass = SelectManager.Instance.player1Class;
         LoadClass(selectedClass);
 
@@ -78,6 +77,11 @@ public class Player_01_Controls : MonoBehaviour
     }
     private void Update()
     {
+        if (isStunned)
+        {
+            print("Pl1Stun");
+            return;
+        }
         if (currentClass.isStunned)
             return;
 
