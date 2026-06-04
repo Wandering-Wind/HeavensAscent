@@ -131,8 +131,8 @@ public class Player_01_Controls : MonoBehaviour
                 {
                     print("Player 1 hit Player 2");
 
-                    p2.currChargep2--;  // steal from Player 1
-                    currChargep1++;     // Player 2 gains charge
+                    p2.currChargep2--;  
+                    currChargep1++;     
                 }
 
                 StartCoroutine(StunOther(p2, 2f));
