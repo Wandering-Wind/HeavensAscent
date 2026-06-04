@@ -173,12 +173,22 @@ public class Player_02_Controls : MonoBehaviour
     }
     public void OnTeleport(InputAction.CallbackContext context)
     {
+        if (isStunned)
+        {
+            print("Pl1Stun");
+            return;
+        }
         if (!context.performed) return;
         Teleport();
     }
 
     public void OnShoot(InputAction.CallbackContext context)
     {
+        if (isStunned)
+        {
+            print("Pl1Stun");
+            return;
+        }
         if (context.started)
         {
             if (Soul_Life_p2 > 0 && bullet_P_02 == null)
@@ -233,9 +243,24 @@ public class Player_02_Controls : MonoBehaviour
     }
     public void Orb_Absorb()
     {
+        if (currentClass.classType == PlayerClassEnum.Devil)
+        {
+            StartCoroutine(StunSelf(2f));
+            return;
+        }
+
         Soul_Life_p2 = Max_SLP2;
         currentSoulScale = 1f;
         UpdateSoulBar();
+    }
+
+    IEnumerator StunSelf(float duration)
+    {
+        isStunned = true;
+
+        yield return new WaitForSeconds(duration);
+
+        isStunned = false;
     }
 
     public void Flip() //Youtu.be. (2026). Available at: https://youtu.be/Cr-j7EoM8bg?si=IjMERP-pLs5SwuNJ [Accessed 8 Mar. 2026].

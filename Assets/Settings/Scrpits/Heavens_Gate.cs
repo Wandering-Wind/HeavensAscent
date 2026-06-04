@@ -243,15 +243,30 @@ public class Heavens_Gate : MonoBehaviour
 
         baseBuff = Mathf.Clamp(baseBuff, 1f, 2.5f);
 
+        P1.transform.localScale = Vector3.one;
+        P2.transform.localScale = Vector3.one;
+
         if (P1_Score < P2_Score)
         {
             p1.LoseMulti = baseBuff;
             p2.LoseMulti = 1f;
+
+            if (p1.selectedClass == PlayerClassEnum.Angel)
+            {
+                float sizeBuff = Mathf.Clamp(1f + diff * 0.1f, 1f, 1.5f);
+                P1.transform.localScale = Vector3.one * sizeBuff;
+            }
         }
         else if (P2_Score < P1_Score)
         {
             p2.LoseMulti = baseBuff;
             p1.LoseMulti = 1f;
+
+            if (p2.selectedClass == PlayerClassEnum.Angel)
+            {
+                float sizeBuff = Mathf.Clamp(1f + diff * 0.1f, 1f, 1.5f);
+                P2.transform.localScale = Vector3.one * sizeBuff;
+            }
         }
         else
         {
