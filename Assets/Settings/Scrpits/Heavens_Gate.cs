@@ -258,5 +258,6 @@ public class Heavens_Gate : MonoBehaviour
             p1.LoseMulti = 1f;
             p2.LoseMulti = 1f;
         }
+        Debug.Log($"P1 Buff: {p1.LoseMulti} | P2 Buff: {p2.LoseMulti}");
     }
 }

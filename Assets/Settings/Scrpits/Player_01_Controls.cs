@@ -82,9 +82,6 @@ public class Player_01_Controls : MonoBehaviour
             print("Pl1Stun");
             return;
         }
-        if (currentClass.isStunned)
-            return;
-
         if (aimInput.magnitude > deadzone)
         {
             lastAimDirection = aimInput.normalized;
@@ -104,7 +101,7 @@ public class Player_01_Controls : MonoBehaviour
 
             rb.linearVelocity *= slowFactor;
             rb.gravityScale = originalGravity * slowFactor;
-            currentCharge += Charge * Time.deltaTime;
+            currentCharge += Charge* LoseMulti * Time.deltaTime;
             currentCharge = Mathf.Clamp(currentCharge, Min_Charge_power_P_01, Max_Charge_power_P_01);
 
             float chargePercent = currentCharge / Max_Charge_power_P_01;
