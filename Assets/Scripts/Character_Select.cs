@@ -8,6 +8,7 @@ public class Character_Select : MonoBehaviour
 
     public TMP_Text playerText;
     public TMP_Text classText;
+    public TMP_Text descriptionText;
 
     private PlayerClassEnum[] classes =
     {
@@ -18,7 +19,10 @@ public class Character_Select : MonoBehaviour
     private int classIndex = 0;
     private int currentPlayer = 1;
 
+
     public string[] gameScenes ={"Nhlanzeko","Stage_02","Stage_03"};
+
+    public string[] classDescriptions ={ "Devil", "Angel" };
 
     private void Start()
     {
@@ -69,5 +73,6 @@ public class Character_Select : MonoBehaviour
     {
         playerText.text = $"Player {currentPlayer} Select Class";
         classText.text = classes[classIndex].ToString();
+        descriptionText.text = classDescriptions[classIndex];
     }
 }
