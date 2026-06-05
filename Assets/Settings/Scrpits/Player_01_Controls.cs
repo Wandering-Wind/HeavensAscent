@@ -59,6 +59,7 @@ public class Player_01_Controls : MonoBehaviour
     private Class_Stats currentClass;
     public bool isStunned;
     public float LoseMulti = 1f;
+    public float SoulSizeMultiplier = 1f;
 
 
     private void Start()
@@ -226,7 +227,7 @@ public class Player_01_Controls : MonoBehaviour
         SoulScrpit_01 owner1 = bullet_P_01.AddComponent<SoulScrpit_01>();
         owner1.player1 = this;
 
-        bullet_P_01.transform.localScale = Vector3.one * currentSoulScale;
+        bullet_P_01.transform.localScale = Vector3.one * currentSoulScale * SoulSizeMultiplier;
         currentSoulScale = (Soul_Life_p1 / Max_SLP1);
     }
     public void Teleport()

@@ -189,8 +189,11 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
 
         baseBuff = Mathf.Clamp(baseBuff, 1f, 2.5f);
 
-        P1.transform.localScale = Vector3.one;
-        P2.transform.localScale = Vector3.one;
+        p1.LoseMulti = 1f;
+        p2.LoseMulti = 1f;
+
+        p1.SoulSizeMultiplier = 1f;
+        p2.SoulSizeMultiplier = 1f;
 
         if (P1_Score < P2_Score)
         {
@@ -199,8 +202,7 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
 
             if (p1.selectedClass == PlayerClassEnum.Angel)
             {
-                float sizeBuff = Mathf.Clamp(1f + diff * 0.1f, 1f, 1.5f);
-                P1.transform.localScale = Vector3.one * sizeBuff;
+                p1.SoulSizeMultiplier = Mathf.Clamp(1f + diff * 0.1f, 1f, 1.5f);
             }
         }
         else if (P2_Score < P1_Score)
@@ -210,8 +212,7 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
 
             if (p2.selectedClass == PlayerClassEnum.Angel)
             {
-                float sizeBuff = Mathf.Clamp(1f + diff * 0.1f, 1f, 1.5f);
-                P2.transform.localScale = Vector3.one * sizeBuff;
+                p2.SoulSizeMultiplier = Mathf.Clamp(1f + diff * 0.1f, 1f, 1.5f);
             }
         }
         else
