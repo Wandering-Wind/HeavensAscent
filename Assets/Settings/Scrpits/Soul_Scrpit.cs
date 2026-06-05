@@ -21,8 +21,6 @@ public class Soul_Scrpit : MonoBehaviour
 
             player2.StartCoroutine(StunPlayer1(p1, 2f));
         }
-
-        Destroy(gameObject);
     }
 
     IEnumerator StunPlayer1(Player_01_Controls target, float duration)
