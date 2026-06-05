@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 using UnityEngine.UI;
+using TMPro;
 
 public class Player_02_Controls : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class Player_02_Controls : MonoBehaviour
     private float currentSoulScale;
     private float originalSoulScale;
 
-    public Image soulBarFill;
+    public TextMeshProUGUI soulText;
 
     [Header("Aim")]
     public GameObject aimArrow;
@@ -297,6 +298,6 @@ public class Player_02_Controls : MonoBehaviour
     }
     private void UpdateSoulBar()
     {
-        soulBarFill.fillAmount = Soul_Life_p2 / Max_SLP2;
+        soulText.text = Soul_Life_p2.ToString();
     }
 }

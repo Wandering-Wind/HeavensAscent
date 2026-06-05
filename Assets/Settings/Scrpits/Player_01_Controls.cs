@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -27,7 +28,7 @@ public class Player_01_Controls : MonoBehaviour
     private float currentSoulScale;
     private float originalSoulScale;
 
-    public Image soulBarFill;
+    public TextMeshProUGUI soulText;
 
     [Header("Aim")]
     public GameObject aimArrow;
@@ -296,7 +297,7 @@ public class Player_01_Controls : MonoBehaviour
     }
     private void UpdateSoulBar()
     {
-        soulBarFill.fillAmount = Soul_Life_p1 / Max_SLP1;
+        soulText.text = Soul_Life_p1.ToString();
     }
 }
 
