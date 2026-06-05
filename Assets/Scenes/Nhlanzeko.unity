@@ -1425,7 +1425,7 @@ GameObject:
   - component: {fileID: 374208278}
   - component: {fileID: 374208279}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3456,7 +3456,7 @@ Transform:
   m_GameObject: {fileID: 926980747}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.85, y: 2.86, z: 7}
+  m_LocalPosition: {x: -0.85, y: 2.74, z: 7}
   m_LocalScale: {x: 1.18, y: 1.18, z: 1.18}
   m_ConstrainProportionsScale: 1
   m_Children: []
