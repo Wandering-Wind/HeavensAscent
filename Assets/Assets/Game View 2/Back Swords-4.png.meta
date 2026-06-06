@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: b70eec91a68dea9419bd4db3dcbbcb95
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2298273422724544118
+    second: Back Swords-4_0
+  - first:
+      213: 7169438485172352928
+    second: Back Swords-4_1
+  - first:
+      213: -4419427078172959758
+    second: Back Swords-4_2
+  - first:
+      213: -3265894204904085461
+    second: Back Swords-4_3
+  - first:
+      213: 6072751078201033332
+    second: Back Swords-4_4
+  - first:
+      213: -7637543768959877912
+    second: Back Swords-4_5
+  - first:
+      213: -3781651023688788207
+    second: Back Swords-4_6
+  - first:
+      213: 1728298408926752029
+    second: Back Swords-4_7
+  - first:
+      213: -3721008770650031534
+    second: Back Swords-4_8
+  - first:
+      213: 3132679825429523344
+    second: Back Swords-4_9
+  - first:
+      213: -6172699387693551314
+    second: Back Swords-4_10
+  - first:
+      213: 7792799293657206862
+    second: Back Swords-4_11
+  - first:
+      213: -7763488912268892727
+    second: Back Swords-4_12
+  - first:
+      213: -6313642670701513143
+    second: Back Swords-4_13
+  - first:
+      213: -6043850234653036171
+    second: Back Swords-4_14
+  - first:
+      213: 7652555869848732661
+    second: Back Swords-4_15
+  - first:
+      213: 6657086657120887105
+    second: Back Swords-4_16
+  - first:
+      213: -719361057234118459
+    second: Back Swords-4_17
+  - first:
+      213: 1583451740097110175
+    second: Back Swords-4_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Back Swords-4_0
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 84
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 676b73e408b15ef10800000000000000
+      internalID: 2298273422724544118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_1
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 85
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a776b32156fe7360800000000000000
+      internalID: 7169438485172352928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_2
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 70
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb12cecc7a0ba2c0800000000000000
+      internalID: -4419427078172959758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_3
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 72
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b286faa26863da2d0800000000000000
+      internalID: -3265894204904085461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_4
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 86
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4720b894eeeb64450800000000000000
+      internalID: 6072751078201033332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_5
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 67
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ecf5a6586ef10690800000000000000
+      internalID: -7637543768959877912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_6
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 83
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11799841e60e48bc0800000000000000
+      internalID: -3781651023688788207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_7
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 65
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1da3f9fe362cf710800000000000000
+      internalID: 1728298408926752029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_8
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 51
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25aba43ec325c5cc0800000000000000
+      internalID: -3721008770650031534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_9
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 36
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b62cd14b3897b20800000000000000
+      internalID: 3132679825429523344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_10
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 60
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e21314b7c9a265aa0800000000000000
+      internalID: -6172699387693551314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_11
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 71
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e405a586ba5952c60800000000000000
+      internalID: 7792799293657206862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_12
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 63
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c5678e87fb824490800000000000000
+      internalID: -7763488912268892727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_13
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 57
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 946761e217f6168a0800000000000000
+      internalID: -6313642670701513143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_14
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 43
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57138d7bb3eef1ca0800000000000000
+      internalID: -6043850234653036171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_15
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 54
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f30a26c407533a60800000000000000
+      internalID: 7652555869848732661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_16
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 55
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 141eeac3b09b26c50800000000000000
+      internalID: 6657086657120887105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_17
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 42
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c89f460ee05406f0800000000000000
+      internalID: -719361057234118459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back Swords-4_18
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 51
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f906677d7fc89f510800000000000000
+      internalID: 1583451740097110175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Back Swords-4_0: 2298273422724544118
+      Back Swords-4_1: 7169438485172352928
+      Back Swords-4_10: -6172699387693551314
+      Back Swords-4_11: 7792799293657206862
+      Back Swords-4_12: -7763488912268892727
+      Back Swords-4_13: -6313642670701513143
+      Back Swords-4_14: -6043850234653036171
+      Back Swords-4_15: 7652555869848732661
+      Back Swords-4_16: 6657086657120887105
+      Back Swords-4_17: -719361057234118459
+      Back Swords-4_18: 1583451740097110175
+      Back Swords-4_2: -4419427078172959758
+      Back Swords-4_3: -3265894204904085461
+      Back Swords-4_4: 6072751078201033332
+      Back Swords-4_5: -7637543768959877912
+      Back Swords-4_6: -3781651023688788207
+      Back Swords-4_7: 1728298408926752029
+      Back Swords-4_8: -3721008770650031534
+      Back Swords-4_9: 3132679825429523344
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

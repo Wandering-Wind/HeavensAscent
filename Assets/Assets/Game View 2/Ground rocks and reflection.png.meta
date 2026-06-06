@@ -1,0 +1,1001 @@
+fileFormatVersion: 2
+guid: eae3fcff9670faa4293b1be375498304
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1701578153925732802
+    second: Ground rocks and reflection_0
+  - first:
+      213: 6673778099332819412
+    second: Ground rocks and reflection_1
+  - first:
+      213: 3597478722907149971
+    second: Ground rocks and reflection_2
+  - first:
+      213: -1968787181158131897
+    second: Ground rocks and reflection_3
+  - first:
+      213: 1115461165243742645
+    second: Ground rocks and reflection_4
+  - first:
+      213: -3909233611698410387
+    second: Ground rocks and reflection_5
+  - first:
+      213: -8107075299558658797
+    second: Ground rocks and reflection_6
+  - first:
+      213: 7884511831263181410
+    second: Ground rocks and reflection_7
+  - first:
+      213: 6871993461152535452
+    second: Ground rocks and reflection_8
+  - first:
+      213: 3254899987375742240
+    second: Ground rocks and reflection_9
+  - first:
+      213: 2292353245933095795
+    second: Ground rocks and reflection_10
+  - first:
+      213: -4163418859530614447
+    second: Ground rocks and reflection_11
+  - first:
+      213: 6346777112730133147
+    second: Ground rocks and reflection_12
+  - first:
+      213: -8657927802915800864
+    second: Ground rocks and reflection_13
+  - first:
+      213: 4489590809004112333
+    second: Ground rocks and reflection_14
+  - first:
+      213: -7296439986830851687
+    second: Ground rocks and reflection_15
+  - first:
+      213: -5402602424854088735
+    second: Ground rocks and reflection_16
+  - first:
+      213: -319060898048528974
+    second: Ground rocks and reflection_17
+  - first:
+      213: -7567378859604713223
+    second: Ground rocks and reflection_18
+  - first:
+      213: -7519057489559570654
+    second: Ground rocks and reflection_19
+  - first:
+      213: 9142573592602344027
+    second: Ground rocks and reflection_20
+  - first:
+      213: 3236120082686914042
+    second: Ground rocks and reflection_21
+  - first:
+      213: -6796397743292640218
+    second: Ground rocks and reflection_22
+  - first:
+      213: -2399490590102567428
+    second: Ground rocks and reflection_23
+  - first:
+      213: -1731981096987380785
+    second: Ground rocks and reflection_24
+  - first:
+      213: -5226684425351091176
+    second: Ground rocks and reflection_25
+  - first:
+      213: 9109630873233291062
+    second: Ground rocks and reflection_26
+  - first:
+      213: -3889711893849674256
+    second: Ground rocks and reflection_27
+  - first:
+      213: -5936111044293997952
+    second: Ground rocks and reflection_28
+  - first:
+      213: 8431658991287793608
+    second: Ground rocks and reflection_29
+  - first:
+      213: 596310420928820338
+    second: Ground rocks and reflection_30
+  - first:
+      213: -5689460988702091878
+    second: Ground rocks and reflection_31
+  - first:
+      213: -6761965557981467868
+    second: Ground rocks and reflection_32
+  - first:
+      213: 8314207598196216214
+    second: Ground rocks and reflection_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ground rocks and reflection_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 26
+        width: 45
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c9ee4ec0583d9710800000000000000
+      internalID: 1701578153925732802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 45
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d9a38872d50e9c50800000000000000
+      internalID: 6673778099332819412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 28
+        width: 73
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39618e596dfcce130800000000000000
+      internalID: 3597478722907149971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_3
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 22
+        width: 49
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7471ab46d767da4e0800000000000000
+      internalID: -1968787181158131897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_4
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 44
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b9b813150aea7f00800000000000000
+      internalID: 1115461165243742645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_5
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 44
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ce2befdbc9fb9c0800000000000000
+      internalID: -3909233611698410387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_6
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 30
+        width: 47
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d667ad7f1ed7f80800000000000000
+      internalID: -8107075299558658797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_7
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 31
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26a7ec19cb96b6d60800000000000000
+      internalID: 7884511831263181410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_8
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 44
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c93ddceb4a93e5f50800000000000000
+      internalID: 6871993461152535452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_9
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 10
+        width: 184
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02d54f61b4abb2d20800000000000000
+      internalID: 3254899987375742240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_10
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 30
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37b4e8bb12310df10800000000000000
+      internalID: 2292353245933095795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_11
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 45
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15904822b909836c0800000000000000
+      internalID: -4163418859530614447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_12
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 22
+        width: 70
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b92ebd84828441850800000000000000
+      internalID: 6346777112730133147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_13
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 26
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e8b930f88cd8d780800000000000000
+      internalID: -8657927802915800864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_14
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 32
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc97c8dcd0b3e4e30800000000000000
+      internalID: 4489590809004112333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_15
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 44
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 991cdfb7d76ddba90800000000000000
+      internalID: -7296439986830851687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_16
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 32
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e378e308b91605b0800000000000000
+      internalID: -5402602424854088735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_17
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 36
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bda91ebdc7729bf0800000000000000
+      internalID: -319060898048528974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_18
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 32
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0e57855054bf690800000000000000
+      internalID: -7567378859604713223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_19
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 42
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227bf090d01f6a790800000000000000
+      internalID: -7519057489559570654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_20
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 30
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5afde73e32f0ee70800000000000000
+      internalID: 9142573592602344027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_21
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 44
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afdaf0bc11209ec20800000000000000
+      internalID: 3236120082686914042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_22
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 19
+        width: 83
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62496c6e2485ea1a0800000000000000
+      internalID: -6796397743292640218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_23
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 32
+        width: 31
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf54b07750c43bed0800000000000000
+      internalID: -2399490590102567428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_24
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 34
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc330646e54c6f7e0800000000000000
+      internalID: -1731981096987380785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_25
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 34
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ca1e115361777b0800000000000000
+      internalID: -5226684425351091176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_26
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 4
+        width: 75
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 637700aa309eb6e70800000000000000
+      internalID: 9109630873233291062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_27
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 16
+        width: 41
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fd6a7024a7f40ac0800000000000000
+      internalID: -3889711893849674256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_28
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 22
+        width: 49
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a4591c472be9da0800000000000000
+      internalID: -5936111044293997952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_29
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 0
+        width: 75
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c7ffe20e25430570800000000000000
+      internalID: 8431658991287793608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_30
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 6
+        width: 42
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 274735f1b25864800800000000000000
+      internalID: 596310420928820338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_31
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 4
+        width: 75
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9518f4ff59fa01b0800000000000000
+      internalID: -5689460988702091878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_32
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 4
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ba615c62ca822a0800000000000000
+      internalID: -6761965557981467868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground rocks and reflection_33
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 1
+        width: 75
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 691d65f82cff16370800000000000000
+      internalID: 8314207598196216214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ground rocks and reflection_0: 1701578153925732802
+      Ground rocks and reflection_1: 6673778099332819412
+      Ground rocks and reflection_10: 2292353245933095795
+      Ground rocks and reflection_11: -4163418859530614447
+      Ground rocks and reflection_12: 6346777112730133147
+      Ground rocks and reflection_13: -8657927802915800864
+      Ground rocks and reflection_14: 4489590809004112333
+      Ground rocks and reflection_15: -7296439986830851687
+      Ground rocks and reflection_16: -5402602424854088735
+      Ground rocks and reflection_17: -319060898048528974
+      Ground rocks and reflection_18: -7567378859604713223
+      Ground rocks and reflection_19: -7519057489559570654
+      Ground rocks and reflection_2: 3597478722907149971
+      Ground rocks and reflection_20: 9142573592602344027
+      Ground rocks and reflection_21: 3236120082686914042
+      Ground rocks and reflection_22: -6796397743292640218
+      Ground rocks and reflection_23: -2399490590102567428
+      Ground rocks and reflection_24: -1731981096987380785
+      Ground rocks and reflection_25: -5226684425351091176
+      Ground rocks and reflection_26: 9109630873233291062
+      Ground rocks and reflection_27: -3889711893849674256
+      Ground rocks and reflection_28: -5936111044293997952
+      Ground rocks and reflection_29: 8431658991287793608
+      Ground rocks and reflection_3: -1968787181158131897
+      Ground rocks and reflection_30: 596310420928820338
+      Ground rocks and reflection_31: -5689460988702091878
+      Ground rocks and reflection_32: -6761965557981467868
+      Ground rocks and reflection_33: 8314207598196216214
+      Ground rocks and reflection_4: 1115461165243742645
+      Ground rocks and reflection_5: -3909233611698410387
+      Ground rocks and reflection_6: -8107075299558658797
+      Ground rocks and reflection_7: 7884511831263181410
+      Ground rocks and reflection_8: 6871993461152535452
+      Ground rocks and reflection_9: 3254899987375742240
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
