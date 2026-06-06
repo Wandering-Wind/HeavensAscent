@@ -120,29 +120,39 @@ public class Player_02_Controls : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        /*if (gameObject.CompareTag("Player_01_Soul") || gameObject.CompareTag("P1"))
-            print("Pl1 Hit");
-        animator.SetBool("GetHit", true);*/
-        if(currentClass.classType == PlayerClassEnum.Devil)
+        if (collision.gameObject.CompareTag("Player_01_Soul") || collision.gameObject.CompareTag("P1"))
         {
-            Player_01_Controls p1 = collision.gameObject.GetComponent<Player_01_Controls>();
+            float impactSpeed = collision.relativeVelocity.magnitude;
+            float intensity = Mathf.Clamp(impactSpeed * 0.02f, 0.05f, 0.7f);
 
-            if (p1 != null)
+            if (CameraShaking.Instance != null)
             {
-                if (p1.currChargep1 > 0)
-                {
-                    print("Player 1 hit Player 2");
-
-                    p1.currChargep1--; 
-                    currChargep2++;   
-                }
-
-                StartCoroutine(StunOther(p1, 2f));
+                CameraShaking.Instance.Shake(0.2f, intensity);
             }
-        }
-        else if(currentClass ==null || currentClass.classType == PlayerClassEnum.Angel)
-        {
-            return;
+
+
+            if (currentClass.classType == PlayerClassEnum.Devil)
+            {
+                Player_01_Controls p1 =
+                    collision.gameObject.GetComponent<Player_01_Controls>();
+
+                if (p1 != null)
+                {
+                    if (p1.currChargep1 > 0)
+                    {
+                        print("Player 1 hit Player 2");
+
+                        p1.currChargep1--;
+                        currChargep2++;
+                    }
+
+                    StartCoroutine(StunOther(p1, 2f));
+                }
+            }
+            else if (currentClass == null || currentClass.classType == PlayerClassEnum.Angel)
+            {
+                return;
+            }
         }
     }
 

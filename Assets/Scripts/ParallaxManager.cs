@@ -21,13 +21,13 @@ public class ParallaxManager : MonoBehaviour
     [Tooltip("Add all the layers you want to apply parallax to.")]
     public ParallaxLayerData[] layers;
 
-    private Transform cam;
+    public Transform cam;
     private Vector3 startCameraPosition;
 
     void Start()
     {
         // Cache camera starting position
-        cam = Camera.main.transform;
+       // cam = Camera.main.transform;
         startCameraPosition = cam.position;
 
         // Loop through the list and record the starting position of every assigned layer

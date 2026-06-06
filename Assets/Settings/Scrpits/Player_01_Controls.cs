@@ -119,30 +119,38 @@ public class Player_01_Controls : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        /*  if (gameObject.CompareTag("Player_02_Soul") || gameObject.CompareTag("P2"))
-              print("Pl2 Hit");
-              animator.SetBool("GetHit", true);*/
-
-        if (currentClass.classType == PlayerClassEnum.Devil)
+        if (collision.gameObject.CompareTag("Player_02_Soul") || collision.gameObject.CompareTag("P2"))
         {
-            Player_02_Controls p2 = collision.gameObject.GetComponent<Player_02_Controls>();
+            float impactSpeed = collision.relativeVelocity.magnitude;
+            float intensity = Mathf.Clamp(impactSpeed * 0.02f, 0.05f, 0.7f);
 
-            if (p2 != null)
+            if (CameraShaking.Instance != null)
             {
-                if (p2.currChargep2 > 0)
-                {
-                    print("Player 1 hit Player 2");
-
-                    p2.currChargep2--;  
-                    currChargep1++;     
-                }
-
-                StartCoroutine(StunOther(p2, 2f));
+                CameraShaking.Instance.Shake(0.2f, intensity);
             }
-        }
-        else if (currentClass == null || currentClass.classType == PlayerClassEnum.Angel)
-        {
-            return;
+
+
+            if (currentClass.classType == PlayerClassEnum.Devil)
+            {
+                Player_02_Controls p2 = collision.gameObject.GetComponent<Player_02_Controls>();
+
+                if (p2 != null)
+                {
+                    if (p2.currChargep2 > 0)
+                    {
+                        print("Player 2 hit Player 1");
+
+                        p2.currChargep2--;
+                        currChargep1++;
+                    }
+
+                    StartCoroutine(StunOther(p2, 2f));
+                }
+            }
+            else if (currentClass == null || currentClass.classType == PlayerClassEnum.Angel)
+            {
+                return;
+            }
         }
     }
     IEnumerator StunOther(Player_02_Controls target, float duration)

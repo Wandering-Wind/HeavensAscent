@@ -21,11 +21,10 @@ public class DynamicCameraController : MonoBehaviour
     public Vector2 maxBounds;
 
     private Vector3 velocity = Vector3.zero;
-    private Camera cam;
+    public Camera cam;
 
     void Start()
     {
-        cam = GetComponent<Camera>();
 
         if (!cam.orthographic)
         {

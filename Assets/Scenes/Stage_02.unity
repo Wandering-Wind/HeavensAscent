@@ -2232,7 +2232,8 @@ GameObject:
   - component: {fileID: 554631852}
   - component: {fileID: 554631851}
   - component: {fileID: 554631854}
-  - component: {fileID: 554631855}
+  - component: {fileID: 554631856}
+  - component: {fileID: 554631857}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2307,8 +2308,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554631850}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.29, y: 1.37, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.8, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2358,7 +2359,19 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &554631855
+--- !u!114 &554631856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554631850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bcd751ffe1c389439a20ccdc1c4889c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraShaking
+--- !u!114 &554631857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2379,6 +2392,7 @@ MonoBehaviour:
   zoomLimiter: 9
   minBounds: {x: -18.2, y: -6.28}
   maxBounds: {x: 18.2, y: 9.94}
+  cam: {fileID: 554631852}
 --- !u!1 &573681837
 GameObject:
   m_ObjectHideFlags: 0
@@ -4270,6 +4284,7 @@ MonoBehaviour:
   - layerTransform: {fileID: 1216280943}
     parallaxMultiplier: {x: -0.3, y: -0.05}
     startPosition: {x: 0, y: 0, z: 0}
+  cam: {fileID: 554631853}
 --- !u!4 &1353711317
 Transform:
   m_ObjectHideFlags: 0
