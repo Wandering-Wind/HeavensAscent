@@ -4295,13 +4295,13 @@ MonoBehaviour:
     parallaxMultiplier: {x: 0.6, y: 0.05}
     startPosition: {x: 0, y: 0, z: 0}
   - layerTransform: {fileID: 1945528791}
-    parallaxMultiplier: {x: 0.4, y: 0.03}
+    parallaxMultiplier: {x: 0.4, y: 0.04}
     startPosition: {x: 0, y: 0, z: 0}
   - layerTransform: {fileID: 159272374}
-    parallaxMultiplier: {x: 0.25, y: 0.02}
+    parallaxMultiplier: {x: 0.35, y: 0.03}
     startPosition: {x: 0, y: 0, z: 0}
   - layerTransform: {fileID: 452794156}
-    parallaxMultiplier: {x: 0.1, y: 0.01}
+    parallaxMultiplier: {x: 0.25, y: 0.02}
     startPosition: {x: 0, y: 0, z: 0}
   - layerTransform: {fileID: 1009720147}
     parallaxMultiplier: {x: 0, y: 0}
