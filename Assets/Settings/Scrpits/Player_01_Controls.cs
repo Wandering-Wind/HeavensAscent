@@ -250,10 +250,13 @@ public class Player_01_Controls : MonoBehaviour
             StartCoroutine(StunSelf(2f));
             return;
         }
-
-        Soul_Life_p1 = Max_SLP1;
-        currentSoulScale = 1f;
-        UpdateSoulBar();
+        if (currentClass.classType == PlayerClassEnum.Angel)
+        {
+            Max_SLP1 += 1;
+            Soul_Life_p1 = Max_SLP1;
+            currentSoulScale = 1f;
+            UpdateSoulBar();
+        }
     }
 
     IEnumerator StunSelf(float duration)

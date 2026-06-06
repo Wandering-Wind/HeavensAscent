@@ -252,9 +252,13 @@ public class Player_02_Controls : MonoBehaviour
             return;
         }
 
-        Soul_Life_p2 = Max_SLP2;
-        currentSoulScale = 1f;
-        UpdateSoulBar();
+        if (currentClass.classType == PlayerClassEnum.Angel)
+        {
+            Max_SLP2 += 1;
+            Soul_Life_p2 = Max_SLP2;
+            currentSoulScale = 1f;
+            UpdateSoulBar();
+        }
     }
 
     IEnumerator StunSelf(float duration)
