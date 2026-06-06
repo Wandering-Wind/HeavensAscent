@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: e2b423eaa4f3df74bac556f043fe8735
+guid: 9186e3abc8d907d419b4e4e7012be284
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8057053110638923423
-    second: Giant-5_0
+      213: -6582355348762458784
+    second: Back arms_0
+  - first:
+      213: 5141510841102603406
+    second: Back arms_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +49,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 27
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Giant-5_0
+      name: Back arms_0
       rect:
         serializedVersion: 2
-        x: 190
-        y: 26
-        width: 409
-        height: 198
+        x: 132
+        y: 114
+        width: 143
+        height: 204
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9ec614bd1760df60800000000000000
-      internalID: 8057053110638923423
+      spriteID: 0650f936fa6c6a4a0800000000000000
+      internalID: -6582355348762458784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back arms_1
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 114
+        width: 143
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e849dbc7ed05a5740800000000000000
+      internalID: 5141510841102603406
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Giant-5_0: 8057053110638923423
+      Back arms_0: -6582355348762458784
+      Back arms_1: 5141510841102603406
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

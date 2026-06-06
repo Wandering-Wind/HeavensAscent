@@ -1,34 +1,49 @@
 fileFormatVersion: 2
-guid: 96149a745edb22a488176f2fcb0f2038
+guid: 9773233f17f3a954890d6804bfa86456
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2656847970297182411
-    second: Middle Sword-7_0
+      213: -2976340537264255197
+    second: Glare_0
   - first:
-      213: -7521382769678869649
-    second: Middle Sword-7_1
+      213: -9155756163385808630
+    second: Glare_1
   - first:
-      213: 9154686511283349534
-    second: Middle Sword-7_2
+      213: 3301831142293357849
+    second: Glare_2
   - first:
-      213: -307709549238097337
-    second: Middle Sword-7_3
+      213: -7263803421439630390
+    second: Glare_3
   - first:
-      213: -2330275393116857248
-    second: Middle Sword-7_4
+      213: -6574112324947065016
+    second: Glare_4
   - first:
-      213: -1071725889654885302
-    second: Middle Sword-7_5
+      213: 3966105472472296601
+    second: Glare_5
   - first:
-      213: 786930391108065309
-    second: Middle Sword-7_6
+      213: -7917643525890373514
+    second: Glare_6
   - first:
-      213: 23471735988495035
-    second: Middle Sword-7_7
+      213: 8950144402723559783
+    second: Glare_7
   - first:
-      213: 2298987864023415784
-    second: Middle Sword-7_8
+      213: -9092441052515814128
+    second: Glare_8
+  - first:
+      213: 7097644752248842500
+    second: Glare_9
+  - first:
+      213: 7258563176675042112
+    second: Glare_10
+  - first:
+      213: 960031598213664208
+    second: Glare_11
+  - first:
+      213: 468019798590376122
+    second: Glare_12
+  - first:
+      213: -7577684738129420947
+    second: Glare_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +76,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,12 +85,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 27
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,7 +114,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -124,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Middle Sword-7_0
+      name: Glare_0
       rect:
         serializedVersion: 2
-        x: 651
-        y: 140
-        width: 33
-        height: 34
+        x: 65
+        y: 411
+        width: 125
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 537083cf8daf02bd0800000000000000
-      internalID: -2656847970297182411
+      spriteID: 32fc4c9fc0ae1b6d0800000000000000
+      internalID: -2976340537264255197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Middle Sword-7_1
+      name: Glare_1
       rect:
         serializedVersion: 2
-        x: 657
-        y: 152
-        width: 92
-        height: 117
+        x: 194
+        y: 429
+        width: 27
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f6b1c81983eae9790800000000000000
-      internalID: -7521382769678869649
+      spriteID: a09ab47574830f080800000000000000
+      internalID: -9155756163385808630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Middle Sword-7_2
+      name: Glare_2
       rect:
         serializedVersion: 2
-        x: 681
-        y: 109
-        width: 47
-        height: 55
+        x: 57
+        y: 399
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,20 +198,64 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e18aa1fd0eafb0f70800000000000000
-      internalID: 9154686511283349534
+      spriteID: 915c7b81ee572dd20800000000000000
+      internalID: 3301831142293357849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Middle Sword-7_3
+      name: Glare_3
       rect:
         serializedVersion: 2
-        x: 716
-        y: 130
+        x: 228
+        y: 402
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac3e2d20649c13b90800000000000000
+      internalID: -7263803421439630390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glare_4
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 335
+        width: 11
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 847430eebaf04c4a0800000000000000
+      internalID: -6574112324947065016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glare_5
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 293
         width: 20
-        height: 26
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +264,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 74aeaa79bcbcabbf0800000000000000
-      internalID: -307709549238097337
+      spriteID: 99ca174f9ef6a0730800000000000000
+      internalID: 3966105472472296601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Middle Sword-7_4
+      name: Glare_6
       rect:
         serializedVersion: 2
-        x: 646
-        y: 108
-        width: 19
-        height: 26
+        x: 244
+        y: 347
+        width: 15
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,20 +286,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06c9f6450e239afd0800000000000000
-      internalID: -2330275393116857248
+      spriteID: 6780225a921ee1290800000000000000
+      internalID: -7917643525890373514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Middle Sword-7_5
+      name: Glare_7
       rect:
         serializedVersion: 2
-        x: 669
-        y: 108
-        width: 26
-        height: 29
+        x: 38
+        y: 286
+        width: 42
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,20 +308,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a44f78a4bf67021f0800000000000000
-      internalID: -1071725889654885302
+      spriteID: 769d9c41aec453c70800000000000000
+      internalID: 8950144402723559783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Middle Sword-7_6
+      name: Glare_8
       rect:
         serializedVersion: 2
-        x: 694
-        y: 74
-        width: 29
-        height: 40
+        x: 70
+        y: 257
+        width: 40
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +330,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1894f8750dbbea00800000000000000
-      internalID: 786930391108065309
+      spriteID: 015bd9b590921d180800000000000000
+      internalID: -9092441052515814128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Middle Sword-7_7
+      name: Glare_9
       rect:
         serializedVersion: 2
-        x: 638
-        y: 11
-        width: 77
-        height: 74
+        x: 39
+        y: 267
+        width: 7
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,20 +352,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb22bd56b63635000800000000000000
-      internalID: 23471735988495035
+      spriteID: 40925b71c46ef7260800000000000000
+      internalID: 7097644752248842500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Middle Sword-7_8
+      name: Glare_10
       rect:
         serializedVersion: 2
-        x: 642
-        y: 78
-        width: 46
-        height: 29
+        x: 190
+        y: 257
+        width: 39
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,8 +374,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ebbc022845a7ef10800000000000000
-      internalID: 2298987864023415784
+      spriteID: 043627d60c89bb460800000000000000
+      internalID: 7258563176675042112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glare_11
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 259
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd0da0f6a7b25d00800000000000000
+      internalID: 960031598213664208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glare_12
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 254
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab844d2f68dbe7600800000000000000
+      internalID: 468019798590376122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glare_13
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 248
+        width: 64
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6d95e301e7a6d690800000000000000
+      internalID: -7577684738129420947
       vertices: []
       indices: 
       edges: []
@@ -325,7 +450,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -335,15 +460,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Middle Sword-7_0: -2656847970297182411
-      Middle Sword-7_1: -7521382769678869649
-      Middle Sword-7_2: 9154686511283349534
-      Middle Sword-7_3: -307709549238097337
-      Middle Sword-7_4: -2330275393116857248
-      Middle Sword-7_5: -1071725889654885302
-      Middle Sword-7_6: 786930391108065309
-      Middle Sword-7_7: 23471735988495035
-      Middle Sword-7_8: 2298987864023415784
+      Glare_0: -2976340537264255197
+      Glare_1: -9155756163385808630
+      Glare_10: 7258563176675042112
+      Glare_11: 960031598213664208
+      Glare_12: 468019798590376122
+      Glare_13: -7577684738129420947
+      Glare_2: 3301831142293357849
+      Glare_3: -7263803421439630390
+      Glare_4: -6574112324947065016
+      Glare_5: 3966105472472296601
+      Glare_6: -7917643525890373514
+      Glare_7: 8950144402723559783
+      Glare_8: -9092441052515814128
+      Glare_9: 7097644752248842500
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
