@@ -53,6 +53,8 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Player_01_Controls p1 = P1.GetComponent<Player_01_Controls>();
+        Player_02_Controls p2 = P2.GetComponent<Player_02_Controls>();
         if (gameEnded) return;
 
         Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
@@ -71,6 +73,14 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
 
             if (P1_Score >= scoreToWin)
             {
+                if (p1.selectedClass == PlayerClassEnum.Angel)
+                {
+                    NPC_Dialogoue.Instance.StartDialogue(new string[] { "Well Done You Are Truely Blessed By The Angels." });
+                }
+                if (p2.selectedClass == PlayerClassEnum.Devil)
+                {
+                    NPC_Dialogoue.Instance.StartDialogue(new string[] { "ou'd even sell a part of you to get here guess yo were that desperate.", "Oh Well Congratulations!" });
+                }
                 AM.PlayWinnerAAAH();
                 gameEnded = true;
                 winPanel_P1.SetActive(true);
@@ -94,6 +104,14 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
 
             if (P2_Score >= scoreToWin)
             {
+                if (p2.selectedClass == PlayerClassEnum.Angel)
+                {
+                    NPC_Dialogoue.Instance.StartDialogue(new string[] { "Well Done You Are Truely Blessed By The Angels" });
+                }
+                if (p2.selectedClass == PlayerClassEnum.Devil)
+                {
+                    NPC_Dialogoue.Instance.StartDialogue(new string[] { "ou'd even sell a part of you to get here guess yo were that desperate.", "Oh Well Congratulations!" });
+                }
                 AM.PlayWinnerAAAH();
                 gameEnded = true;
                 winPanel_P2.SetActive(true);
