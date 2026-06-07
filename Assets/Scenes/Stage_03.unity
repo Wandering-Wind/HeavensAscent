@@ -11305,7 +11305,7 @@ GameObject:
   - component: {fileID: 1632018981}
   - component: {fileID: 1632018980}
   - component: {fileID: 1632018979}
-  - component: {fileID: 1632018978}
+  - component: {fileID: 1632018982}
   m_Layer: 0
   m_Name: End_Point(Heavens_Gate)
   m_TagString: End_Point
@@ -11313,61 +11313,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1632018978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632018977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5af905381d40b9442a88a7578bc064fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Heavens_Gate
-  P1: {fileID: 906423705}
-  P2: {fileID: 1767807943}
-  P1_Start_Pos: {fileID: 1252317406}
-  P2_Start_Pos: {fileID: 2143283476}
-  P1_Score: 0
-  P2_Score: 0
-  P1_Text: {fileID: 2084913729}
-  P2_Text: {fileID: 1141033902}
-  LightOrb: {fileID: 4245511873358579384, guid: 94abde440dc61104fad5df03201bc806, type: 3}
-  random_Ord_Rangex: 12
-  random_Ord_Rangey: 5.7
-  Spawn_Time: 6
-  Platform1: {fileID: 9085756307087719219, guid: b5ad30a77d9cae741b9e7c8bd1dfd88f, type: 3}
-  Platform2: {fileID: 1769472006298474172, guid: 4853594eab1a39a4d9b5362c6a478a9b, type: 3}
-  Platform3: {fileID: 4566458927162604673, guid: 0e32ddd3beff88541b8a0832e0c70bf5, type: 3}
-  Platform4: {fileID: 2220702646892327518, guid: 6b6561ddd9c75914f85cca37d5caea77, type: 3}
-  platformSpawnPoints:
-  - {fileID: 1528718430}
-  - {fileID: 453350082}
-  - {fileID: 254426458}
-  - {fileID: 1894505737}
-  - {fileID: 162086483}
-  - {fileID: 311477625}
-  - {fileID: 247341069}
-  - {fileID: 1861413175}
-  - {fileID: 1698677668}
-  - {fileID: 935685862}
-  portalMovePoints:
-  - {fileID: 975177558}
-  - {fileID: 1192116330}
-  - {fileID: 124330861}
-  - {fileID: 494915738}
-  - {fileID: 1903268930}
-  - {fileID: 1896231997}
-  scoreToWin: 5
-  winPanel_P1: {fileID: 1889021745}
-  winPanel_P2: {fileID: 1523835935}
-  Restart: {fileID: 100143823}
-  replay: {fileID: 1401821702}
-  Anim_P1: {fileID: 941418375}
-  Anim_P2: {fileID: 137666736}
-  gameEnded: 0
-  AM: {fileID: 389517822}
 --- !u!61 &1632018979
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11492,6 +11437,39 @@ Transform:
   - {fileID: 285855587}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1632018982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632018977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e1b0bf3e64cf1c4dbbfa91d37d1101c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Heaven_Gate_Stage_02
+  P1: {fileID: 906423705}
+  P2: {fileID: 1767807943}
+  P1_Start_Pos: {fileID: 1252317406}
+  P2_Start_Pos: {fileID: 2143283476}
+  P1_Score: 0
+  P2_Score: 0
+  P1_Text: {fileID: 2084913729}
+  P2_Text: {fileID: 1141033902}
+  LightOrb: {fileID: 4245511873358579384, guid: 94abde440dc61104fad5df03201bc806, type: 3}
+  random_Ord_Rangex: 12
+  random_Ord_Rangey: 5.7
+  Spawn_Time: 6
+  scoreToWin: 5
+  winPanel_P1: {fileID: 2084913726}
+  winPanel_P2: {fileID: 1141033901}
+  Restart: {fileID: 100143823}
+  replay: {fileID: 1401821702}
+  Anim_P1: {fileID: 941418375}
+  Anim_P2: {fileID: 137666736}
+  gameEnded: 0
+  AM: {fileID: 389517822}
 --- !u!1 &1650819630
 GameObject:
   m_ObjectHideFlags: 0
