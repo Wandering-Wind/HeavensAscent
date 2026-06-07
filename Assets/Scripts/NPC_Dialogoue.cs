@@ -11,14 +11,19 @@ public class NPC_Dialogoue : MonoBehaviour
     public GameObject player1;
     public GameObject player2;
 
+    [Header("NPC Objects")]
+    public GameObject Angel;
+    public GameObject Devil;
+
     [Header("UI")]
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI speakerText;
 
-    [Header("Dialogue Settings")]
+    [Header("Settings")]
     public float lineDuration = 3f;
 
-    private string[] dialogueLines;
+    private Dialogou_Line[] dialogueLines;
     private int currentLine;
     private bool dialogueActive;
 
@@ -31,7 +36,7 @@ public class NPC_Dialogoue : MonoBehaviour
         else
             Destroy(gameObject);
     }
-    public void StartDialogue(string[] lines)
+    public void StartDialogue(Dialogou_Line[] lines)
     {
         if (lines == null || lines.Length == 0)
             return;
@@ -41,17 +46,13 @@ public class NPC_Dialogoue : MonoBehaviour
         dialogueActive = true;
 
         dialoguePanel.SetActive(true);
-        dialogueText.text = dialogueLines[currentLine];
 
-        if (player1 != null)
-            player1.GetComponent<PlayerInput>().enabled = false;
+        LockPlayers();
 
-        if (player2 != null)
-            player2.GetComponent<PlayerInput>().enabled = false;
+        ShowLine();
 
         StartCoroutine(AutoDialogue());
     }
-
     private IEnumerator AutoDialogue()
     {
         while (dialogueActive)
@@ -62,7 +63,26 @@ public class NPC_Dialogoue : MonoBehaviour
                 NextLine();
         }
     }
+    private void ShowLine()
+    {
+        var line = dialogueLines[currentLine];
 
+        dialogueText.text = line.text;
+        speakerText.text = line.speakerID;
+
+        SetActiveNPC(line.speakerID);
+    }
+    private void SetActiveNPC(string speakerID)
+    {
+        if (Angel != null) Angel.SetActive(false);
+        if (Devil != null) Devil.SetActive(false);
+
+        if (speakerID == "Angel" && Angel != null)
+            Angel.SetActive(true);
+
+        else if (speakerID == "Devil" && Devil != null)
+            Devil.SetActive(true);
+    }
     public void NextLine()
     {
         currentLine++;
@@ -73,15 +93,30 @@ public class NPC_Dialogoue : MonoBehaviour
             return;
         }
 
-        dialogueText.text = dialogueLines[currentLine];
+        ShowLine();
     }
-
     public void EndDialogue()
     {
         dialogueActive = false;
 
         dialoguePanel.SetActive(false);
 
+        if (Angel != null) Angel.SetActive(false);
+        if (Devil != null) Devil.SetActive(false);
+
+        UnlockPlayers();
+    }
+    private void LockPlayers()
+    {
+        if (player1 != null)
+            player1.GetComponent<PlayerInput>().enabled = false;
+
+        if (player2 != null)
+            player2.GetComponent<PlayerInput>().enabled = false;
+    }
+
+    private void UnlockPlayers()
+    {
         if (player1 != null)
             player1.GetComponent<PlayerInput>().enabled = true;
 

@@ -75,11 +75,18 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
             {
                 if (p1.selectedClass == PlayerClassEnum.Angel)
                 {
-                    NPC_Dialogoue.Instance.StartDialogue(new string[] { "Well Done You Are Truely Blessed By The Angels." });
+                    NPC_Dialogoue.Instance.StartDialogue(new Dialogou_Line[]
+                    {
+                        new Dialogou_Line { speakerID = "Angel", text = "Well Done You Are Truly Blessed By The Angels." }
+                    });
                 }
-                if (p2.selectedClass == PlayerClassEnum.Devil)
+                if (p1.selectedClass == PlayerClassEnum.Devil)
                 {
-                    NPC_Dialogoue.Instance.StartDialogue(new string[] { "ou'd even sell a part of you to get here guess yo were that desperate.", "Oh Well Congratulations!" });
+                    NPC_Dialogoue.Instance.StartDialogue(new Dialogou_Line[]
+                    {
+                        new Dialogou_Line { speakerID = "Devil", text = "You'd even sell a part of you to get here..." },
+                        new Dialogou_Line { speakerID = "Devil", text = "Oh well... Congratulations!" }
+                    });
                 }
                 AM.PlayWinnerAAAH();
                 gameEnded = true;
@@ -104,13 +111,20 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
 
             if (P2_Score >= scoreToWin)
             {
-                if (p2.selectedClass == PlayerClassEnum.Angel)
+                if (p1.selectedClass == PlayerClassEnum.Angel)
                 {
-                    NPC_Dialogoue.Instance.StartDialogue(new string[] { "Well Done You Are Truely Blessed By The Angels" });
+                    NPC_Dialogoue.Instance.StartDialogue(new Dialogou_Line[]
+                    {
+        new Dialogou_Line { speakerID = "Angel", text = "Well Done You Are Truly Blessed By The Angels." }
+                    });
                 }
                 if (p2.selectedClass == PlayerClassEnum.Devil)
                 {
-                    NPC_Dialogoue.Instance.StartDialogue(new string[] { "ou'd even sell a part of you to get here guess yo were that desperate.", "Oh Well Congratulations!" });
+                    NPC_Dialogoue.Instance.StartDialogue(new Dialogou_Line[]
+                    {
+        new Dialogou_Line {speakerID = "Devil", text = "You'd even sell a part of you to get here..." },
+        new Dialogou_Line { speakerID = "Devil", text = "Oh well... Congratulations!" }
+                    });
                 }
                 AM.PlayWinnerAAAH();
                 gameEnded = true;

@@ -4,17 +4,12 @@ public class Intro_Dialogou : MonoBehaviour
 {
     void Start()
     {
-        if (NPC_Dialogoue.Instance == null)
+        NPC_Dialogoue.Instance.StartDialogue(new Dialogou_Line[]
         {
-            Debug.LogError("NPC_Dialogoue Instance is NULL");
-            return;
-        }
-
-        NPC_Dialogoue.Instance.StartDialogue(new string[]
-        {
-        "To think I would find some lost souls here.",
-        "I'll only permit one of you through to Heaven.",
-        "Good luck!"
+            new Dialogou_Line { speakerID = "Angel", text = "You should not be here..." },
+            new Dialogou_Line { speakerID = "Angel", text = "Only one soul may pass." },
+            new Dialogou_Line { speakerID = "Devil", text = "HaHaHa Let's see which soul is mightier" },
+            new Dialogou_Line { speakerID = "Devil", text = "Let’s see who is worthy." }
         });
     }
 }
