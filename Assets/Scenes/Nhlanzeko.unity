@@ -1937,6 +1937,7 @@ MonoBehaviour:
   zoomLimiter: 9
   minBounds: {x: -18.2, y: -6.28}
   maxBounds: {x: 18.2, y: 9.94}
+  cam: {fileID: 554631852}
 --- !u!1 &573681837
 GameObject:
   m_ObjectHideFlags: 0
@@ -4191,6 +4192,7 @@ MonoBehaviour:
   - layerTransform: {fileID: 1216280943}
     parallaxMultiplier: {x: -0.3, y: -0.05}
     startPosition: {x: 0, y: 0, z: 0}
+  cam: {fileID: 554631853}
 --- !u!4 &1353711317
 Transform:
   m_ObjectHideFlags: 0
