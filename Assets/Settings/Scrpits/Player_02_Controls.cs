@@ -31,6 +31,7 @@ public class Player_02_Controls : MonoBehaviour
 
     public TextMeshProUGUI soulText;
 
+
     [Header("Aim")]
     public GameObject aimArrow;
     public float arrowDistance = 1f;
@@ -66,7 +67,6 @@ public class Player_02_Controls : MonoBehaviour
 
     private void Start()
     {
-
         selectedClass = SelectManager.Instance.player2Class;
         LoadClass(selectedClass);
 

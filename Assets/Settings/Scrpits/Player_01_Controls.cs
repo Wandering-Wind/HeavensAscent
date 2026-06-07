@@ -65,7 +65,6 @@ public class Player_01_Controls : MonoBehaviour
 
     private void Start()
     {
-
         selectedClass = SelectManager.Instance.player1Class;
         LoadClass(selectedClass);
 
