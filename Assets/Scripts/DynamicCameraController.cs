@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Camera))]
 public class DynamicCameraController : MonoBehaviour
 {
     [Header("Player Targets")]
