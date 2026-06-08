@@ -188,7 +188,15 @@ public class Player_02_Controls : MonoBehaviour
     }
     IEnumerator Regain()
     {
-        yield return new WaitForSeconds(5);
+        float regainTime = 5f;
+
+        if (selectedClass == PlayerClassEnum.Angel)
+        {
+            regainTime = 3f;
+        }
+
+        yield return new WaitForSeconds(regainTime);
+
         Soul_Life_p2 = Max_SLP2;
         currentSoulScale = originalSoulScale;
         UpdateSoulBar();
