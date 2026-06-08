@@ -3796,6 +3796,8 @@ MonoBehaviour:
   hitVFX: {fileID: 0}
   teleportVFX: {fileID: 0}
   vfxLifetime: 0.5
+  stunVFXPrefab: {fileID: 0}
+  stunVFXOffset: {x: 0, y: 1.5, z: 0}
 --- !u!114 &906423707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11430,6 +11432,8 @@ MonoBehaviour:
   hitVFX: {fileID: 0}
   teleportVFX: {fileID: 0}
   vfxLifetime: 1
+  stunVFXPrefab: {fileID: 0}
+  stunVFXOffset: {x: 0, y: 1.5, z: 0}
 --- !u!114 &1767807945
 MonoBehaviour:
   m_ObjectHideFlags: 0

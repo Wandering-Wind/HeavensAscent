@@ -46,6 +46,9 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
 
     public AudioManager AM;
 
+    public GameObject scoreVFX;
+    public float scoreVFXLifetime = 2f;
+
     public void Start()
     {
         StartCoroutine(SpawnRoutine());
@@ -65,6 +68,7 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
 
         if (collision.CompareTag("Player_01_Soul"))
         {
+            PlayScoreVFX(collision.transform.position);
             AM.PlayScore();
             P1_Score++;
             P1_Text.text = P1_Score.ToString();
@@ -103,6 +107,7 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
         }
         else if (collision.CompareTag("Player_02_Soul"))
         {
+            PlayScoreVFX(collision.transform.position);
             AM.PlayScore();
             P2_Score++;
             P2_Text.text = P2_Score.ToString();
@@ -115,15 +120,15 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
                 {
                     NPC_Dialogoue.Instance.StartDialogue(new Dialogou_Line[]
                     {
-        new Dialogou_Line { speakerID = "Angel", text = "Well Done You Are Truly Blessed By The Angels." }
+                        new Dialogou_Line { speakerID = "Angel", text = "Well Done You Are Truly Blessed By The Angels." }
                     });
                 }
                 if (p2.selectedClass == PlayerClassEnum.Devil)
                 {
                     NPC_Dialogoue.Instance.StartDialogue(new Dialogou_Line[]
                     {
-        new Dialogou_Line {speakerID = "Devil", text = "You'd even sell a part of you to get here..." },
-        new Dialogou_Line { speakerID = "Devil", text = "Oh well... Congratulations!" }
+                        new Dialogou_Line {speakerID = "Devil", text = "You'd even sell a part of you to get here..." },
+                        new Dialogou_Line { speakerID = "Devil", text = "Oh well... Congratulations!" }
                     });
                 }
                 AM.PlayWinnerAAAH();
@@ -253,5 +258,13 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
             p2.LoseMulti = 1f;
         }
         Debug.Log($"P1 Buff: {p1.LoseMulti} | P2 Buff: {p2.LoseMulti}");
+    }
+    private void PlayScoreVFX(Vector3 position)
+    {
+        if (scoreVFX == null) return;
+
+        GameObject vfx = Instantiate(scoreVFX, position,Quaternion.identity);
+
+        Destroy(vfx, scoreVFXLifetime);
     }
 }

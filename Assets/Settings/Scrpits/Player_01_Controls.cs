@@ -267,17 +267,17 @@ public class Player_01_Controls : MonoBehaviour
             Vector3 startPos = transform.position;
             Vector3 endPos = bullet_P_01.transform.position;
 
-           /* if (teleportVFX != null)
+            if (teleportVFX != null)
             {
                 Destroy(Instantiate(teleportVFX, startPos, Quaternion.identity), vfxLifetime);
-            }*/
+            }
 
             transform.position = endPos;
 
-            if (teleportVFX != null)
+         /*   if (teleportVFX != null)
             {
                 Destroy(Instantiate(teleportVFX, endPos, Quaternion.identity), vfxLifetime);
-            }
+            }*/
 
             Rigidbody2D prb = Player_01.GetComponent<Rigidbody2D>();
             prb.linearVelocity = ShootDirection * currentCharge;
@@ -372,11 +372,13 @@ public class Player_01_Controls : MonoBehaviour
             case PlayerClassEnum.Angel:
                 angelCharacter.SetActive(true);
                 animator = angelCharacter.GetComponent<Animator>();
+                flipTarget = angelCharacter;
                 break;
 
             case PlayerClassEnum.Devil:
                 devilCharacter.SetActive(true);
                 animator = devilCharacter.GetComponent<Animator>();
+                flipTarget = devilCharacter;
                 break;
         }
     }
@@ -384,7 +386,7 @@ public class Player_01_Controls : MonoBehaviour
     {
         if (stunVFXPrefab == null || activeStunVFX != null)
             return;
-         activeStunVFX = Instantiate(stunVFXPrefab,transform.position + stunVFXOffset,Quaternion.identity,transform);
+         activeStunVFX = Instantiate(stunVFXPrefab,transform.position,Quaternion.identity,transform);
     }
 
     public void HideStunVFX()

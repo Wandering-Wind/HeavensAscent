@@ -57,6 +57,8 @@ public class Heavens_Gate : MonoBehaviour
     public bool gameEnded;
 
     public AudioManager AM;
+    public GameObject scoreVFX;
+    public float scoreVFXLifetime = 2f;
 
 
     public void Start()
@@ -78,6 +80,7 @@ public class Heavens_Gate : MonoBehaviour
 
         if (collision.CompareTag("Player_01_Soul"))
         {
+            PlayScoreVFX(collision.transform.position);
             AM.PlayScore();
             P1_Score++;
             P1_Text.text = P1_Score.ToString();
@@ -116,6 +119,7 @@ public class Heavens_Gate : MonoBehaviour
         }
         else if (collision.CompareTag("Player_02_Soul"))
         {
+            PlayScoreVFX(collision.transform.position);
             AM.PlayScore();
             P2_Score++;
             P2_Text.text = P2_Score.ToString();
@@ -308,5 +312,13 @@ public class Heavens_Gate : MonoBehaviour
             p2.LoseMulti = 1f;
         }
         Debug.Log($"P1 Buff: {p1.LoseMulti} | P2 Buff: {p2.LoseMulti}");
+    }
+    private void PlayScoreVFX(Vector3 position)
+    {
+        if (scoreVFX == null) return;
+
+        GameObject vfx = Instantiate(scoreVFX, position, Quaternion.identity);
+
+        Destroy(vfx, scoreVFXLifetime);
     }
 }
