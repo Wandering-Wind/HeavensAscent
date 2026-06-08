@@ -51,7 +51,11 @@ public class Player_01_Controls : MonoBehaviour
     private float originalGravity;
 
     [Header("Animatiom")]
-    public Animator animator;
+    private Animator animator;
+
+    [Header("Character Visuals")]
+    public GameObject angelCharacter;
+    public GameObject devilCharacter;
 
     [Header("Flip")]
     private bool facingRight;
@@ -75,6 +79,8 @@ public class Player_01_Controls : MonoBehaviour
     {
         selectedClass = SelectManager.Instance.player1Class;
         LoadClass(selectedClass);
+
+        UpdateCharacterVisual();
 
         originalSoulScale = Soul_Life_p1 / Max_SLP1;
         currentSoulScale = originalSoulScale;
@@ -344,6 +350,24 @@ public class Player_01_Controls : MonoBehaviour
         else
         {
             extraChargeObject.SetActive(false);
+        }
+    }
+    private void UpdateCharacterVisual()
+    {
+        angelCharacter.SetActive(false);
+        devilCharacter.SetActive(false);
+
+        switch (selectedClass)
+        {
+            case PlayerClassEnum.Angel:
+                angelCharacter.SetActive(true);
+                animator = angelCharacter.GetComponent<Animator>();
+                break;
+
+            case PlayerClassEnum.Devil:
+                devilCharacter.SetActive(true);
+                animator = devilCharacter.GetComponent<Animator>();
+                break;
         }
     }
 }
