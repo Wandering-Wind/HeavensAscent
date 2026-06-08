@@ -36,6 +36,21 @@ public class NPC_Dialogoue : MonoBehaviour
         else
             Destroy(gameObject);
     }
+    private void Update()
+{
+    if (!dialogueActive)
+        return;
+
+    if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
+    {
+        EndDialogue();
+    }
+
+    if (Gamepad.current != null && Gamepad.current.buttonEast.wasPressedThisFrame)
+    {
+        EndDialogue();
+    }
+}
     public void StartDialogue(Dialogou_Line[] lines)
     {
         if (lines == null || lines.Length == 0)
