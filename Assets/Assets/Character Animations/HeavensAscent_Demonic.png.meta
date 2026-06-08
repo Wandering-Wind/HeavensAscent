@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 9bce53fd95f3ea147bef56772d93709f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1257427803057149827
+    second: HeavensAscent_Demonic_0
+  - first:
+      213: 5062613902357639195
+    second: HeavensAscent_Demonic_1
+  - first:
+      213: -8516675776173187013
+    second: HeavensAscent_Demonic_2
+  - first:
+      213: 4059590682024817407
+    second: HeavensAscent_Demonic_3
+  - first:
+      213: 2679649402278273285
+    second: HeavensAscent_Demonic_4
+  - first:
+      213: -3084654632817143061
+    second: HeavensAscent_Demonic_5
+  - first:
+      213: -3618318248663641555
+    second: HeavensAscent_Demonic_6
+  - first:
+      213: 6783431224295617383
+    second: HeavensAscent_Demonic_7
+  - first:
+      213: 8733018123694943567
+    second: HeavensAscent_Demonic_8
+  - first:
+      213: 4821809531258969391
+    second: HeavensAscent_Demonic_9
+  - first:
+      213: 4171651376680604160
+    second: HeavensAscent_Demonic_10
+  - first:
+      213: -7959108044835077448
+    second: HeavensAscent_Demonic_11
+  - first:
+      213: 5785159707061628397
+    second: HeavensAscent_Demonic_12
+  - first:
+      213: 5492136515051575054
+    second: HeavensAscent_Demonic_13
+  - first:
+      213: 2203818934137106802
+    second: HeavensAscent_Demonic_14
+  - first:
+      213: 4907527023600875370
+    second: HeavensAscent_Demonic_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 9
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7824144318bc8ee0800000000000000
+      internalID: -1257427803057149827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 7
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b103bf47584024640800000000000000
+      internalID: 5062613902357639195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 5
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b30e50e3180bec980800000000000000
+      internalID: -8516675776173187013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_3
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 7
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff233977730965830800000000000000
+      internalID: 4059590682024817407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 9
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50162691fe6003520800000000000000
+      internalID: 2679649402278273285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_5
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 11
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be2db2464fa1135d0800000000000000
+      internalID: -3084654632817143061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_6
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 13
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d22171839b629cdc0800000000000000
+      internalID: -3618318248663641555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_7
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 11
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 763fe6222c6932e50800000000000000
+      internalID: 6783431224295617383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_8
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 9
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4da2e7c6b9e13970800000000000000
+      internalID: 8733018123694943567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_9
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 7
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2d984db8328ae240800000000000000
+      internalID: 4821809531258969391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_10
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 5
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00211d123dea4e930800000000000000
+      internalID: 4171651376680604160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_11
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 7
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b2c6a207619b8190800000000000000
+      internalID: -7959108044835077448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_12
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 9
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dedaf4c3a14094050800000000000000
+      internalID: 5785159707061628397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_13
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 11
+        width: 31
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07d995df0df73c40800000000000000
+      internalID: 5492136515051575054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_14
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 9
+        width: 23
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 271b58ee4a9859e10800000000000000
+      internalID: 2203818934137106802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavensAscent_Demonic_15
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 9
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a673c57a3d90b1440800000000000000
+      internalID: 4907527023600875370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HeavensAscent_Demonic_0: -1257427803057149827
+      HeavensAscent_Demonic_1: 5062613902357639195
+      HeavensAscent_Demonic_10: 4171651376680604160
+      HeavensAscent_Demonic_11: -7959108044835077448
+      HeavensAscent_Demonic_12: 5785159707061628397
+      HeavensAscent_Demonic_13: 5492136515051575054
+      HeavensAscent_Demonic_14: 2203818934137106802
+      HeavensAscent_Demonic_15: 4907527023600875370
+      HeavensAscent_Demonic_2: -8516675776173187013
+      HeavensAscent_Demonic_3: 4059590682024817407
+      HeavensAscent_Demonic_4: 2679649402278273285
+      HeavensAscent_Demonic_5: -3084654632817143061
+      HeavensAscent_Demonic_6: -3618318248663641555
+      HeavensAscent_Demonic_7: 6783431224295617383
+      HeavensAscent_Demonic_8: 8733018123694943567
+      HeavensAscent_Demonic_9: 4821809531258969391
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
