@@ -1903,7 +1903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -718, y: 290}
+  m_AnchoredPosition: {x: -718, y: 464}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &397269144
@@ -4097,7 +4097,7 @@ MonoBehaviour:
   - {fileID: 1341984829}
   extraChargeObject: {fileID: 706944880}
   extraChargeText: {fileID: 706944882}
-  soulText: {fileID: 0}
+  extraCharges: 0
   aimArrow: {fileID: 1619271125}
   arrowDistance: 1
   deadzone: 0.2
@@ -5353,7 +5353,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 573, y: 425}
+  m_AnchoredPosition: {x: 199, y: 493}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1164006937
@@ -11182,7 +11182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fa9963e774df31f4ea6ee001e218f469, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4f0afd6483015b94fb43487f6aa7b87c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11243,7 +11243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 770, y: 290}
+  m_AnchoredPosition: {x: 770, y: 464}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1466977740
@@ -11409,7 +11409,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c94616786cbdb1747a5c5101b3e24562, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5e2fec839199c149ac10ebe8d594c13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13031,7 +13031,7 @@ MonoBehaviour:
   soulChargeIcons: []
   extraChargeObject: {fileID: 0}
   extraChargeText: {fileID: 0}
-  soulText: {fileID: 0}
+  extraCharges: 0
   aimArrow: {fileID: 1577796504}
   arrowDistance: 1
   deadzone: 0.2
@@ -14147,7 +14147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -739, y: 425}
+  m_AnchoredPosition: {x: 45, y: 494}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2084913728
