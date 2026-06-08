@@ -11,6 +11,7 @@ public class Character_Select : MonoBehaviour
     public TMP_Text descriptionText;
     public GameObject angelPreview;
     public GameObject devilPreview;
+    public GameObject lightOrbIcon;
 
     private PlayerClassEnum[] classes =
     {
