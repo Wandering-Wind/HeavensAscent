@@ -1680,8 +1680,8 @@ Transform:
   m_GameObject: {fileID: 374208274}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0281, y: 7.36, z: 0}
-  m_LocalScale: {x: 25.721027, y: 0.49440557, z: 1}
+  m_LocalPosition: {x: -0.0048, y: 9.9878, z: 0}
+  m_LocalScale: {x: 44.652706, y: 5.750085, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1529292727}
@@ -1736,7 +1736,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8745098, g: 0.9882353, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1803,10 +1803,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604c44d326308a4428d168dd5cfcc7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RectangularProximityFader
-  player1: {fileID: 0}
-  player2: {fileID: 0}
-  coreWallSize: {x: 15.7, y: 0.05}
-  fadeDistance: 4.27
+  player1: {fileID: 906423711}
+  player2: {fileID: 1767807949}
+  coreWallSize: {x: 31, y: 5.94}
+  fadeDistance: 3.36
   maxAlpha: 0.8
 --- !u!1 &389517819
 GameObject:
@@ -5815,8 +5815,8 @@ Transform:
   m_GameObject: {fileID: 1377611715}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.4568, y: 0.7776, z: 0}
-  m_LocalScale: {x: 0.7900456, y: 12.889081, z: 1}
+  m_LocalPosition: {x: -16.7723, y: 3.6717, z: 0}
+  m_LocalScale: {x: 9.421057, y: 18.677568, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1529292727}
@@ -5917,7 +5917,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8745098, g: 0.9882353, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5940,9 +5940,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProximityFader
   player1: {fileID: 906423711}
   player2: {fileID: 1767807949}
-  coreWallSize: {x: 2, y: 15}
+  coreWallSize: {x: 9.77, y: 18.8}
   fadeDistance: 3.84
-  maxAlpha: 0.8
+  maxAlpha: 0.565
 --- !u!1 &1387717032
 GameObject:
   m_ObjectHideFlags: 0
@@ -13807,8 +13807,8 @@ Transform:
   m_GameObject: {fileID: 1958044837}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.38, y: 1.0137, z: 0}
-  m_LocalScale: {x: 0.828298, y: 13.220901, z: 1}
+  m_LocalPosition: {x: 17.1939, y: 3.7346, z: 0}
+  m_LocalScale: {x: 10.45579, y: 18.662622, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1529292727}
@@ -13909,7 +13909,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8745098, g: 0.9882353, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13932,9 +13932,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProximityFader
   player1: {fileID: 906423711}
   player2: {fileID: 1767807949}
-  coreWallSize: {x: 2, y: 15}
+  coreWallSize: {x: 9.77, y: 18.8}
   fadeDistance: 3.84
-  maxAlpha: 0.8
+  maxAlpha: 0.565
 --- !u!1 &1965591091
 GameObject:
   m_ObjectHideFlags: 0
