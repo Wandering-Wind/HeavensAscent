@@ -44,7 +44,7 @@ public class ContextScene : MonoBehaviour
         yield return FadeIn(orbCanvas, 1f);
 
         orbText.StartTyping(
-            "Beware: you only have 5 teleports until you exhaust your power and have to wait to recharge\r\n. Get life orbs to get one more charge. Hint: This is a Light Orb. Shoot it to teleport across the battlefield."
+            "Beware: you only have 5 teleports until you exhaust your power and have to wait to recharge\r\n. Get life orbs to get one more charge.\r\n Hint: This is a Light Orb. Shoot it to teleport across the battlefield."
         );
     }
 
