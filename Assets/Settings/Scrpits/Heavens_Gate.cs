@@ -94,15 +94,16 @@ public class Heavens_Gate : MonoBehaviour
                 {
                     NPC_Dialogoue.Instance.StartDialogue(new Dialogou_Line[]
                     {
-                        new Dialogou_Line { speakerID = "Angel", text = "Well Done You Are Truly Blessed By The Angels." }
+                        new Dialogou_Line { speakerID = "Angel", text = "A predictable outcome. You clawed your way to the light, but you still reek of mortality. Go on, get out of my sight." },
+                        new Dialogou_Line { speakerID = "Angel", text = "You survived. Delightful. Now run along into the portal before I change my mind." },
                     });
                 }
                 if (p1.selectedClass == PlayerClassEnum.Devil)
                 {
                     NPC_Dialogoue.Instance.StartDialogue(new Dialogou_Line[]
                     {
-                        new Dialogou_Line { speakerID = "Devil", text = "You'd even sell a part of you to get here..." },
-                        new Dialogou_Line { speakerID = "Devil", text = "Oh well... Congratulations!" }
+                        new Dialogou_Line { speakerID = "Devil", text = "You'd even sell a part of you to get here...label me impressed" },
+                        new Dialogou_Line { speakerID = "Devil", text = "Ha! Look at that! Pay up, you golden fraud! That's four whole realms of gold you owe me!" },
                     });
                 }
                 AM.PlayWinnerAAAH();
@@ -133,15 +134,16 @@ public class Heavens_Gate : MonoBehaviour
                 {
                     NPC_Dialogoue.Instance.StartDialogue(new Dialogou_Line[]
                     {
-        new Dialogou_Line { speakerID = "Angel", text = "Well Done You Are Truly Blessed By The Angels." }
+       new Dialogou_Line { speakerID = "Angel", text = "A predictable outcome. You clawed your way to the light, but you still reek of mortality. Go on, get out of my sight." },
+                        new Dialogou_Line { speakerID = "Angel", text = "You survived. Delightful. Now run along into the portal before I change my mind." },
                     });
                 }
                 if (p2.selectedClass == PlayerClassEnum.Devil)
                 {
                     NPC_Dialogoue.Instance.StartDialogue(new Dialogou_Line[]
                     {
-        new Dialogou_Line {speakerID = "Devil", text = "You'd even sell a part of you to get here..." },
-        new Dialogou_Line { speakerID = "Devil", text = "Oh well... Congratulations!" }
+        new Dialogou_Line { speakerID = "Devil", text = "You'd even sell a part of you to get here...label me impressed" },
+                        new Dialogou_Line { speakerID = "Devil", text = "Ha! Look at that! Pay up, you golden fraud! That's four whole realms of gold you owe me!" },
                     });
                 }
                 AM.PlayWinnerAAAH();
