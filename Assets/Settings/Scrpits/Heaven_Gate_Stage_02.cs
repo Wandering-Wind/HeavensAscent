@@ -82,15 +82,22 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
                 {
                     NPC_Dialogoue.Instance.StartDialogue(new Dialogou_Line[]
                     {
-                        new Dialogou_Line { speakerID = "Angel", text = "Well Done You Are Truly Blessed By The Angels." }
+                        new Dialogou_Line
+                        {
+                            speakerID = "Angel",
+                            text = angelWinLines[Random.Range(0, angelWinLines.Length)]
+                        }
                     });
                 }
                 if (p1.selectedClass == PlayerClassEnum.Devil)
                 {
                     NPC_Dialogoue.Instance.StartDialogue(new Dialogou_Line[]
                     {
-                        new Dialogou_Line { speakerID = "Devil", text = "You'd even sell a part of you to get here..." },
-                        new Dialogou_Line { speakerID = "Devil", text = "Oh well... Congratulations!" }
+                        new Dialogou_Line
+                        {
+                            speakerID = "Devil",
+                            text = devilWinLines[Random.Range(0, devilWinLines.Length)]
+                        }
                     });
                 }
                 AM.PlayWinnerAAAH();
@@ -121,15 +128,22 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
                 {
                     NPC_Dialogoue.Instance.StartDialogue(new Dialogou_Line[]
                     {
-                        new Dialogou_Line { speakerID = "Angel", text = "Well Done You Are Truly Blessed By The Angels." }
+                        new Dialogou_Line
+                        {
+                            speakerID = "Angel",
+                            text = angelWinLines[Random.Range(0, angelWinLines.Length)]
+                        }
                     });
                 }
-                if (p2.selectedClass == PlayerClassEnum.Devil)
+                if (p1.selectedClass == PlayerClassEnum.Devil)
                 {
                     NPC_Dialogoue.Instance.StartDialogue(new Dialogou_Line[]
                     {
-                        new Dialogou_Line {speakerID = "Devil", text = "You'd even sell a part of you to get here..." },
-                        new Dialogou_Line { speakerID = "Devil", text = "Oh well... Congratulations!" }
+                        new Dialogou_Line
+                        {
+                            speakerID = "Devil",
+                            text = devilWinLines[Random.Range(0, devilWinLines.Length)]
+                        }
                     });
                 }
                 AM.PlayWinnerAAAH();
@@ -146,6 +160,17 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
             ScoreReset();
         }
     }
+    private string[] angelWinLines =
+{
+    "A predictable outcome. You clawed your way to the light, but you still reek of mortality. Go on, get out of my sight.",
+    "You survived. Delightful. Now run along into the portal before I change my mind."
+};
+
+    private string[] devilWinLines =
+    {
+    "You'd even sell a part of you to get here... label me impressed.",
+    "Ha! Look at that! Pay up, you golden fraud! That's four whole realms of gold you owe me!"
+};
     IEnumerator SpawnRoutine()
     {
         while (true)
