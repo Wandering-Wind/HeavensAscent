@@ -4133,7 +4133,7 @@ MonoBehaviour:
   hitVFX: {fileID: -2253911629886400664, guid: 750f3d2c33564a740841db351b1e790f, type: 3}
   teleportVFX: {fileID: -2253911629886400664, guid: 74e9d128f00e1034f91bda5aa9efbc28, type: 3}
   vfxLifetime: 1
-  stunVFXPrefab: {fileID: -2253911629886400664, guid: bb0f2fc3f83a6a643bfb84b270a51edd, type: 3}
+  stunVFXPrefab: {fileID: 6326529738941234651, guid: 25f3ddf41dbf0ff46bf8d1dd79894e7b, type: 3}
   stunVFXOffset: {x: 0, y: 1.5, z: 0}
 --- !u!114 &906423707
 MonoBehaviour:
@@ -13694,7 +13694,7 @@ MonoBehaviour:
   hitVFX: {fileID: -2253911629886400664, guid: 750f3d2c33564a740841db351b1e790f, type: 3}
   teleportVFX: {fileID: -2253911629886400664, guid: ae1c58a2e12ec6940948f08e0053bf37, type: 3}
   vfxLifetime: 1
-  stunVFXPrefab: {fileID: -2253911629886400664, guid: bb0f2fc3f83a6a643bfb84b270a51edd, type: 3}
+  stunVFXPrefab: {fileID: 6326529738941234651, guid: 25f3ddf41dbf0ff46bf8d1dd79894e7b, type: 3}
   stunVFXOffset: {x: 0, y: 1.5, z: 0}
 --- !u!114 &1767807945
 MonoBehaviour:
@@ -15073,6 +15073,63 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &6313776097146675691
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6326529738941234651, guid: 25f3ddf41dbf0ff46bf8d1dd79894e7b, type: 3}
+      propertyPath: m_Name
+      value: Stun effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494652219731662270, guid: 25f3ddf41dbf0ff46bf8d1dd79894e7b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.27448
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494652219731662270, guid: 25f3ddf41dbf0ff46bf8d1dd79894e7b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5168
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494652219731662270, guid: 25f3ddf41dbf0ff46bf8d1dd79894e7b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494652219731662270, guid: 25f3ddf41dbf0ff46bf8d1dd79894e7b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494652219731662270, guid: 25f3ddf41dbf0ff46bf8d1dd79894e7b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494652219731662270, guid: 25f3ddf41dbf0ff46bf8d1dd79894e7b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494652219731662270, guid: 25f3ddf41dbf0ff46bf8d1dd79894e7b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494652219731662270, guid: 25f3ddf41dbf0ff46bf8d1dd79894e7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494652219731662270, guid: 25f3ddf41dbf0ff46bf8d1dd79894e7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6494652219731662270, guid: 25f3ddf41dbf0ff46bf8d1dd79894e7b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 25f3ddf41dbf0ff46bf8d1dd79894e7b, type: 3}
 --- !u!1 &6969460405924983199
 GameObject:
   m_ObjectHideFlags: 0
@@ -15129,3 +15186,4 @@ SceneRoots:
   - {fileID: 1353711317}
   - {fileID: 641673634}
   - {fileID: 870938056}
+  - {fileID: 6313776097146675691}
