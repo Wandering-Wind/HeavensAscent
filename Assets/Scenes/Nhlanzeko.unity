@@ -1807,7 +1807,7 @@ MonoBehaviour:
   player2: {fileID: 1767807949}
   coreWallSize: {x: 31, y: 5.94}
   fadeDistance: 3.36
-  maxAlpha: 0.8
+  maxAlpha: 0.6
 --- !u!1 &389517819
 GameObject:
   m_ObjectHideFlags: 0
@@ -6176,7 +6176,7 @@ MonoBehaviour:
   player2: {fileID: 1767807949}
   coreWallSize: {x: 9.77, y: 18.8}
   fadeDistance: 3.84
-  maxAlpha: 0.565
+  maxAlpha: 0.4
 --- !u!1 &1387717032
 GameObject:
   m_ObjectHideFlags: 0
@@ -14639,7 +14639,7 @@ MonoBehaviour:
   player2: {fileID: 1767807949}
   coreWallSize: {x: 9.77, y: 18.8}
   fadeDistance: 3.84
-  maxAlpha: 0.565
+  maxAlpha: 0.4
 --- !u!1 &1965591091
 GameObject:
   m_ObjectHideFlags: 0
