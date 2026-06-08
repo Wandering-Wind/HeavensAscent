@@ -70,7 +70,7 @@ public class Player_02_Controls : MonoBehaviour
     [Header("VFX")]
     public GameObject hitVFX;
     public GameObject teleportVFX;
-    public float vfxLifetime = 2f;
+    public float vfxLifetime = 1f;
 
 
     private void Start()
@@ -145,8 +145,14 @@ public class Player_02_Controls : MonoBehaviour
                     currChargep2++;
                     if (hitVFX != null)
                     {
-                        Vector3 hitPos = collision.contacts[0].point;
-                        Destroy(Instantiate(hitVFX, hitPos, Quaternion.identity), vfxLifetime);
+                        Vector3 hitPos = transform.position;
+
+                        if (collision.contactCount > 0)
+                            hitPos = collision.GetContact(0).point;
+
+                        GameObject vfx = Instantiate(hitVFX, hitPos, Quaternion.identity);
+                        vfx.transform.localScale = Vector3.one * 1.2f;
+                        Destroy(vfx, vfxLifetime);
                     }
                 }
 
@@ -252,10 +258,10 @@ public class Player_02_Controls : MonoBehaviour
             Vector3 startPos = transform.position;
             Vector3 endPos = bullet_P_02.transform.position;
 
-            if (teleportVFX != null)
+           /* if (teleportVFX != null)
             {
                 Destroy(Instantiate(teleportVFX, startPos, Quaternion.identity), vfxLifetime);
-            }     
+            }     */
 
             transform.position = endPos;
 
