@@ -21,9 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_Select.unity
     guid: b0cfe343d3aa10a438a5f853a60f6459
   - enabled: 1
-    path: Assets/Scenes/Character_Select_Screen.unity
-    guid: f75086f3ab0edae49895321e3853ca09
-  - enabled: 1
     path: Assets/Scenes/Nhlanzeko.unity
     guid: af55643503cb04a4db71d8fd29baa674
   - enabled: 1
