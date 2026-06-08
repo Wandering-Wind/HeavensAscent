@@ -65,6 +65,11 @@ public class Player_01_Controls : MonoBehaviour
     public float LoseMulti = 1f;
     public float SoulSizeMultiplier = 1f;
 
+    [Header("VFX")]
+    public GameObject hitVFX;
+    public GameObject teleportVFX;
+    public float vfxLifetime = 2f;
+
 
     private void Start()
     {
@@ -121,10 +126,9 @@ public class Player_01_Controls : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        /*  if (gameObject.CompareTag("Player_02_Soul") || gameObject.CompareTag("P2"))
-              print("Pl2 Hit");
-              animator.SetBool("GetHit", true);*/
-
+        /*if (gameObject.CompareTag("Player_01_Soul") || gameObject.CompareTag("P1"))
+            print("Pl1 Hit");
+        animator.SetBool("GetHit", true);*/
         if (currentClass.classType == PlayerClassEnum.Devil)
         {
             Player_02_Controls p2 = collision.gameObject.GetComponent<Player_02_Controls>();
@@ -133,10 +137,15 @@ public class Player_01_Controls : MonoBehaviour
             {
                 if (p2.currChargep2 > 0)
                 {
-                    print("Player 1 hit Player 2");
+                    print("Player 2 hit Player 1");
 
-                    p2.currChargep2--;  
-                    currChargep1++;     
+                    p2.currChargep2--;
+                    currChargep1++;
+                    if (hitVFX != null)
+                    {
+                        Vector3 hitPos = collision.contacts[0].point;
+                        Destroy(Instantiate(hitVFX, hitPos, Quaternion.identity), vfxLifetime);
+                    }
                 }
 
                 StartCoroutine(StunOther(p2, 2f));
@@ -235,14 +244,28 @@ public class Player_01_Controls : MonoBehaviour
     }
     public void Teleport()
     {
-        print("Asdndfsfljgb");
         if (bullet_P_01 != null)
         {
-            transform.position = bullet_P_01.transform.position;
+            Vector3 startPos = transform.position;
+            Vector3 endPos = bullet_P_01.transform.position;
+
+            if (teleportVFX != null)
+            {
+                Destroy(Instantiate(teleportVFX, startPos, Quaternion.identity), vfxLifetime);
+            }
+
+            transform.position = endPos;
+
+            if (teleportVFX != null)
+            {
+                Destroy(Instantiate(teleportVFX, endPos, Quaternion.identity), vfxLifetime);
+            }
+
             Rigidbody2D prb = Player_01.GetComponent<Rigidbody2D>();
             prb.linearVelocity = ShootDirection * currentCharge;
+
             Destroy(bullet_P_01);
-            bullet_P_01   = null;
+            bullet_P_01 = null;
         }
     }
     public void Orb_Absorb()

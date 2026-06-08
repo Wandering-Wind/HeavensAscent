@@ -67,6 +67,11 @@ public class Player_02_Controls : MonoBehaviour
     public float LoseMulti = 1f;
     public float SoulSizeMultiplier = 1f;
 
+    [Header("VFX")]
+    public GameObject hitVFX;
+    public GameObject teleportVFX;
+    public float vfxLifetime = 2f;
+
 
     private void Start()
     {
@@ -137,7 +142,12 @@ public class Player_02_Controls : MonoBehaviour
                     print("Player 1 hit Player 2");
 
                     p1.currChargep1--; 
-                    currChargep2++;   
+                    currChargep2++;
+                    if (hitVFX != null)
+                    {
+                        Vector3 hitPos = collision.contacts[0].point;
+                        Destroy(Instantiate(hitVFX, hitPos, Quaternion.identity), vfxLifetime);
+                    }
                 }
 
                 StartCoroutine(StunOther(p1, 2f));
@@ -237,12 +247,26 @@ public class Player_02_Controls : MonoBehaviour
     }
     public void Teleport()
     {
-        print("Asdndfsfljgb");
         if (bullet_P_02 != null)
         {
-            transform.position = bullet_P_02.transform.position;
+            Vector3 startPos = transform.position;
+            Vector3 endPos = bullet_P_02.transform.position;
+
+            if (teleportVFX != null)
+            {
+                Destroy(Instantiate(teleportVFX, startPos, Quaternion.identity), vfxLifetime);
+            }     
+
+            transform.position = endPos;
+
+            if (teleportVFX != null)
+            {
+                Destroy(Instantiate(teleportVFX, endPos, Quaternion.identity), vfxLifetime);
+            }
+
             Rigidbody2D prb = Player_02.GetComponent<Rigidbody2D>();
             prb.linearVelocity = ShootDirection * currentCharge;
+
             Destroy(bullet_P_02);
             bullet_P_02 = null;
         }

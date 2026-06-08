@@ -4128,6 +4128,9 @@ MonoBehaviour:
   isStunned: 0
   LoseMulti: 1
   SoulSizeMultiplier: 1
+  hitVFX: {fileID: -2253911629886400664, guid: 750f3d2c33564a740841db351b1e790f, type: 3}
+  teleportVFX: {fileID: -2253911629886400664, guid: 74e9d128f00e1034f91bda5aa9efbc28, type: 3}
+  vfxLifetime: 2
 --- !u!114 &906423707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13062,6 +13065,9 @@ MonoBehaviour:
   isStunned: 0
   LoseMulti: 1
   SoulSizeMultiplier: 1
+  hitVFX: {fileID: -2253911629886400664, guid: 750f3d2c33564a740841db351b1e790f, type: 3}
+  teleportVFX: {fileID: -2253911629886400664, guid: ae1c58a2e12ec6940948f08e0053bf37, type: 3}
+  vfxLifetime: 2
 --- !u!114 &1767807945
 MonoBehaviour:
   m_ObjectHideFlags: 0
