@@ -28,7 +28,10 @@ public class Player_01_Controls : MonoBehaviour
     private float currentSoulScale;
     private float originalSoulScale;
 
-    public TextMeshProUGUI soulText;
+    public GameObject[] soulChargeIcons;
+    public GameObject extraChargeObject;
+    public TextMeshProUGUI extraChargeText;
+    public int extraCharges;
 
     [Header("Aim")]
     public GameObject aimArrow;
@@ -250,8 +253,10 @@ public class Player_01_Controls : MonoBehaviour
             return;
         }
 
+        Max_SLP1++;
         Soul_Life_p1 = Max_SLP1;
-        currentSoulScale = 1f;
+        print(Max_SLP1);
+        extraCharges++;
         UpdateSoulBar();
     }
 
@@ -287,7 +292,6 @@ public class Player_01_Controls : MonoBehaviour
                 Min_Charge_power_P_01 = stats.minChargePower;
                 Max_Charge_power_P_01 = stats.maxChargePower;
 
-                stats.currCharge = stats.maxChargePower;
                 Charge = stats.chargeSpeed;
                 currChargep1 = stats.currCharge;
                 break;
@@ -296,7 +300,22 @@ public class Player_01_Controls : MonoBehaviour
     }
     private void UpdateSoulBar()
     {
-        soulText.text = Soul_Life_p1.ToString();
+        int normalCharges = Mathf.Clamp((int)Soul_Life_p1, 0, 4);
+
+        for (int i = 0; i < soulChargeIcons.Length; i++)
+        {
+            soulChargeIcons[i].SetActive(i < normalCharges);
+        }
+
+        if (extraCharges > 0)
+        {
+            extraChargeObject.SetActive(true);
+            extraChargeText.text = "x" + extraCharges;
+        }
+        else
+        {
+            extraChargeObject.SetActive(false);
+        }
     }
 }
 
