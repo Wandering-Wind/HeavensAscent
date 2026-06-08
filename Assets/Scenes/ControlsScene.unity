@@ -1984,7 +1984,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: dae9dc39222276c499c8c67d0d1d64f4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3251,6 +3251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1805495661}
   - component: {fileID: 1805495660}
+  - component: {fileID: 1805495662}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -3283,6 +3284,22 @@ Transform:
   - {fileID: 1319258802}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1805495662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805495659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a976eb9a06fdf48ad99df848f41247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonClickAudio
+  audioSource: {fileID: 1319258804}
+  clickSound: {fileID: 8300000, guid: dae9dc39222276c499c8c67d0d1d64f4, type: 3}
+  Score_Sound: {fileID: 0}
+  WinnerAAAH: {fileID: 0}
 --- !u!1 &1817224389
 GameObject:
   m_ObjectHideFlags: 0
