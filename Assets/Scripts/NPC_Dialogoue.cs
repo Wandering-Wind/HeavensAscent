@@ -66,9 +66,9 @@ public class NPC_Dialogoue : MonoBehaviour
 
         ShowLine();
 
-        StartCoroutine(AutoDialogue());
+      //  StartCoroutine(AutoDialogue());
     }
-    private IEnumerator AutoDialogue()
+   /* private IEnumerator AutoDialogue()
     {
         while (dialogueActive)
         {
@@ -77,7 +77,7 @@ public class NPC_Dialogoue : MonoBehaviour
             if (dialogueActive)
                 NextLine();
         }
-    }
+    }*/
     private void ShowLine()
     {
         var line = dialogueLines[currentLine];

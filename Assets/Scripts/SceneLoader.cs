@@ -17,10 +17,10 @@ public class SceneLoader : MonoBehaviour
 
     public void ContextScene()
     {
-        StartCoroutine(ContextSceneRoutine());
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 
-    IEnumerator ContextSceneRoutine()
+    IEnumerator Dialogoue()
     {
         dialoguePanel.SetActive(true);
 
@@ -28,7 +28,7 @@ public class SceneLoader : MonoBehaviour
 
         yield return new WaitForSeconds(dialogueDuration);
 
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
     }
 
     public void ControlsScene()
@@ -38,7 +38,7 @@ public class SceneLoader : MonoBehaviour
 
     public void GameScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+        StartCoroutine(Dialogoue());
     }
     public void QuitGame()
     {
