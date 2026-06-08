@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: ecdf139bd5c0d10449bf0df28bc14654
+guid: 36f3243b8a26fa648808a1bbcdb97685
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -793588202014477126
-    second: Score UI feature_0
-  - first:
-      213: -7422985739012877731
-    second: Score UI feature_1
+      213: -8852774830433540328
+    second: HomeScreen2AnimationBrownStand_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 27
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Score UI feature_0
+      name: HomeScreen2AnimationBrownStand_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
-        width: 80
-        height: 14
+        y: 0
+        width: 480
+        height: 270
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ab47cf02cbb9cf4f0800000000000000
-      internalID: -793588202014477126
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Score UI feature_1
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 16
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d52d85d8cc14cf890800000000000000
-      internalID: -7422985739012877731
+      spriteID: 8176d7b1230a42580800000000000000
+      internalID: -8852774830433540328
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Score UI feature_0: -793588202014477126
-      Score UI feature_1: -7422985739012877731
+      HomeScreen2AnimationBrownStand_0: -8852774830433540328
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
