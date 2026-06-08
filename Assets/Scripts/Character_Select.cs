@@ -76,11 +76,9 @@ public class Character_Select : MonoBehaviour
             UpdateUI();
         }
         else
-        {
+        { 
             SelectManager.Instance.player2Class = classes[classIndex];
-
-            int randomScene = Random.Range(0, gameScenes.Length);
-            UnityEngine.SceneManagement.SceneManager.LoadScene(gameScenes[randomScene]);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Level_Select");
         }
     }
 
