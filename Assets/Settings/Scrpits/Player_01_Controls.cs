@@ -187,14 +187,13 @@ public class Player_01_Controls : MonoBehaviour
         float regainTime = 5f;
 
         if (selectedClass == PlayerClassEnum.Angel)
-        {
             regainTime = 3f;
-        }
 
         yield return new WaitForSeconds(regainTime);
 
         Soul_Life_p1 = Max_SLP1;
         currentSoulScale = originalSoulScale;
+
         UpdateSoulBar();
     }
     public void OnAim(InputAction.CallbackContext context)
@@ -303,9 +302,8 @@ public class Player_01_Controls : MonoBehaviour
         }
 
         Max_SLP1++;
-        Soul_Life_p1 = Max_SLP1;
+        Soul_Life_p1 +=2;
         print(Max_SLP1);
-        extraCharges++;
         UpdateSoulBar();
     }
 
@@ -360,10 +358,12 @@ public class Player_01_Controls : MonoBehaviour
             soulChargeIcons[i].SetActive(i < normalCharges);
         }
 
-        if (extraCharges > 0)
+        int extra = Mathf.Max(0, (int)Soul_Life_p1 - 4);
+
+        if (extra > 0)
         {
             extraChargeObject.SetActive(true);
-            extraChargeText.text = "x" + extraCharges;
+            extraChargeText.text = "x" + extra;
         }
         else
         {
