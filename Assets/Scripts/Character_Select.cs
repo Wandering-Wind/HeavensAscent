@@ -9,6 +9,8 @@ public class Character_Select : MonoBehaviour
     public TMP_Text playerText;
     public TMP_Text classText;
     public TMP_Text descriptionText;
+    public GameObject angelPreview;
+    public GameObject devilPreview;
 
     private PlayerClassEnum[] classes =
     {
@@ -87,6 +89,25 @@ public class Character_Select : MonoBehaviour
         playerText.text = $"Player {currentPlayer}";
         classText.text = classes[classIndex].ToString();
         descriptionText.text = classDescriptions[classIndex];
+
+        if (angelPreview != null)
+            angelPreview.SetActive(false);
+
+        if (devilPreview != null)
+            devilPreview.SetActive(false);
+
+        switch (classes[classIndex])
+        {
+            case PlayerClassEnum.Angel:
+                if (angelPreview != null)
+                    angelPreview.SetActive(true);
+                break;
+
+            case PlayerClassEnum.Devil:
+                if (devilPreview != null)
+                    devilPreview.SetActive(true);
+                break;
+        }
     }
 
     /*public string[] classDescriptions ={ "Devil", "Angel" };
