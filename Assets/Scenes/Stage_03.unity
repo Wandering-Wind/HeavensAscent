@@ -3232,7 +3232,7 @@ Transform:
   m_GameObject: {fileID: 608391776}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1290599, y: 2.9257698, z: 0}
+  m_LocalPosition: {x: -1.1290599, y: 2.9257698, z: 1}
   m_LocalScale: {x: 1.09, y: 0.9, z: 0.9}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13444,6 +13444,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff94bbf8b3dedb84881397333c2a3cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
+  dialogueDuration: 4
 --- !u!4 &1673617629
 Transform:
   m_ObjectHideFlags: 0
