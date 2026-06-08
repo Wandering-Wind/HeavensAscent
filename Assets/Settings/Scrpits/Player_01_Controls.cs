@@ -65,7 +65,7 @@ public class Player_01_Controls : MonoBehaviour
     public PlayerClassEnum selectedClass;
     public Class_Stats[] availableClasses;
     private Class_Stats currentClass;
-    public bool isStunned;
+    public bool isStunned = false;
     public float LoseMulti = 1f;
     public float SoulSizeMultiplier = 1f;
 
@@ -73,6 +73,10 @@ public class Player_01_Controls : MonoBehaviour
     public GameObject hitVFX;
     public GameObject teleportVFX;
     public float vfxLifetime = 0.5f;
+    public GameObject stunVFXPrefab;
+    public Vector3 stunVFXOffset = new Vector3(0f, 1.5f, 0f);
+
+    private GameObject activeStunVFX;
 
 
     private void Start()
@@ -171,10 +175,12 @@ public class Player_01_Controls : MonoBehaviour
     IEnumerator StunOther(Player_02_Controls target, float duration)
     {
         target.isStunned = true;
+        target.ShowStunVFX();
 
         yield return new WaitForSeconds(duration);
 
         target.isStunned = false;
+        target.HideStunVFX();
     }
     IEnumerator Regain()
     {
@@ -299,9 +305,13 @@ public class Player_01_Controls : MonoBehaviour
     {
         isStunned = true;
 
+        ShowStunVFX();
+
         yield return new WaitForSeconds(duration);
 
         isStunned = false;
+
+        HideStunVFX();
     }
 
     public void Flip() //Youtu.be. (2026). Available at: https://youtu.be/Cr-j7EoM8bg?si=IjMERP-pLs5SwuNJ [Accessed 8 Mar. 2026].
@@ -368,6 +378,21 @@ public class Player_01_Controls : MonoBehaviour
                 devilCharacter.SetActive(true);
                 animator = devilCharacter.GetComponent<Animator>();
                 break;
+        }
+    }
+    public void ShowStunVFX()
+    {
+        if (stunVFXPrefab == null || activeStunVFX != null)
+            return;
+         activeStunVFX = Instantiate(stunVFXPrefab,transform.position + stunVFXOffset,Quaternion.identity,transform);
+    }
+
+    public void HideStunVFX()
+    {
+        if (activeStunVFX != null)
+        {
+            Destroy(activeStunVFX);
+            activeStunVFX = null;
         }
     }
 }

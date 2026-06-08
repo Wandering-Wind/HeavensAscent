@@ -37,6 +37,7 @@ public class Soul_Scrpit : MonoBehaviour
     {
         target.isStunned = true;
 
+
         yield return new WaitForSeconds(duration);
 
         target.isStunned = false;
