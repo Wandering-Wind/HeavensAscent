@@ -128,10 +128,22 @@ public class Player_02_Controls : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        /*if (gameObject.CompareTag("Player_01_Soul") || gameObject.CompareTag("P1"))
-            print("Pl1 Hit");
-        animator.SetBool("GetHit", true);*/
-        if(currentClass.classType == PlayerClassEnum.Devil)
+        if (gameObject.CompareTag("Player_01_Soul") || gameObject.CompareTag("P1"))
+        {
+            if (hitVFX != null)
+            {
+                Vector3 hitPos = transform.position;
+
+                if (collision.contactCount > 0)
+                    hitPos = collision.GetContact(0).point;
+
+                GameObject vfx = Instantiate(hitVFX, hitPos, Quaternion.identity);
+                vfx.transform.localScale = Vector3.one * 1.2f;
+                Destroy(vfx, vfxLifetime);
+            }
+        }
+
+        if (currentClass.classType == PlayerClassEnum.Devil)
         {
             Player_01_Controls p1 = collision.gameObject.GetComponent<Player_01_Controls>();
 
@@ -143,17 +155,6 @@ public class Player_02_Controls : MonoBehaviour
 
                     p1.currChargep1--; 
                     currChargep2++;
-                    if (hitVFX != null)
-                    {
-                        Vector3 hitPos = transform.position;
-
-                        if (collision.contactCount > 0)
-                            hitPos = collision.GetContact(0).point;
-
-                        GameObject vfx = Instantiate(hitVFX, hitPos, Quaternion.identity);
-                        vfx.transform.localScale = Vector3.one * 1.2f;
-                        Destroy(vfx, vfxLifetime);
-                    }
                 }
 
                 StartCoroutine(StunOther(p1, 2f));
