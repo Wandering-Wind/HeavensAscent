@@ -47,7 +47,8 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
     public AudioManager AM;
 
     public GameObject scoreVFX;
-    public float scoreVFXLifetime = 2f;
+    public float scoreVFXLifetime = 1f;
+    public Vector3 scoreVFXOffset;
 
     public void Start()
     {
@@ -263,7 +264,7 @@ public class Heaven_Gate_Stage_02 : MonoBehaviour
     {
         if (scoreVFX == null) return;
 
-        GameObject vfx = Instantiate(scoreVFX, position,Quaternion.identity);
+        GameObject vfx = Instantiate(scoreVFX, position + scoreVFXOffset,Quaternion.identity);
 
         Destroy(vfx, scoreVFXLifetime);
     }
