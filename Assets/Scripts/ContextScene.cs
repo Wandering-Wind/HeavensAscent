@@ -26,7 +26,7 @@ public class ContextScene : MonoBehaviour
         yield return FadeIn(introCanvas, 1f);
 
         introText.StartTyping(
-            "Ever wanted to throw your soul? Ever get sick of waiting to get to heaven? Why not see if you're daring enough to shoot your soul into the portal to get to heaven? ",
+            "Well, it turns out being righteous and pure of heart doesn't guarantee you into heaven... \r\nFIGHTING FOR IT DOES",
             ShowOrbPanel
         );
     }
@@ -44,7 +44,7 @@ public class ContextScene : MonoBehaviour
         yield return FadeIn(orbCanvas, 1f);
 
         orbText.StartTyping(
-            "Beware: you only have 5 teleports until you exhaust your power and have to wait to recharge\r\n. Get life orbs to get one more charge.\r\n Hint: This is a Light Orb. Shoot it to teleport across the battlefield."
+            "Beware: you only have 5 teleports until you exhaust your power and have to wait to recharge.\r\nGet life orbs to get one more charge.\r\nHint: This is a Light Orb. Shoot it to teleport across the battlefield."
         );
     }
 
