@@ -22,7 +22,76 @@ public class Character_Select : MonoBehaviour
 
     public string[] gameScenes ={"Nhlanzeko","Stage_02","Stage_03"};
 
-    public string[] classDescriptions ={ "Devil", "Angel" };
+    private string[] classDescriptions =
+   {
+         // Demon type shii
+        "<i>\"Take what isn't yours.\"\n\n</i>" +
+        "<b>Playstyle</b>\n" +
+        "Fast and aggressive. Strike the Angel's soul to drain their charge and leave them stranded.\n\n" +
+        "<b>Comeback Mechanic</b>\n" +
+        "Collisions grow your soul's size and speed. More chaos, more power.\n\n" +
+        "<b>Watch out for: </b>" +
+        "Light Orbs stun you and shrink your soul.",
+
+        // Angel
+        "<i>\"Heaven favours the patient.\"\n\n</i>" +
+        "<b>Playstyle</b>\n" +
+        "Start with more charges for more throws and teleports. Collect Light Orbs to restore them.\n\n" +
+        "<b>Comeback Mechanic</b>\n" +
+        "Falling behind? Your soul grows larger, making the Heaven's Gate easier to hit.\n\n" +
+        "<b>Watch out for: </b>" +
+        "Demons stun you on contact. Keep moving."
+    };
+
+    private void Start()
+    {
+        UpdateUI();
+    }
+
+    public void NextClass()
+    {
+        classIndex++;
+        if (classIndex >= classes.Length)
+            classIndex = 0;
+        UpdateUI();
+    }
+
+    public void PreviousClass()
+    {
+        classIndex--;
+        if (classIndex < 0)
+            classIndex = classes.Length - 1;
+        UpdateUI();
+    }
+
+    public void ConfirmSelection()
+    {
+        if (currentPlayer == 1)
+        {
+            SelectManager.Instance.player1Class = classes[classIndex];
+
+            currentPlayer = 2;
+            classIndex = 0;
+
+            UpdateUI();
+        }
+        else
+        {
+            SelectManager.Instance.player2Class = classes[classIndex];
+
+            int randomScene = Random.Range(0, gameScenes.Length);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(gameScenes[randomScene]);
+        }
+    }
+
+    void UpdateUI()
+    {
+        playerText.text = $"Player {currentPlayer}";
+        classText.text = classes[classIndex].ToString();
+        descriptionText.text = classDescriptions[classIndex];
+    }
+
+    /*public string[] classDescriptions ={ "Devil", "Angel" };
 
     private void Start()
     {
@@ -75,4 +144,5 @@ public class Character_Select : MonoBehaviour
         classText.text = classes[classIndex].ToString();
         descriptionText.text = classDescriptions[classIndex];
     }
+    */
 }
