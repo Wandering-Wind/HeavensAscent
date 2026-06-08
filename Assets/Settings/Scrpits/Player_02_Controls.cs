@@ -128,7 +128,7 @@ public class Player_02_Controls : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (gameObject.CompareTag("Player_01_Soul") || gameObject.CompareTag("P1"))
+       /* if (collision.gameObject.CompareTag("Player_02_Soul") || collision.gameObject.CompareTag("P2"))
         {
             if (hitVFX != null)
             {
@@ -141,7 +141,7 @@ public class Player_02_Controls : MonoBehaviour
                 vfx.transform.localScale = Vector3.one * 1.2f;
                 Destroy(vfx, vfxLifetime);
             }
-        }
+        }*/
 
         if (currentClass.classType == PlayerClassEnum.Devil)
         {
@@ -246,7 +246,7 @@ public class Player_02_Controls : MonoBehaviour
         ShootDirection = lastAimDirection;
         rb.linearVelocity = ShootDirection * SP;
 
-        Soul_Scrpit owner = bullet_P_02.AddComponent<Soul_Scrpit>();
+        Soul_Scrpit owner = bullet_P_02.GetComponent<Soul_Scrpit>();
         owner.player2 = this;
 
         bullet_P_02.transform.localScale = Vector3.one * currentSoulScale *  SoulSizeMultiplier;
