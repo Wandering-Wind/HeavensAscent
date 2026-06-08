@@ -13183,6 +13183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff94bbf8b3dedb84881397333c2a3cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
+  dialogueDuration: 4
 --- !u!4 &1673617629
 Transform:
   m_ObjectHideFlags: 0
@@ -13496,7 +13499,11 @@ MonoBehaviour:
   currChargep2: 0
   Soul_Life_p2: 5
   Max_SLP2: 5
-  soulChargeIcons: []
+  soulChargeIcons:
+  - {fileID: 911001271}
+  - {fileID: 1002217949}
+  - {fileID: 1470122485}
+  - {fileID: 170304392}
   extraChargeObject: {fileID: 17931648}
   extraChargeText: {fileID: 17931650}
   extraCharges: 0
