@@ -21,7 +21,7 @@ public class ControlsTutorial : MonoBehaviour
         
         if (context.started)
         {
-            ShowText(east_Button, "Hold O to charge and shoot your soul to where you're aiming. (Or button mash to charge your soul)");
+            ShowText(east_Button, "Hold O to charge and shoot your soul to where you're aiming. (Button mash to replenish your soul charnge)");
         }
         else
         {
