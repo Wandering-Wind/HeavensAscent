@@ -15,9 +15,8 @@ public class ContextScene : MonoBehaviour
 
     void Start()
     {
+       
         introPanel.SetActive(true);
-        orbPanel.SetActive(false);
-
         StartCoroutine(StartIntro());
     }
 
@@ -26,25 +25,7 @@ public class ContextScene : MonoBehaviour
         yield return FadeIn(introCanvas, 1f);
 
         introText.StartTyping(
-            "Well, it turns out being righteous and pure of heart doesn't guarantee you into heaven... \r\nFIGHTING FOR IT DOES",
-            ShowOrbPanel
-        );
-    }
-
-    void ShowOrbPanel()
-    {
-        //introPanel.SetActive(false);
-        orbPanel.SetActive(true);
-
-        StartCoroutine(ShowOrb());
-    }
-
-    IEnumerator ShowOrb()
-    {
-        yield return FadeIn(orbCanvas, 1f);
-
-        orbText.StartTyping(
-            "Beware: you only have 5 teleports until you exhaust your power and have to wait to recharge.\r\nGet life orbs to get one more charge.\r\nHint: This is a Light Orb. Shoot it to teleport across the battlefield."
+            "Well, it turns out being righteous and pure of heart doesn't guarantee you into heaven... \r\nFIGHTING FOR IT DOES"
         );
     }
 
